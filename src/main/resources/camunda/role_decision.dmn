@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="roleDecision" name="Role Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.5.1">
+  <decision id="roleDecisionKey" name="Role Decision">
+    <decisionTable id="DecisionTable_0m1wy4u" hitPolicy="COLLECT">
+      <input id="Input_1" label="state" biodi:width="356" camunda:inputVariable="state">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1bmk3ku">
+          <text>"BOZZA","LAVORAZIONE","APPR_DOC","APPR_FIRMA","CHIUSURA_PA_RDP","FIRMA","IN_CHIUSURA","CHIUSO","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_DECRETO","CHIUSO_ANT"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0i7lefx" label="employeeCategory" camunda:inputVariable="employeeCategory">
+        <inputExpression id="LiteralExpression_0p7r712" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1wf252c">
+          <text>"Uff.","SottUff.","Gra."</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="role" name="role" typeRef="string" biodi:width="292">
+        <outputValues id="UnaryTests_0nyknss">
+          <text>"ROLE_INSTRUCTOR_OFFICER","ROLE_INSTRUCTOR_SUB_OFFICER","ROLE_INSTRUCTOR_GRADUATED","ROLE_APPROVER_OFFICER","ROLE_APPROVER_SUB_OFFICER","ROLE_APPROVER_GRADUATED","ROLE_SIGNATURE_OFFICER","ROLE_SIGNATURE_SUB_OFFICER","ROLE_SIGNATURE_GRADUATED","ROLE_MANAGER_OFFICER","ROLE_MANAGER_SUB_OFFICER","ROLE_MANAGER_GRADUATED"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1c3dcxj">
+        <inputEntry id="UnaryTests_1tady68">
+          <text>"BOZZA","LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rcq77j">
+          <text>"Uff."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vqwk0t">
+          <text>"ROLE_INSTRUCTOR_OFFICER"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0phkatz">
+        <inputEntry id="UnaryTests_1ip8gj4">
+          <text>"BOZZA","LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t1ilxa">
+          <text>"SottUff."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0smrkdr">
+          <text>"ROLE_INSTRUCTOR_SUB_OFFICER"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1i6pev2">
+        <inputEntry id="UnaryTests_0vret9q">
+          <text>"BOZZA","LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bd9iwd">
+          <text>"Gra."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1arxwqk">
+          <text>"ROLE_INSTRUCTOR_GRADUATED"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ckg7hd">
+        <inputEntry id="UnaryTests_12buls8">
+          <text>"APPR_DOC","APPR_FIRMA","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_DECRETO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k8upch">
+          <text>"Uff."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1632e13">
+          <text>"ROLE_APPROVER_OFFICER"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1mxfo3k">
+        <inputEntry id="UnaryTests_05vg10p">
+          <text>"APPR_DOC","APPR_FIRMA","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_DECRETO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fqaor8">
+          <text>"SottUff."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0u80gtl">
+          <text>"ROLE_APPROVER_SUB_OFFICER"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_152i9tu">
+        <inputEntry id="UnaryTests_1ce529p">
+          <text>"APPR_DOC","APPR_FIRMA","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_DECRETO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nltq6v">
+          <text>"Gra."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vtji1d">
+          <text>"ROLE_APPROVER_GRADUATED"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1sb4ffn">
+        <inputEntry id="UnaryTests_1gmujdo">
+          <text>"FIRMA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vawmrh">
+          <text>"Uff."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15p3svc">
+          <text>"ROLE_SIGNATURE_OFFICER"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_079qibf">
+        <inputEntry id="UnaryTests_1ix5z1w">
+          <text>"FIRMA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1khyv5m">
+          <text>"SottUff."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1d5eg3g">
+          <text>"ROLE_SIGNATURE_SUB_OFFICER"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10wx1sa">
+        <inputEntry id="UnaryTests_06epuhy">
+          <text>"FIRMA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o71roy">
+          <text>"Gra."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0y6pedf">
+          <text>"ROLE_SIGNATURE_GRADUATED"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0v63snw">
+        <inputEntry id="UnaryTests_0m3r7hs">
+          <text>"CHIUSURA_PA_RDP","IN_CHIUSURA","CHIUSO","CHIUSO_ANT"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a4yvwf">
+          <text>"Uff."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1n10d3l">
+          <text>"ROLE_MANAGER_OFFICER"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_066j62m">
+        <inputEntry id="UnaryTests_0nxbfxj">
+          <text>"CHIUSURA_PA_RDP","IN_CHIUSURA","CHIUSO","CHIUSO_ANT"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j1oqj6">
+          <text>"SottUff."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16w0z40">
+          <text>"ROLE_MANAGER_SUB_OFFICER"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p1fdl3">
+        <inputEntry id="UnaryTests_1sd9458">
+          <text>"CHIUSURA_PA_RDP","IN_CHIUSURA","CHIUSO","CHIUSO_ANT"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mhwfd7">
+          <text>"Gra."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1k7e1ox">
+          <text>"ROLE_MANAGER_GRADUATED"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="roleDecisionKey">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

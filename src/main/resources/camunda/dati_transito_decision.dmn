@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="datiTransitoDecision" name="Dati Transito Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.8.1">
+  <decision id="datiTransitoDecisionKey" name="Dati Transito Decision">
+    <decisionTable id="DecisionTable_1dnx606" hitPolicy="COLLECT">
+      <input id="Input_1" label="fase" camunda:inputVariable="fase">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1uhflag">
+          <text>"AVVIO","ISTRUTTORIA","APPROVAZIONE","FIRMA","CHIUSURA"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0rl8g9u" label="flagIdoneoTransito" camunda:inputVariable="flagIdoneoTransito">
+        <inputExpression id="LiteralExpression_1f22da0" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0f91uqv" label="flagPresentataIstanza" camunda:inputVariable="flagPresentataIstanza">
+        <inputExpression id="LiteralExpression_1p5oijm" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0oa8ncf" label="flagPresRinuncia" camunda:inputVariable="flagPresRinuncia">
+        <inputExpression id="LiteralExpression_1k3f9mm" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0m74aab" label="flagNoautoriz" camunda:inputVariable="flagNoautoriz">
+        <inputExpression id="LiteralExpression_0wzdu7l" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_18lpyo0" label="flagPresentataIstanza" name="flagPresentataIstanza" typeRef="string">
+        <outputValues id="UnaryTests_1uzfbgj">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="Output_1" label="dataIstanza" name="dataIstanza" typeRef="string">
+        <outputValues id="UnaryTests_13zo48h">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_113rkos" label="protIstanza" name="protIstanza" typeRef="string">
+        <outputValues id="UnaryTests_1ha4y64">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0122vun" label="dataProtIstanza" name="dataProtIstanza" typeRef="string">
+        <outputValues id="UnaryTests_1ftj606">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0wnh5fq" label="protDomandaPersomil" name="protDomandaPersomil" typeRef="string" biodi:width="194">
+        <outputValues id="UnaryTests_1fx0j2e">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0z72kan" label="dataPrDomPersomil" name="dataPrDomPersomil" typeRef="string">
+        <outputValues id="UnaryTests_1euggew">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1jykteq" label="flagPresRinuncia" name="flagPresRinuncia" typeRef="string">
+        <outputValues id="UnaryTests_0pr6xqv">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1fowbe7" label="dataPresRinuncia" name="dataPresRinuncia" typeRef="string">
+        <outputValues id="UnaryTests_18peapj">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_15sv16t" label="protRinunciaCmd" name="protRinunciaCmd" typeRef="string" biodi:width="192">
+        <outputValues id="UnaryTests_1pz7e5s">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0qd19ag" label="dataRinunciaCmd" name="dataRinunciaCmd" typeRef="string">
+        <outputValues id="UnaryTests_1gopwqf">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0or9fzb" label="protRinunciaPersomil" name="protRinunciaPersomil" typeRef="string">
+        <outputValues id="UnaryTests_0861huz">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_02mbrsd" label="dataRinunciaPersomil" name="dataRinunciaPersomil" typeRef="string" biodi:width="192">
+        <outputValues id="UnaryTests_0iirvvb">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0mllgjc" label="flagNoautoriz" name="flagNoautoriz" typeRef="string">
+        <outputValues id="UnaryTests_1ov97ls">
+          <text>"visible","readonly","required"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_13ru1jk" label="dataNoautPersociv" name="dataNoautPersociv" typeRef="string">
+        <outputValues id="UnaryTests_1ot11ze">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0cbpeb5" label="protNoautPersociv" name="protNoautPersociv" typeRef="string">
+        <outputValues id="UnaryTests_0qsl6j1">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0s9ifux" label="dataPrNoautPersociv" name="dataPrNoautPersociv" typeRef="string" biodi:width="192">
+        <outputValues id="UnaryTests_16tslwq">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1lu0sto" label="protNoautPersomil" name="protNoautPersomil" typeRef="string">
+        <outputValues id="UnaryTests_17rlipj">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_18khnw5" label="dataPrNoautPersomil" name="dataPrNoautPersomil" typeRef="string">
+        <outputValues id="UnaryTests_1ss0q01">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0rur875" label="dataNotifica" name="dataNotifica" typeRef="string">
+        <outputValues id="UnaryTests_0lb98pl">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1o77p20" label="flagFirmaContratto" name="flagFirmaContratto" typeRef="string">
+        <outputValues id="UnaryTests_1tabxav">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0ayuqps" label="dataFirmaContr" name="dataFirmaContr" typeRef="string">
+        <outputValues id="UnaryTests_0e9ti79">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1ei4ey9" label="protFirmaPersociv" name="protFirmaPersociv" typeRef="string" biodi:width="192">
+        <outputValues id="UnaryTests_0n8wt78">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1pni79r" label="dataPrFirmaPersociv" name="dataPrFirmaPersociv" typeRef="string">
+        <outputValues id="UnaryTests_121rj2l">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_006opbi" label="protFirmaPersomil" name="protFirmaPersomil" typeRef="string">
+        <outputValues id="UnaryTests_0ln9v15">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1kmg6io" label="dataPrFirmaPersomil" name="dataPrFirmaPersomil" typeRef="string">
+        <outputValues id="UnaryTests_11vsmps">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_19gmqt0" label="flagNonfirmaSalute" name="flagNonfirmaSalute" typeRef="string">
+        <outputValues id="UnaryTests_0bi5z1w">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_114fqjz" label="dataGiorno151" name="dataGiorno151" typeRef="string">
+        <outputValues id="UnaryTests_11nemn7">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_19z7xsb" label="contrDataMax266" name="contrDataMax266" typeRef="string">
+        <outputValues id="UnaryTests_0i3raa8">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0n08vzo" label="numGiorniErogati266" name="numGiorniErogati266" typeRef="string">
+        <outputValues id="UnaryTests_109113r">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1tr12qg">
+        <inputEntry id="UnaryTests_0t9vy2l">
+          <text>"AVVIO","ISTRUTTORIA","APPROVAZIONE","FIRMA","CHIUSURA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0go4fal">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10ln3ch">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mna6gw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10xlte8">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xvgc9e">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hbwroo">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17yihs8">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14u8ro6">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10opvtx">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0suc6zc">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00576fy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1y5au5e">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zcpzdc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fws7cb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tr7q43">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_022tkdx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1q3ozf1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1g2a6w2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vvjf8z">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_152cm1x">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05nym12">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v58om3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0v628tl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0v8ekj3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06wvmf9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xqxdrk">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cq9357">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xsvwy4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01libfr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gn8oz7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cn6n4k">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13m6okg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ngrpf8">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00gy85f">
+        <inputEntry id="UnaryTests_1r3exlv">
+          <text>"ISTRUTTORIA","APPROVAZIONE","FIRMA","CHIUSURA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sv46dc">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ybvrck">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ws7kly">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16lufkz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14bysdv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d2l4wa">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l7cuhj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gw960s">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1g3y01h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uqae00">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1urujas">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rhrcxd">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1942arq">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19pbadz">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_006j6hk">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xz7q9t">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10wfoqv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dub0ug">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c7aeik">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0koxbap">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k9vl6l">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04feg5c">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ende62">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kvsprv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dovd8v">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ei2g58">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1r0lkgs">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06v1lcd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02tipge">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vuobzu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gncwuy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11cw0ah">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0icpk9z">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gbg4ye">
+        <inputEntry id="UnaryTests_0843jpu">
+          <text>"ISTRUTTORIA","APPROVAZIONE","FIRMA","CHIUSURA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09a9x1h">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cebpce">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xab5m1">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pt6iq8">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15quh0c">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_000lycv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05a2fam">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vh7yp8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1my7ygu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00ix0co">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1n3na81">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lwq86y">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1oktmpv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jrm4rl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jopkaq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_065szzl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1agfsz6">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ltm9nd">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ehmc8n">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mvlkx5">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0goao89">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_103mzbi">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o2vszi">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19r00fh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01j3g2h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12a008h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p6ggex">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hki302">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0w2i3hv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0difh63">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1om9s2h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0naooii">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vth4v4">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0vo9njo">
+        <inputEntry id="UnaryTests_0ek4nq8">
+          <text>"ISTRUTTORIA","APPROVAZIONE","FIRMA","CHIUSURA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12r3hhc">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qltwdu">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e7osij">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1oiic9b">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0eukerk">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k9hrqa">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12dqlcl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gsg60a">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1459qjr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1735p6n">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h6hk2v">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l8w119">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_067pnmo">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kl0q3q">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15ldp9u">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wxzb8m">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01cmdwa">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hhpoau">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1r578sn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_084jojs">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nx5xkn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p7owad">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jwck6l">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11mb90y">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xsoynr">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dytzl4">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1iyyn07">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f65r1g">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jih1z5">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1a82i5k">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g29b86">
+          <text>"readonly"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d0o6j3">
+          <text>"readonly"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07u5bs1">
+          <text>"readonly"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="datiTransitoDecisionKey">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

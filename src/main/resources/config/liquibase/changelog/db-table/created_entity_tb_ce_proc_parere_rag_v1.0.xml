@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!--
+        Added the entity TB_CE_PROC_PARERE_RAG.
+    -->
+    <changeSet id="created_entity_tb_ce_proc_parere_rag_v1.0" author="m.kerabandi">
+        <createTable tableName="tb_ce_proc_parere_rag">
+            <column name="id" type="bigint" defaultValueSequenceNext="parere_rag_proc_sequence">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="tb_ce_proc_parere_rag_pk"/>
+            </column>
+            <column name="id_proc" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="esito" type="varchar2(10)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="num_registrazione" type="varchar2(50)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="data_esito" type="date">
+                <constraints nullable="true"/>
+            </column>
+            <column name="cod_ins" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ins" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cod_ult_agg" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ult_agg" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="created_entity_constraints_tp_ce_proc_parere_rag_v1.0" author="m.kerabandi">
+
+        <addForeignKeyConstraint baseColumnNames="id_proc"
+                                 baseTableName="tb_ce_proc_parere_rag"
+                                 constraintName="fk_tb_ce_proc_parere_rag__procedure"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_ce_procedura"/>
+    </changeSet>
+    <changeSet id="alter-entity_tp_ce_proc_parere_rag_v2.0" author="m.kerabandi">
+        <modifyDataType tableName="tb_ce_proc_parere_rag"
+                        columnName="esito" newDataType="boolean" />
+    </changeSet>
+    <changeSet id="alter-entity_tp_ce_proc_parere_rag_v2.1" author="m.kerabandi">
+        <modifyDataType tableName="tb_ce_proc_parere_rag"
+                        columnName="num_registrazione" newDataType="bigint" />
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!--
+        Added the entity StateProcedure.
+    -->
+    <changeSet id="created_entity_StateProcedure_v1.0" author="m.kerabandi">
+        <createTable tableName="tb_ce_stato_procedura">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="code_stato" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="search_code" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="desc_stato" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="code_stato_centrale" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ord_stato" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_fase_procedura" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="add_desc_stato_centrale" author="m.kerabandi">
+        <addColumn tableName="tb_ce_stato_procedura">
+            <column name="desc_stato_centrale" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="created_entity_StateProcedure_v2.0-data" author="m.kerabandi">
+        <loadUpdateData
+                file="config/liquibase/changelog/data/state_procedure.csv"
+                separator=";"
+                tableName="tb_ce_stato_procedura"
+                primaryKey="id">
+        </loadUpdateData>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+    <!--
+        Added the constraints for TP_CETIP_CESSAZIONE.
+    -->
+    <changeSet id="constraints_TP_CETIP_CESSAZIONE_v1.0" author="m.kerabandi">
+        <addForeignKeyConstraint baseColumnNames="CETIP_CENOR_SEQ_PK"
+                                 baseTableName="TP_CETIP_CESSAZIONE"
+                                 constraintName="TP_CETIP_CESSAZIONE_FK4"
+                                 referencedColumnNames="CENOR_SEQ_PK"
+                                 referencedTableName="TP_CENOR_NORMATIVA"/>
+    </changeSet>
+</databaseChangeLog>

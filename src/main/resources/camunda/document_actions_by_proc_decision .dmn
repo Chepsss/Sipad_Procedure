@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="documentActionsByProcDecision" name="Document Actions By Procedure Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.5.1">
+  <decision id="documentActionsByProcDecisionKey" name="Document Actions By Procedure Decision">
+    <decisionTable id="DecisionTable_0m1wy4u" hitPolicy="COLLECT">
+      <input id="InputClause_0i7lefx" label="role" biodi:width="353" camunda:inputVariable="role">
+        <inputExpression id="LiteralExpression_0p7r712" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1wf252c">
+          <text>"ROLE_INSTRUCTOR_OFFICER","ROLE_INSTRUCTOR_SUB_OFFICER","ROLE_INSTRUCTOR_GRADUATED","ROLE_APPROVER_OFFICER","ROLE_APPROVER_SUB_OFFICER","ROLE_APPROVER_GRADUATED","ROLE_SIGNATURE_OFFICER","ROLE_SIGNATURE_SUB_OFFICER","ROLE_SIGNATURE_GRADUATED","ROLE_MANAGER_OFFICER","ROLE_MANAGER_SUB_OFFICER","ROLE_MANAGER_GRADUATED"</text>
+        </inputValues>
+      </input>
+      <input id="Input_1" label="state" biodi:width="415" camunda:inputVariable="state">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1bmk3ku">
+          <text>"LAVORAZIONE","APPR_DOC","APPR_FIRMA","CHIUSURA_PA_RDP","FIRMA","IN_CHIUSURA","CHIUSO","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_DECRETO","CHIUSO_ANT"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="DETTAGLI_DOCUMENTO" name="DETTAGLI_DOCUMENTO" typeRef="string" biodi:width="292">
+        <outputValues id="UnaryTests_0nyknss">
+          <text>"Dettagli documento"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_11yfweq" label="VISUALIZZA_DOCUMENTO" name="VISUALIZZA_DOCUMENTO" typeRef="string">
+        <outputValues id="UnaryTests_0quop1n">
+          <text>"Visualizza documento"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0egecd7" label="MODIFICA" name="MODIFICA" typeRef="string">
+        <outputValues id="UnaryTests_14r6h3m">
+          <text>"Modifica"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0qq07bm" label="FIRMA" name="FIRMA" typeRef="string">
+        <outputValues id="UnaryTests_1qt5mrd">
+          <text>"Firma"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1mkcz6m" label="SEGNATURA" name="SEGNATURA" typeRef="string">
+        <outputValues id="UnaryTests_19x3hay">
+          <text>"Segnatura"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1k7kvpq" label="PREDISPOSIZIONE" name="PREDISPOSIZIONE" typeRef="string">
+        <outputValues id="UnaryTests_1mlg2k2">
+          <text>"Predisposizione"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0yjkm0z" label="PROTOCOLLA" name="PROTOCOLLA" typeRef="string">
+        <outputValues id="UnaryTests_0nvk7xe">
+          <text>"Protocolla"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1cj1vdx" label="PREDISPONI_ADHOC" name="PREDISPONI_ADHOC" typeRef="string">
+        <outputValues id="UnaryTests_1aw1e8a">
+          <text>"Predisponi su AdHoc"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0arw7u3" label="APPROVAZIONE_ADHOC" name="APPROVAZIONE_ADHOC" typeRef="string">
+        <outputValues id="UnaryTests_0fa9wfg">
+          <text>"Invia per approvazione su AdHoc"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0vie20z" label="ELIMINA" name="ELIMINA" typeRef="string">
+        <outputValues id="UnaryTests_0z0tn96">
+          <text>"Elimina"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1xpjm72" label="STERILIZZA" name="STERILIZZA" typeRef="string">
+        <outputValues id="UnaryTests_0c179cj">
+          <text>"Sterilizza"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1v7nzp5" label="ACQUISISCI_PROTOCOLLO" name="ACQUISISCI_PROTOCOLLO" typeRef="string">
+        <outputValues id="UnaryTests_07cvmhd">
+          <text>"Acquisisci protocollo"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1aje5ss" label="INSERISCI_NOTIFICA" name="INSERISCI_NOTIFICA" typeRef="string">
+        <outputValues id="UnaryTests_0ygzmjw">
+          <text>"Inserisci notifica"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0l5ub4t" label="CAMBIA_NOME" name="CAMBIA_NOME" typeRef="string">
+        <outputValues id="UnaryTests_061nqix">
+          <text>"Cambia nome"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1c3dcxj">
+        <inputEntry id="UnaryTests_1rcq77j">
+          <text>"ROLE_INSTRUCTOR_OFFICER","ROLE_INSTRUCTOR_SUB_OFFICER","ROLE_INSTRUCTOR_GRADUATED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tady68">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vqwk0t">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l7ww87">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05nbisc">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0b80d3j">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wnczkf">
+          <text>"Segnatura"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1athzc3">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x3vsw2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ih98de">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hzegh4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uhi9nf">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rvcu74">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05tzoso">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_104dk13">
+          <text>"Inserisci notifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18517wq">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0phkatz">
+        <inputEntry id="UnaryTests_0t1ilxa">
+          <text>"ROLE_INSTRUCTOR_OFFICER","ROLE_INSTRUCTOR_SUB_OFFICER","ROLE_INSTRUCTOR_GRADUATED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ip8gj4">
+          <text>not("LAVORAZIONE")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0smrkdr">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1y57gow">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1phhny9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1r7c37m">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m2y7u5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cqjj7x">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s41owd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0168byo">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1820uqf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02w6q59">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zudfbi">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14rx26k">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1etl7fz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05ooedl">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1i6pev2">
+        <inputEntry id="UnaryTests_0bd9iwd">
+          <text>"ROLE_APPROVER_OFFICER","ROLE_APPROVER_SUB_OFFICER","ROLE_APPROVER_GRADUATED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vret9q">
+          <text>"APPR_DOC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1arxwqk">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nvxptg">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02q4in2">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1n3dea6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_037gewd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1sosm4d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1z089zh">
+          <text>"Protocolla"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j7v95r">
+          <text>"Predisponi su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0aek4ge">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1imdd7o">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cf7vbm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ei6a49">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bcxsv4">
+          <text>"Inserisci notifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1eusbri">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13bwe0q">
+        <inputEntry id="UnaryTests_0qiklqh">
+          <text>"ROLE_APPROVER_OFFICER","ROLE_APPROVER_SUB_OFFICER","ROLE_APPROVER_GRADUATED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13c2n8x">
+          <text>"APPR_FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1f1cpex">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0v7nlf9">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ivw113">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fh1b8w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rseht4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c8dqgp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ol9q4m">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vsi436">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03v7b4f">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0iy3n48">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l1alki">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s7nwf3">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11ipz8j">
+          <text>"Inserisci notifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0q8fyom">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0w6i3ca">
+        <inputEntry id="UnaryTests_1ll2afd">
+          <text>"ROLE_APPROVER_OFFICER","ROLE_APPROVER_SUB_OFFICER","ROLE_APPROVER_GRADUATED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02sc8ad">
+          <text>"CHIUSURA_PA_DINIEGO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1hye0ij">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hmm0n6">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1oqbw06">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tdqnhv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0r3ba32">
+          <text>"Segnatura"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ndhpkv">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hje5u8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0am446x">
+          <text>"Predisponi su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dc1pqm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03ypspo">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_099m2g7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0y0donh">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dnqyys">
+          <text>"Inserisci notifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14tpqsx">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0wajeyp">
+        <inputEntry id="UnaryTests_08q15al">
+          <text>"ROLE_APPROVER_OFFICER","ROLE_APPROVER_SUB_OFFICER","ROLE_APPROVER_GRADUATED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z4yl36">
+          <text>"CHIUSURA_PA_DECRETO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18skgoe">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zznuat">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f7anaj">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_006ro85">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n712kg">
+          <text>"Segnatura"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vvzt7j">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02ijj46">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1q3kwyy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12avd93">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16r9i63">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b47jrf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_104rjjh">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0q857f6">
+          <text>"Inserisci notifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ohcyhf">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1eldp0m">
+        <inputEntry id="UnaryTests_0ybg2q7">
+          <text>"ROLE_APPROVER_OFFICER","ROLE_APPROVER_SUB_OFFICER","ROLE_APPROVER_GRADUATED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18p1k21">
+          <text>"CHIUSURA_PA_RDP"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lpbma8">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gnd4u0">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0v0q9pq">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14e2p9f">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bihl6i">
+          <text>"Segnatura"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1frv1re">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n07ufw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i4cy4g">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tkv19i">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1glus4k">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x1aakd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hhejjj">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rbqgjq">
+          <text>"Inserisci notifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1grpju8">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0vzve57">
+        <inputEntry id="UnaryTests_0tuqvup">
+          <text>"ROLE_APPROVER_OFFICER","ROLE_APPROVER_SUB_OFFICER","ROLE_APPROVER_GRADUATED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08hlsuf">
+          <text>not("APPR_DOC","APPR_FIRMA","CHIUSURA_PA_RDP","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_DECRETO")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xo0gw6">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1suffpg">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1crs4id">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0w7gli6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1amkus9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0puaf1d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09nv34r">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vew59y">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rdkiq6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0453e31">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0oy1mlz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0r72obg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o0u7ys">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ai2thd">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ft9flg">
+        <inputEntry id="UnaryTests_1oih0ij">
+          <text>"ROLE_SIGNATURE_OFFICER","ROLE_SIGNATURE_SUB_OFFICER","ROLE_SIGNATURE_GRADUATED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l0aei9">
+          <text>"FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qg2c8v">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ojopmz">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kphnye">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b91s79">
+          <text>"Firma"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04ei4ai">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_091ypvm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1u0i690">
+          <text>"Protocolla"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bfyn62">
+          <text>"Predisponi su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1iylzkd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l3d4nv">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0elj2u2">
+          <text>"Sterilizza"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_169yncc">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rx6k4a">
+          <text>"Inserisci notifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ileevm">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_107kemb">
+        <inputEntry id="UnaryTests_1md3ud2">
+          <text>"ROLE_SIGNATURE_OFFICER","ROLE_SIGNATURE_SUB_OFFICER","ROLE_SIGNATURE_GRADUATED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tdgbdz">
+          <text>not("FIRMA")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12mf1xt">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yrtabj">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_024azgz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nxsmad">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kr7ar4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d5182k">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fboudv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d199bh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m3kuu2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uxpfrd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_053n554">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k57x6h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d7ra3m">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0foba8t">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0eywean">
+        <inputEntry id="UnaryTests_0vo0ue0">
+          <text>"ROLE_MANAGER_OFFICER","ROLE_MANAGER_SUB_OFFICER","ROLE_MANAGER_GRADUATED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t0kv63">
+          <text>"CHIUSURA_PA_DECRETO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tp1ied">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yvdyvu">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v6c3gj">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0h6j13k">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0eux8eh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qwlzc8">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u4iq7x">
+          <text>"Protocolla"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xhexfo">
+          <text>"Predisponi su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ftjq3j">
+          <text>"Invia per approvazione su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18gwjhp">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08jqvs5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1444p6f">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qcb4gl">
+          <text>"Inserisci notifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ftnsfc">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0k9g2g0">
+        <inputEntry id="UnaryTests_1bqom3x">
+          <text>"ROLE_MANAGER_OFFICER","ROLE_MANAGER_SUB_OFFICER","ROLE_MANAGER_GRADUATED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04tn61u">
+          <text>"CHIUSURA_PA_RDP","CHIUSURA_PA_DINIEGO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1e8o5sl">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06g22yp">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qom3rv">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ygdat7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ihc2a2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wf8ui4">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0627qdx">
+          <text>"Protocolla"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f9yyvv">
+          <text>"Predisponi su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1oox5r7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0v91zvn">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0h2qx3v">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_122ecbd">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1swmsqw">
+          <text>"Inserisci notifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1y9i1q9">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06ee6cc">
+        <inputEntry id="UnaryTests_005s0of">
+          <text>"ROLE_MANAGER_OFFICER","ROLE_MANAGER_SUB_OFFICER","ROLE_MANAGER_GRADUATED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vtendm">
+          <text>"IN_CHIUSURA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1e2lqa2">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1oi7nlr">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rhtm19">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16s3krr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jsypta">
+          <text>"Segnatura"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01f1u82">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jrdyky">
+          <text>"Protocolla"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1g5f3f8">
+          <text>"Predisponi su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_027saps">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09h7qr2">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_138mwlo">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hombvp">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1je6ou2">
+          <text>"Inserisci notifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yfrl3l">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xwd0ys">
+        <inputEntry id="UnaryTests_1pziokw">
+          <text>"ROLE_MANAGER_OFFICER","ROLE_MANAGER_SUB_OFFICER","ROLE_MANAGER_GRADUATED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02ax1l1">
+          <text>not("CHIUSURA_PA_RDP","IN_CHIUSURA","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_DECRETO")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09cmhmd">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07xesza">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0juhnxq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x0f55b">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gggjos">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bwvg2d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00qywmh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nn5xc6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1omzfaq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0aj2ltt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_171rf9w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fo3gyg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1e5mqng">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1su0bze">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="documentActionsByProcDecisionKey">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

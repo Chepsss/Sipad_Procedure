@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+    <!--
+        Added the constraints for TP_CECON_CATEG_CONG.
+    -->
+    <changeSet id="constraints_TP_CECON_CATEG_CONG_v1.0" author="m.kerabandi">
+        <addForeignKeyConstraint baseColumnNames="CECON_CETIP_SEQ_PK"
+                                 baseTableName="TP_CECON_CATEG_CONG"
+                                 constraintName="TP_CECON_CATEG_CONG_FK1"
+                                 referencedColumnNames="CETIP_ID_PK"
+                                 referencedTableName="TP_CETIP_CESSAZIONE"/>
+    </changeSet>
+</databaseChangeLog>

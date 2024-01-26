@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!--
+        Added the entity TB_CE_DICH_PROC.
+    -->
+    <changeSet id="created_entity_tb_ce_dich_proc_v1.0" author="m.kerabandi">
+        <createTable tableName="tb_ce_dich_proc">
+            <column name="id" type="bigint" defaultValueSequenceNext="declaration_proc_sequence">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="tb_ce_dich_proc_pk"/>
+            </column>
+            <column name="id_proc" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="id_dich" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="flag_dich" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_dich" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="cod_ins" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ins" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cod_ult_agg" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ult_agg" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="created_entity_constraints_tp_ce_dich_proc_v1.0" author="m.kerabandi">
+
+        <addForeignKeyConstraint baseColumnNames="id_proc"
+                                 baseTableName="tb_ce_dich_proc"
+                                 constraintName="fk_tb_ce_dich_proc__procedure"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_ce_procedura"/>
+
+        <addForeignKeyConstraint baseColumnNames="id_dich"
+                                 baseTableName="tb_ce_dich_proc"
+                                 constraintName="fk_tb_ce_dich_proc__dichiarazioni"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_ce_dichiarazioni"/>
+    </changeSet>
+
+</databaseChangeLog>

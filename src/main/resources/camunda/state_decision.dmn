@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="stateDecision" name="State Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.13.0">
+  <decision id="stateDecisionKey" name="State Decision">
+    <decisionTable id="DecisionTable_0q9v9qp" hitPolicy="COLLECT">
+      <input id="Input_1" label="currentState" biodi:width="520" camunda:inputVariable="currentState">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0vq15h8">
+          <text>"BOZZA","LAVORAZIONE","APPR_DOC","APPR_FIRMA","CHIUSURA_PA_RDP","FIRMA","IN_CHIUSURA","CHIUSO","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_DECRETO","CHIUSO_ANT"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="nextState" name="nextState" typeRef="string" biodi:width="483">
+        <outputValues id="UnaryTests_17cjyu2">
+          <text>"LAVORAZIONE","APPR_DOC","APPR_FIRMA","CHIUSURA_PA_RDP","FIRMA","IN_CHIUSURA","CHIUSO","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_DECRETO","CHIUSO_ANT"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1eahqab" label="label" name="label" typeRef="string">
+        <outputValues id="UnaryTests_1msbxkb">
+          <text>"Crea PA","Invia ad approvazione documenti","Chiudi PA","Invia alla chiusura","Chiudi","Invia a chiusura anticipata PA","Invia a chiusura PA","Chiusura anticipata PA","Torna ad approvazione firma","Torna in firma","Invia in istruttoria","Invia alla firma","Invia ad approvazione firma","Chiudi anticipatamente"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_0xgoi7j">
+        <inputEntry id="UnaryTests_10608d9">
+          <text>"BOZZA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_183us12">
+          <text>"LAVORAZIONE"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08p38w6">
+          <text>"Crea PA"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0891cwg">
+        <inputEntry id="UnaryTests_15ifzxp">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0x4vyjw">
+          <text>"APPR_DOC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0anqdn8">
+          <text>"Invia lettere in approvazione"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ir3d4q">
+        <inputEntry id="UnaryTests_1qpyhvz">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1adyfx9">
+          <text>"CHIUSURA_PA_DINIEGO"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0maqlzw">
+          <text>"Invia lettere di chiusura anticipata PA"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08itd1b">
+        <inputEntry id="UnaryTests_13b20dc">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wanmjw">
+          <text>"CHIUSURA_PA_DECRETO"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c0m9lz">
+          <text>"Invia in approvazione con appunto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ktzgzf">
+        <inputEntry id="UnaryTests_1wmqz0i">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16mw2qs">
+          <text>"APPR_FIRMA"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1sf0anb">
+          <text>"Invia decreto in approvazione"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xb5up7">
+        <inputEntry id="UnaryTests_0ci637m">
+          <text>"APPR_DOC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1330ad2">
+          <text>"LAVORAZIONE"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0h2bgpf">
+          <text>"Rimanda all'istruttore"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0leb16c">
+        <inputEntry id="UnaryTests_1nvdaxm">
+          <text>"CHIUSURA_PA_DINIEGO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06ac2br">
+          <text>"CHIUSURA_PA_RDP"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06rt5me">
+          <text>"Invia a chiusura anticipata PA RDP"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1t57vr2">
+        <inputEntry id="UnaryTests_12pjy0e">
+          <text>"CHIUSURA_PA_DINIEGO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0eobwtv">
+          <text>"CHIUSO_ANT"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tex3yu">
+          <text>"Chiudi anticipatamente"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1iunhnm">
+        <inputEntry id="UnaryTests_1n4wqga">
+          <text>"CHIUSURA_PA_DECRETO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qumv16">
+          <text>"CHIUSO"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z1va6g">
+          <text>"Chiudi PA"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05py2p2">
+        <inputEntry id="UnaryTests_1t69vc2">
+          <text>"CHIUSURA_PA_DECRETO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0b1392c">
+          <text>"LAVORAZIONE"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vm5vex">
+          <text>"Rimanda all'istruttore"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0wvonca">
+        <inputEntry id="UnaryTests_1o36goi">
+          <text>"CHIUSURA_PA_DINIEGO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1iz73u2">
+          <text>"LAVORAZIONE"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0oqevrq">
+          <text>"Rimanda all'istruttore"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0oztxqy">
+        <inputEntry id="UnaryTests_1nmrxjc">
+          <text>"APPR_FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0naguei">
+          <text>"FIRMA"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16g0n0h">
+          <text>"Invia in firma"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ou0qdg">
+        <inputEntry id="UnaryTests_0dkyomi">
+          <text>"APPR_FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pi56zr">
+          <text>"LAVORAZIONE"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11e3b3w">
+          <text>"Rimanda all'istruttore"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05gk9u6">
+        <inputEntry id="UnaryTests_09zbnip">
+          <text>"FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15ld92c">
+          <text>"IN_CHIUSURA"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_094mhyw">
+          <text>"Inoltra al Responsabile"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0u317dg">
+        <inputEntry id="UnaryTests_0elsb31">
+          <text>"FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0uyebvc">
+          <text>"APPR_FIRMA"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1necswc">
+          <text>"Rimanda all'approvatore"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0m5l46g">
+        <inputEntry id="UnaryTests_1n9adgu">
+          <text>"IN_CHIUSURA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ttnriu">
+          <text>"CHIUSO"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uepgk9">
+          <text>"Chiudi PA"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1i0t8vr">
+        <inputEntry id="UnaryTests_165dtv8">
+          <text>"IN_CHIUSURA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18lnovs">
+          <text>"FIRMA"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_197dyfv">
+          <text>"Rimanda al firmatario"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03vq43l">
+        <inputEntry id="UnaryTests_02ace4y">
+          <text>"CHIUSURA_PA_RDP"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0uvmwjk">
+          <text>"CHIUSO_ANT"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12xwq3u">
+          <text>"Chiudi anticipatamente"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hjg0xw">
+        <inputEntry id="UnaryTests_0ygt6ri">
+          <text>"APPR_DOC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0j53o3h">
+          <text>"APPR_DOC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08vrps7">
+          <text>"Invia ad altro approvatore"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="stateDecisionKey">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

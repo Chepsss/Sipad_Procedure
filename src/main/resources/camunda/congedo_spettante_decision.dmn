@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="congedoSpettanteDecision" name="Congedo Spettante Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.8.1">
+  <decision id="congedoSpettanteDecisionKey" name="Congedo Spettante Decision">
+    <decisionTable id="DecisionTable_11wsjr5" hitPolicy="FIRST">
+      <input id="Input_1" label="idTipoAttivazione" camunda:inputVariable="idTipoAttivazione">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_16h7zxe">
+          <text>"ISTPAR","UFFINT","DAUTOR","UFFORG"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_10hw11o" label="idTipoProcedimento" biodi:width="192" camunda:inputVariable="idTipoProcedimento">
+        <inputExpression id="LiteralExpression_06qygfx" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_01xxgy1">
+          <text>"CszScarsoRend","CszDAutorità","CszNonIdFunzGrad","CszNormeFormaz","CszPerditaGrado","CszInfermità","CszLimitiEtà","CszAusiliaria","CszRiserva","CszComplemento","CszRiservaCompl","CszCongedoAss"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0vvwetl" label="idMotivo" camunda:inputVariable="idMotivo">
+        <inputExpression id="LiteralExpression_1jrb03d" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_01tgqte">
+          <text>"BD165","BD160","BD162","BD168","BD167","BD166","BD209","BD173","BD164","BD154","BD159","BD158","BD155","BD156","BD157","BD168n","BD168r","BD164r","BD164c","BD164a","BD155u","XX001"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0lg04eb" label="catPersonaleRichiesta" camunda:inputVariable="catPersonaleRichiesta">
+        <inputExpression id="LiteralExpression_159cygx" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0wedxmg">
+          <text>"RIS","AUS","CONGASS","CPLCONG","RISCPL"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1nykekg" label="D01" camunda:inputVariable="D01">
+        <inputExpression id="LiteralExpression_134wjny" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1jmmrk1" label="C08" camunda:inputVariable="C08">
+        <inputExpression id="LiteralExpression_0m92zuf" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_08swt2o" label="anniServizioEff" biodi:width="192" camunda:inputVariable="anniServizioEff">
+        <inputExpression id="LiteralExpression_1vk8fgi" typeRef="integer">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0c584g5" label="catMilitare" camunda:inputVariable="catMilitare">
+        <inputExpression id="LiteralExpression_0dqwx5a" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0iz1rrm">
+          <text>"Uff.","SottUff.","Gra."</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="idCatPersSpettante" name="idCatPersSpettante" typeRef="string" biodi:width="192">
+        <outputValues id="UnaryTests_0tlqg3u">
+          <text>"RIS","AUS","CONGASS","CPLCONG","RISCPL"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_155xws6">
+        <inputEntry id="UnaryTests_1fd7fbl">
+          <text>"DAUTOR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kggl3m">
+          <text>"CszScarsoRend"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l65z6p">
+          <text>"BD165"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_095mlba">
+          <text>"RIS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jzpgas">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t3f110">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ukn1gl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uepnur">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01abxye">
+          <text>"RIS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_099z5go">
+        <inputEntry id="UnaryTests_0ye884a">
+          <text>"DAUTOR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gmlzit">
+          <text>"CszDAutorità"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w2n9s7">
+          <text>"BD160"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06g96eo">
+          <text>"RIS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f21pdn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0awesw1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x7wk0i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00wayvy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0s0l41v">
+          <text>"RIS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08y8jl5">
+        <inputEntry id="UnaryTests_0kcsc3b">
+          <text>"DAUTOR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07ffjye">
+          <text>"CszDAutorità"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sobt19">
+          <text>"BD160"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tdmf85">
+          <text>"AUS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qhssx4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sp5wcx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_085515v">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e1masu">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1iwl98c">
+          <text>"AUS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17oqa3v">
+        <inputEntry id="UnaryTests_0gi7mr5">
+          <text>"DAUTOR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0usnxl4">
+          <text>"CszNonIdFunzGrad"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ic4j63">
+          <text>"BD162"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iu8yq0">
+          <text>"CONGASS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01unqgn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qfelvu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cb83ha">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05q23pm">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qv3zd4">
+          <text>"CONGASS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0sv350y">
+        <inputEntry id="UnaryTests_1wqgn27">
+          <text>"DAUTOR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0c7dwl0">
+          <text>"CszNonIdFunzGrad"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oczvgs">
+          <text>"BD162"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cibx9l">
+          <text>"RIS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11zrhsn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e62rtx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n5uqvk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gs6p26">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0uslyrc">
+          <text>"RIS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17fnipi">
+        <inputEntry id="UnaryTests_03pud7u">
+          <text>"UFFINT","UFFORG"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10lw668">
+          <text>"CszNormeFormaz"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q6qtrz">
+          <text>"BD167","BD166","BD168n","BD168r"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j6uz5u">
+          <text>"CPLCONG"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1b962xd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sv967i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dam0fa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14bfzds">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_169mc66">
+          <text>"CPLCONG"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_041im7a">
+        <inputEntry id="UnaryTests_1l0l1a1">
+          <text>"UFFINT","UFFORG"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hjt9l4">
+          <text>"CszPerditaGrado"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cwnp2k">
+          <text>"BD209"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yxuyqu">
+          <text>"CPLCONG"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r0o69g">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tbju78">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cqthr4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pq099d">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bsptob">
+          <text>"CPLCONG"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ns87yc">
+        <inputEntry id="UnaryTests_0vdd94j">
+          <text>"UFFINT","UFFORG"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f2gore">
+          <text>"CszPerditaGrado"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_078owgp">
+          <text>"BD209"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kv29ak">
+          <text>"RIS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iqpm7h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u2h08p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iryp1e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uqloiv">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0cabag0">
+          <text>"RIS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_093sgoh">
+        <inputEntry id="UnaryTests_0nmh67m">
+          <text>"UFFINT","UFFORG"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16wjjog">
+          <text>"CszInfermità"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r1r4q0">
+          <text>"BD173"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08e15ek">
+          <text>"CONGASS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ojj2rc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17a9p8h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05nsajm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06yzzp0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bx5mlj">
+          <text>"CONGASS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0sd03t0">
+        <inputEntry id="UnaryTests_1flguxq">
+          <text>"UFFINT","UFFORG"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kpq52m">
+          <text>"CszInfermità"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19rmo4z">
+          <text>"BD173"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xwhjs9">
+          <text>"RIS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p3xo8y">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0meo1dx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pcux0o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0409p4w">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o3hn0r">
+          <text>"RIS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kfre0x">
+        <description></description>
+        <inputEntry id="UnaryTests_1xoj4qm">
+          <text>"UFFINT","UFFORG"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11yikdf">
+          <text>"CszLimitiEtà"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g1gjht">
+          <text>"BD164c"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16l6dpb">
+          <text>"CONGASS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pp6rmf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s0yzrg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lq7wfj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ez0t1d">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bprinm">
+          <text>"CONGASS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1x76mlx">
+        <inputEntry id="UnaryTests_1qqaw4z">
+          <text>"UFFINT","UFFORG"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uz3trg">
+          <text>"CszLimitiEtà"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n1hw8s">
+          <text>"BD164r"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nx9goy">
+          <text>"RIS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d51thl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06tp2xk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iery2m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d8tmk3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07xpb4r">
+          <text>"RIS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ynm5xu">
+        <description>da chiarire</description>
+        <inputEntry id="UnaryTests_0ndszh6">
+          <text>"UFFINT","UFFORG"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bg4ygx">
+          <text>"CszLimitiEtà"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vx0i48">
+          <text>"BD164a"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_087evjz">
+          <text>"AUS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0weo7pc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v25riu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11sbux1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k3o7zj">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ssip62">
+          <text>"AUS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_090yhmc">
+        <inputEntry id="UnaryTests_13tobaq">
+          <text>"ISTPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04jwilz">
+          <text>"CszAusiliaria"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fxd3ot">
+          <text>"BD154"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ehcwp9">
+          <text>"AUS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00vnljy">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18eoilc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17968h5">
+          <text>&gt; 39</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f3d0s1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_024eqab">
+          <text>"AUS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03lkmye">
+        <inputEntry id="UnaryTests_1us33hi">
+          <text>"ISTPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_055in49">
+          <text>"CszAusiliaria"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uymzjc">
+          <text>"BD154"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qmb4oz">
+          <text>"AUS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0djqa37">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kbf6q4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ct7dy4">
+          <text>&gt; 24</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d5z9vz">
+          <text>"Uff."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1p12vcx">
+          <text>"RIS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_02mh2mf">
+        <inputEntry id="UnaryTests_0z8vpyj">
+          <text>"ISTPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0re22aw">
+          <text>"CszAusiliaria"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17wvtv2">
+          <text>"BD154"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x2yuba">
+          <text>"AUS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lilg6b">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19t40ul">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08o3670">
+          <text>&gt; 19</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w7aung">
+          <text>"SottUff."</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jri422">
+          <text>"RIS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_099hlgd">
+        <description></description>
+        <inputEntry id="UnaryTests_1gdiyhv">
+          <text>"ISTPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ttoipn">
+          <text>"CszAusiliaria"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00q8nt4">
+          <text>"BD154"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sljtxl">
+          <text>"AUS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r9iqb3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03oj1wb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05ok52r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05qxgwp">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0812d7r">
+          <text>"CPLCONG"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_02hfjnv">
+        <inputEntry id="UnaryTests_09idnc7">
+          <text>"ISTPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s4jpdd">
+          <text>"CszAusiliaria"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cj6iir">
+          <text>"BD159"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cf8tqu">
+          <text>"AUS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kn4zla">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j44yed">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lhyip8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xgahes">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1kmva38">
+          <text>"AUS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1al75jb">
+        <inputEntry id="UnaryTests_1yvindp">
+          <text>"ISTPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19efd7m">
+          <text>"CszAusiliaria"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07o7vbi">
+          <text>"BD159"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02pmfi4">
+          <text>"AUS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_103vpjf">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12cinti">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kxvgyj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0enflq0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0evofm6">
+          <text>"RIS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1jjpbtu">
+        <inputEntry id="UnaryTests_1uk5eax">
+          <text>"ISTPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05fuzmz">
+          <text>"CszAusiliaria"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ln752s">
+          <text>"BD159"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zmt4v0">
+          <text>"RIS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k1lf54">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yulafz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aqbsno">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wvw8cb">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14nszd4">
+          <text>"RIS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0g53f0y">
+        <inputEntry id="UnaryTests_0bc9h0r">
+          <text>"ISTPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1brub15">
+          <text>"CszAusiliaria"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mn9nfg">
+          <text>"BD158"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d16p18">
+          <text>"AUS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1so0wzx">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0msa9mk">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d3zzce">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04ui5rz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16qmhxk">
+          <text>"AUS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1la9ss0">
+        <description></description>
+        <inputEntry id="UnaryTests_1lmvqgy">
+          <text>"ISTPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1px5u2o">
+          <text>"CszAusiliaria"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1au8t69">
+          <text>"BD158"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tk663o">
+          <text>"AUS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mf2jbs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11460oy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_053jd8d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ovecwv">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tktadb">
+          <text>"RIS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1d9irkh">
+        <inputEntry id="UnaryTests_0a9w0oi">
+          <text>"ISTPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mcw7jj">
+          <text>"CszAusiliaria"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13tizg4">
+          <text>"BD158"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0atfnp4">
+          <text>"RIS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wa62wm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kkyreh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_072xruh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vs8m6m">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16fyvu0">
+          <text>"RIS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dmn9t4">
+        <inputEntry id="UnaryTests_076ghqr">
+          <text>"ISTPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0as4oyg">
+          <text>"CszRiserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sis9wr">
+          <text>"BD155u"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s2e2kp">
+          <text>"RIS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a06bmd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19e9yi1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rtuxui">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ngo6u8">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_175u3hn">
+          <text>"RIS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hp9zdo">
+        <inputEntry id="UnaryTests_1o4vn1g">
+          <text>"ISTPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jxjpec">
+          <text>"CszComplemento"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rsijmi">
+          <text>"BD157"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o36603">
+          <text>"CPLCONG"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0twrauv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gk6q5p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_066eu5j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mcyhgs">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gchmya">
+          <text>"CPLCONG"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07b80na">
+        <inputEntry id="UnaryTests_1ucxmsx">
+          <text>"ISTPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10khgvo">
+          <text>"CszRiservaCompl"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1czid0r">
+          <text>"XX001"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v1ibhh">
+          <text>"RISCPL"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1txy5ik">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02qyefx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g402lk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0atfo0q">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tvget2">
+          <text>"RISCPL"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0cuouob">
+        <inputEntry id="UnaryTests_1manimf">
+          <text>"ISTPAR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02ti0jg">
+          <text>"CszCongedoAss"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r0q930">
+          <text>"XX002"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n75t4e">
+          <text>"CONGASS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k24ax0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05bb53y">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hfo3nl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tnrkyo">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0h73m5h">
+          <text>"CONGASS"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="congedoSpettanteDecisionKey">
+        <dc:Bounds height="80" width="180" x="170" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

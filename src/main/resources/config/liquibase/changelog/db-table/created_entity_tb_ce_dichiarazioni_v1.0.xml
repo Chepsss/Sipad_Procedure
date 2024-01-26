@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!--
+        Added the entity TB_CE_DICHIARAZIONI.
+    -->
+    <changeSet id="created_entity_tb_ce_dichiarazioni_v1.0" author="m.kerabandi">
+        <createTable tableName="tb_ce_dichiarazioni">
+            <column name="id" type="bigint" defaultValueSequenceNext="declaration_sequence">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="tp_ce_dichiarazioni_pk"/>
+            </column>
+            <column name="codice" type="varchar(10)">
+                <constraints nullable="false" />
+            </column>
+            <column name="descrizione" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="flag_automatico" type="boolean">
+                <constraints nullable="false" />
+            </column>
+            <column name="cod_tipo" type="varchar(3)">
+                <constraints nullable="false" />
+            </column>
+            <column name="descr_tipo" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column defaultValueComputed="to_date ('0001-01-01','YYYY-MM-DD')" name="data_iniz" remarks="Data inizio validità" type="date">
+                <constraints nullable="false" />
+            </column>
+            <column defaultValueComputed="to_date ('9999-12-31','YYYY-MM-DD')" name="data_fine" remarks="Data fine validità" type="date">
+                <constraints nullable="false" />
+            </column>
+            <column name="cod_ins" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ins" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cod_ult_agg" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ult_agg" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="created_entity_tb_ce_dichiarazioni_v1.0-data" author="m.kerabandi">
+        <loadData
+                  file="config/liquibase/changelog/data/tb_ce_dichiarazioni.csv"
+                  separator=";"
+                  tableName="tb_ce_dichiarazioni"
+                  usePreparedStatements="true"/>
+    </changeSet>
+</databaseChangeLog>

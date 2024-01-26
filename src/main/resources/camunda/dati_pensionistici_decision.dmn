@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="datiPensionisticiDecision" name="Dati Pensionistici Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.8.1">
+  <decision id="datiPensionisticiDecisionKey" name="Dati Pensionistici Decision">
+    <decisionTable id="DecisionTable_05btspa" hitPolicy="COLLECT">
+      <input id="Input_1" label="modCompilazione" camunda:inputVariable="modCompilazione">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_009g7bc">
+          <text>"M","A"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="protAttoPersomil" name="protAttoPersomil" typeRef="string">
+        <outputValues id="UnaryTests_14zrz1o">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_05ebugs" label="anniServizioEff" name="anniServizioEff" typeRef="string">
+        <outputValues id="UnaryTests_1xrfyv1">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0hl0dqt" label="mesiServizioEff" name="mesiServizioEff" typeRef="string">
+        <outputValues id="UnaryTests_0np5ohs">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0tlfm2y" label="giorniServizioEff" name="giorniServizioEff" typeRef="string">
+        <outputValues id="UnaryTests_1vse2yt">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0vocgt8" label="etaDipendente" name="etaDipendente" typeRef="string">
+        <outputValues id="UnaryTests_0ih197c">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0e4zdmo" label="anniAnzContr" name="anniAnzContr" typeRef="string">
+        <outputValues id="UnaryTests_0gmcenj">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1fhqqvk" label="mesiAnzContr" name="mesiAnzContr" typeRef="string">
+        <outputValues id="UnaryTests_1gsj66w">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1ey5819" label="giorniAnzContr" name="giorniAnzContr" typeRef="string">
+        <outputValues id="UnaryTests_0pqv31l">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_049vfim" label="dataAggAnzContr" name="dataAggAnzContr" typeRef="string">
+        <outputValues id="UnaryTests_0gc67ni">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_12ly10l" label="dataMatReqMinimo" name="dataMatReqMinimo" typeRef="string">
+        <outputValues id="UnaryTests_0qca9fa">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0hvbb5t" label="mesiIncrSperanzaV" name="mesiIncrSperanzaV" typeRef="string">
+        <outputValues id="UnaryTests_1tr4kvo">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1li67vy" label="mesiFinMobile" name="mesiFinMobile" typeRef="string">
+        <outputValues id="UnaryTests_0nyapds">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1s7uzwn" label="dataDirittoTratt" name="dataDirittoTratt" typeRef="string">
+        <outputValues id="UnaryTests_0becmo5">
+          <text>"visible","required","readonly"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1gexn9t">
+        <inputEntry id="UnaryTests_1mlb7zt">
+          <text>"M"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15s8qsf">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0to3yfy">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rxy0t6">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gpfolc">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_086yh39">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ly8zsc">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mstw0j">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12ynb1h">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_057ouny">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0235fh3">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f2a9ax">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rn0adi">
+          <text>"visible"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_194omea">
+          <text>"visible"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00g5o3a">
+        <inputEntry id="UnaryTests_16jgk5e">
+          <text>"A"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1peyl2c">
+          <text>"readonly"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10ire3s">
+          <text>"readonly"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_135d2ue">
+          <text>"readonly"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kyna7j">
+          <text>"readonly"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m7zdug">
+          <text>"readonly"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09syuw9">
+          <text>"readonly"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1eyowo7">
+          <text>"readonly"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s5dobp">
+          <text>"readonly"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19x9f3m">
+          <text>"readonly"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k6rk10">
+          <text>"readonly"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04oy7w8">
+          <text>"readonly"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0oxylyl">
+          <text>"readonly"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0a126ll">
+          <text>"readonly"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="datiPensionisticiDecisionKey">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

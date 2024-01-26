@@ -1,0 +1,53 @@
+id;codice;descrizione;flag_automatico;cod_tipo;descr_tipo;data_iniz;data_fine;cod_ins;data_ins;cod_ult_agg;data_ult_agg
+1;C01;La dichiarazione è stata presentata nei termini?;1;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+2;C03;Controllo di idoneità al servizio?;0;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+3;C04;Procedimenti penali/disciplinari in corso?;0;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+4;C05;Acquisisce il diritto alla pensione alla data di cessazione?;1;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+5;C06;Obblighi di servizio vigenti (Ferme obbligatorie e/o volontarie)?;0;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+6;C07;Data della domanda di ausiliaria scivolo fuori dai termini;0;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+7;C08;Requisito dei 5 anni (domanda di scivolo ausiliaria);1;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+8;C09;Tipologia di cessazione non ammissibile;0;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+9;C10;Il dipendente ha un procedimento disciplinare in corso?;0;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+10;C11;Verifica coerenza della data di acquisizione diritto percezione trattamento pensionistico;1;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+11;C12;Controllo limite di età;0;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+12;C13;Requisito minimo di accesso alla pensione;1;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+13;C14;Impedimento alla cessazione per data obblighi di servizio superiore alla data di cessazione;1;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+14;C15;Situazioni ostative di carattere disciplinare o penale;0;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+15;C16;Situazioni ostative di carattere funzionale (impiego) ;0;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+16;C17;Controllo sul quinquennio mobile: data superamento maggiore data decorrenza cessazione ;0;CTL;CONTROLLO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+17;D01;Disponibilità al richiamo in servizio;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+18;D02;"Dichiara di voler cessare dal servizio permanente, consapevole che conseguirà
+il diritto al trattamento pensionistico successivamente ai sensi della normativa vigente
+";0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+19;D03;Istanza di aggravamento in corso?;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+20;D04;Dichiara di voler cessare dal servizio permanente, consapevole che potrebbe conseguire il diritto al trattamento pensionistico successivamente a causa della tardiva presentazione dell’istanza;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+21;D05;Dipendenza da causa di Servizio;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+22;D06;Dipendenza da causa di Servizio in corso;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+23;D07;E' stata formulata la prescritta ammonizione? ;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+24;D08;Dichiara di voler permanere in servizio fino al conseguimento del diritto al trattamento pensionistico;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+25;D09;Il dipendente dichiara di essere consapevole del mancato rispetto del termine previsto per la presentazione della dichiarazione di rinuncia all’ausiliaria, il trattamento pensionistico potrà essere erogato con ritardo;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+26;D10;Rinuncia al passaggio in ausiliaria;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+27;D11;Il dipendente ha ritirato l'istanza?;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+28;D12;Il dipendente è deceduto?;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+29;D13;Il dipendente ha un altro procedimento di cessazione in corso?;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+30;D14;Ha impugnato il giudizio medico legale di prima istanza?;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+31;D15;Data ultimo documento caratteristico;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+32;D16;Dichiara di voler cessare dal servizio permanente consapevole di non aver maturato il diritto al trattamento pensionistico anticipato all'atto della cessazione dal servizio;0;DIC;DICHIARAZIONE;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+33;P01;Sono stati formulati Pareri Gerarchici?;0;PGE;PARERE GERARCHICO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+34;P02;Parere del Consiglio dei Ministri;0;PGE;PARERE GERARCHICO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+35;P03;Parere della competente Commissione di avanzamento;0;PGE;PARERE GERARCHICO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+36;P04;Determinazione del Ministro;0;PGE;PARERE GERARCHICO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+37;P05;Esito Parere Ragioneria;0;PGE;PARERE GERARCHICO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+38;T01;Idoneità al transito all'impiego civile;0;TRA;TRANSITO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+39;T02;Ha presentato dichiarazione di rinuncia;0;TRA;TRANSITO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+40;T03;Ha firmato il contratto;0;TRA;TRANSITO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+41;T04;Ha presentato istanza di transito;0;TRA;TRANSITO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+42;T05;Non autorizzato al transito;0;TRA;TRANSITO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+43;T06;È stata notificata la non autorizzazione;0;TRA;TRANSITO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+44;T07;Non firma per motivi di salute;0;TRA;TRANSITO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+45;T08;Controllo del superamento della durata massima del periodo 266/99;0;TRA;TRANSITO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+46;V01;Prospetto contributivo presente?;0;VCD;VERIFICA DOCUMENTO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+47;V02;Copia dello stato di servizio presente?;0;VCD;VERIFICA DOCUMENTO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+48;V03;Attestazione presente Comando/Ente che l’interessato non ha provvedimenti di infermità si DCS presente?;0;VCD;VERIFICA DOCUMENTO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+49;V04;Documentazione caratteristica aggiornata?;0;VCD;VERIFICA DOCUMENTO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13
+50;V05;Verbale Commissione medica ospedaliera?;0;VCD;VERIFICA DOCUMENTO;0001-01-01;9999-01-01;INIT;2022-05-13;INIT;2022-05-13

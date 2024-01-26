@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+    <!--
+        Added the entity TP_CENOR_NORMATIVA.
+    -->
+    <changeSet id="created_entity_TP_CENOR_NORMATIVA_v1.0" author="m.kerabandi">
+
+        <createTable tableName="TP_CENOR_NORMATIVA">
+            <column name="CENOR_SEQ_PK" remarks="Codifica dell'Articolo del Codice di Ordinamento Militare (O.M.)" type="NUMBER(12, 0)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="TP_CENOR_NORMATIVA_PK"/>
+            </column>
+            <column name="CENOR_DESCR_NORMATIVA" remarks="Descrizione dell'articolo del Codice O.M." type="VARCHAR2(100 BYTE)"/>
+            <column name="CENOR_NOTA_NORMATIVA" remarks="Nota contenente i riferimenti alla normativa da riportare" type="VARCHAR2(200 BYTE)"/>
+            <column defaultValueComputed="TO_DATE ('0001-01-01','YYYY-MM-DD')" name="CENOR_DATA_INIZ" remarks="Data di inizio validità della Normativa (data decorrenza)" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="TO_DATE ('9999-12-31','YYYY-MM-DD')" name="CENOR_DATA_FINE" remarks="Data fine validità della Normativa (data scadenza)." type="date"/>
+            <column defaultValueComputed="Current_timestamp" name="CENOR_DATA_INS" remarks="Data di inserimento del record" type="TIMESTAMP(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="Current_timestamp" name="CENOR_DATA_ULT_AGG" remarks="Data di ultimo aggrionamento del record." type="TIMESTAMP(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CENOR_COD_ULT_AGG" remarks="Codice dell'utente/funzione che ha aggrionato il record." type="VARCHAR2(50 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="insert_TP_CENOR_NORMATIVA_v1.0-data" author="m.kerabandi">
+        <loadData
+                file="config/liquibase/changelog/data/tp_cenor_normativa.csv"
+                separator=";"
+                tableName="TP_CENOR_NORMATIVA"
+                usePreparedStatements="true"/>
+    </changeSet>
+
+</databaseChangeLog>

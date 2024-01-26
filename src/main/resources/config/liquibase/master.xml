@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!-- sequenze -->
+    <include file="config/liquibase/changelog/sequence/procedure_sequence.xml"/>
+    <include file="config/liquibase/changelog/sequence/procedure_hist_sequence.xml"/>
+    <include file="config/liquibase/changelog/sequence/state_sequence.xml"/>
+    <include file="config/liquibase/changelog/sequence/fase_sequence.xml"/>
+    <include file="config/liquibase/changelog/sequence/declaration_sequence.xml"/>
+    <include file="config/liquibase/changelog/sequence/declaration_proc_sequence.xml"/>
+    <include file="config/liquibase/changelog/sequence/parere_rag_proc_sequence.xml"/>
+    <include file="config/liquibase/changelog/sequence/procedure_assegnazioni_sequence.xml"/>
+
+    <!-- Tables -->
+    <include file="config/liquibase/changelog/db-table/created_entity_Procedure_v1.0.xml"/>
+    <include file="config/liquibase/changelog/db-table/created_entity_ProcedureHistory_v1.0.xml"/>
+    <include file="config/liquibase/changelog/db-table/created_entity_StateProcedure_v1.0.xml"/>
+    <include file="config/liquibase/changelog/db-table/created_entity_FaseProcedure_v1.0.xml"/>
+    <include file="config/liquibase/changelog/db-table/created_entity_tb_ce_dichiarazioni_v1.0.xml"/>
+    <include file="config/liquibase/changelog/db-table/created_entity_tb_ce_dich_proc_v1.0.xml"/>
+    <include file="config/liquibase/changelog/db-table/created_entity_tb_ce_proc_transito_v1.0.xml"/>
+    <include file="config/liquibase/changelog/db-table/created_entity_tb_ce_proc_pensione_v1.0.xml"/>
+    <include file="config/liquibase/changelog/db-table/created_entity_tb_ce_proc_parere_rag_v1.0.xml"/>
+    <include file="config/liquibase/changelog/db-table/created_entity_TP_CENOR_NORMATIVA_v1.0.xml"/>
+    <include file="config/liquibase/changelog/db-table/created_entity_TP_CETIP_CESSAZIONE_v1.0.xml"/>
+    <include file="config/liquibase/changelog/db-table/created_entity_TP_CECON_CATEG_CONG_v1.0.xml"/>
+    <include file="config/liquibase/changelog/db-table/created_entity_TP_CEGML_GIUD_MED_LEGALE_v1.0.xml"/>
+    <include file="config/liquibase/changelog/db-table/created_entity_tb_ce_proc_assegnazioni_v1.0.xml"/>
+
+    <!-- Foreign Key -->
+    <include file="config/liquibase/changelog/constraint/created_entity_constraints_Procedure_v1.0.xml"/>
+    <include file="config/liquibase/changelog/constraint/created_entity_constraints_ProcedureHistory_v1.0.xml"/>
+    <include file="config/liquibase/changelog/constraint/created_entity_constraints_state_v1.0.xml"/>
+    <include file="config/liquibase/changelog/constraint/constraints_TP_CETIP_CESSAZIONE_v1.0.xml"/>
+    <include file="config/liquibase/changelog/constraint/constraints_TP_CECON_CATEG_CONG_v1.0.xml"/>
+    <include file="config/liquibase/changelog/constraint/constraints_tb_ce_proc_assegnazioni_v1.0.xml"/>
+
+</databaseChangeLog>

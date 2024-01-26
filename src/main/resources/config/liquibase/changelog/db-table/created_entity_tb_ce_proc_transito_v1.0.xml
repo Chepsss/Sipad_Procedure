@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!--
+        Added the entity TB_CE_PROC_TRANSITO.
+    -->
+    <changeSet id="created_entity_tb_ce_proc_transito_v1.0" author="m.kerabandi">
+        <createTable tableName="tb_ce_proc_transito">
+            <column name="id_proc" type="bigint">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="tb_trans_pk"/>
+            </column>
+            <column name="flag_idoneo_transito" remarks="L’utente può inserire il suddetto controllo per l’interessato" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="flag_presentata_istanza" remarks="L’utente può inserire il suddetto controllo per l’interessato" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_istanza" remarks="Data di domanda di transito all’impiego civile" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="prot_istanza" remarks="Numero di protocollo della domanda di transito all’impiego civile all’Ente/ Comando/ CMO n.ro" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_prot_istanza" remarks="Data del suddetto protocollo" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="prot_domanda_persomil" remarks="Numero di protocollo della domanda di transito all’impiego civile PEC PERSOMIL" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_pr_dom_persomil" remarks="Data del suddetto protocollo" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="flag_pres_rinuncia" remarks="L’utente può inserire il suddetto controllo per l’interessato" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_pres_rinuncia" remarks="Data della dichiarazione di rinuncia al transito da parte dell’interessato" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="prot_rinuncia_cmd" remarks="Numero di protocollo della dichiarazione di rinuncia al transito all’impiego civile all’Ente/ Comando/ CMO n.ro" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_rinuncia_cmd" remarks="Data del suddetto protocollo" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="prot_rinuncia_persomil" remarks="Numero di protocollo della dichiarazione di rinuncia al transito all’impiego civile PEC PERSOMIL" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_rinuncia_persomil" remarks="Data del suddetto protocollo" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="flag_noautoriz" remarks="L’utente può inserire il suddetto controllo per l’interessato" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_noaut_persociv" remarks="Data della comunicazione dell’autorizzazione o non autorizzazione al transito da parte di Persociv" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="prot_noaut_persociv" remarks="Numero di protocollo dell’autorizzazione o non autorizzazione al transito all’impiego civile da parte di Persociv" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_pr_noaut_persociv" remarks="Data del suddetto protocollo" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="prot_noaut_persomil" remarks="Numero di protocollo dell’autorizzazione o non autorizzazione al transito all’impiego civile PEC PERSOMIL" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_pr_noaut_persomil" remarks="Data del suddetto protocollo" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_notifica" remarks="Data di notifica all’amministrato dell’autorizzazione o non autorizzazione al transito da parte di Persociv" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="flag_firma_contratto" remarks="L’utente può inserire il suddetto controllo per l’interessato" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_firma_contr" remarks="Data di firma o non firma del contratto di transito all’impiego civile" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="prot_firma_persociv" remarks="Numero di protocollo della firma o non firma del contratto di transito all’impiego civile Persociv" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_pr_firma_persociv" remarks="Data del suddetto protocollo" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="prot_firma_persomil" remarks="Numero di protocollo della firma o non firma del contratto di transito all’impiego civile PEC PERSOMIL" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_pr_firma_persomil" remarks="Data del suddetto protocollo" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="flag_nonfirma_salute" remarks="L’utente può inserire il suddetto controllo per l’interessato" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_giorno_151" remarks="Data del 151° giorno dal primo giorno di aspettativa 266/99, calcolata in automatico dal sistema (la 266/99 verrà sviluppata in seguito e integrata all’interno di questo documento)" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="contr_data_max_266" remarks="Riporta l’esito del controllo del superamento dei 150 giorni del periodo di aspettativa 266/99 (la 266/99 verrà sviluppata in seguito e integrata all’interno di questo documento)" type="varchar2(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="num_giorni_erogati_266" remarks="Numero di giorni erogati dal primo giorno di aspettativa 266/99 (la 266/99 verrà sviluppata in seguito e integrata all’interno di questo documento)" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="cod_ins" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ins" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cod_ult_agg" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ult_agg" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="constraints_tb_ce_proc_transito_v1.0" author="m.kerabandi">
+        <addForeignKeyConstraint baseColumnNames="id_proc"
+                                 baseTableName="tb_ce_proc_transito"
+                                 constraintName="fk_proc_transito__procedura"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_ce_procedura"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+    <!--
+        Added the entity TP_CEGML_GIUD_MED_LEGALE.
+    -->
+    <changeSet id="created_entity_TP_CEGML_GIUD_MED_LEGALE_v1.0" author="m.kerabandi">
+        <createTable tableName="TP_CEGML_GIUD_MED_LEGALE">
+            <column name="CEGML_COD_PK" remarks="Codice del giudizio medico legale" type="VARCHAR2(12 BYTE)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="TP_CEGML_GIUD_MED_LEGALE_PK"/>
+            </column>
+            <column name="CEGML_DESCRIZ_ABBR_GML" remarks="Descrizione abbreviata del gml" type="VARCHAR2(70 BYTE)"/>
+            <column name="CEGML_DESCRIZIONE_GML" remarks="Descrizione estesa del gml" type="VARCHAR2(350 BYTE)"/>
+            <column defaultValueComputed="TO_DATE ('0001-01-01','YYYY-MM-DD')" name="CEGML_DATA_INIZ" remarks="Data inizio validità del gml" type="date"/>
+            <column defaultValueComputed="TO_DATE ('9999-12-31','YYYY-MM-DD')" name="CEGML_DATA_FINE" remarks="Data fine validità del gml)" type="date"/>
+            <column name="CEGML_COD_ASP" remarks="Codice Aspettativa (461,266)" type="VARCHAR2(3 BYTE)"/>
+            <column name="CEGML_NUM_ISTANZA" remarks="Numero istanza (1,2)" type="VARCHAR2(2 BYTE)"/>
+            <column defaultValueComputed="Current_timestamp" name="CEGML_DATA_INS" remarks="Data inserimento del record" type="TIMESTAMP(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="Current_timestamp" name="CEGML_DATA_ULT_AGG" remarks="Data ultimo aggiornamento del record" type="TIMESTAMP(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="LOAD INIT" name="CEGML_COD_ULT_AGG" remarks="Codice dell'utente/funzione che ha aggiornato il record" type="VARCHAR2(50 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueBoolean="false" name="LISTA_GML1" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueBoolean="false" name="LISTA_GML2" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="insert_TP_CEGML_GIUD_MED_LEGALE_v1.0-data" author="m.kerabandi">
+        <loadData
+                file="config/liquibase/changelog/data/tp_cegml_giud_med_legale.csv"
+                separator=";"
+                tableName="TP_CEGML_GIUD_MED_LEGALE"
+                usePreparedStatements="true"/>
+    </changeSet>
+</databaseChangeLog>

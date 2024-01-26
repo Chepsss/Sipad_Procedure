@@ -1,0 +1,13 @@
+body {
+  font-size: 11pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+.table {
+  margin: 0 !important;
+  width: 100%;
+  height: auto;
+}

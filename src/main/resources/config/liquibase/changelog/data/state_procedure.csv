@@ -1,0 +1,12 @@
+id;code_stato;search_code;desc_stato;code_stato_centrale;ord_stato;id_fase_procedura;desc_stato_centrale
+1;BOZZA;BOZZA;Bozza;BOZZA;1;1;Bozza
+2;LAVORAZIONE;LAVORAZIONE;In lavorazione;IN_LAVORAZIONE;2;2;In lavorazione
+3;APPR_DOC;APPR_DOC;Approvazione documenti;APPR_DOCUMENTI;3;2;In approvazione documenti
+4;APPR_FIRMA;APPR_FIRMA;Approvazione firma;APPR_FIRMA;4;3;In approvazione firma
+5;CHIUSURA_PA_DINIEGO;CHIUSURA_PA;Chiusura anticipata PA;APPR_CHIUSURA_PA;5;3;In approvazione chiusura PA
+6;CHIUSURA_PA_DECRETO;CHIUSURA_PA;Chiusura PA;APPR_CHIUSURA_PA;6;3;In approvazione chiusura PA
+7;CHIUSURA_PA_RDP;CHIUSURA_PA;Chiusura anticipata PA RDP;APPR_CHIUSURA_PA;7;3;In approvazione chiusura PA
+8;FIRMA;FIRMA;In firma;IN_FIRMA;8;4;In firma
+9;IN_CHIUSURA;IN_CHIUSURA;In chiusura;IN_CHIUSURA;9;5;In chiusura
+10;CHIUSO;CHIUSO;Chiuso;CHIUSO;10;5;Chiuso
+11;CHIUSO_ANT;CHIUSO;Chiuso anticipatamente;CHIUSO_ANTICIPATAMENTE;11;5;Chiuso anticipatamente

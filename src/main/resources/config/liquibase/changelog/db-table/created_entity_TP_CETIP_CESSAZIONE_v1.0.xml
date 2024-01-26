@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+    <!--
+        Added the entity TP_CETIP_CESSAZIONE.
+    -->
+    <changeSet id="created_entity_TP_CETIP_CESSAZIONE_v1.0" author="m.kerabandi">
+
+        <createTable tableName="TP_CETIP_CESSAZIONE">
+            <column name="CETIP_ID_PK" remarks="Identificativo tipo di cessazione" type="NUMBER(4, 0)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="TP_CETIP_CESSAZIONE_PK"/>
+            </column>
+            <column name="CETIP_PRTPO_SEQ_PK" remarks="Riferimento al tipo di procedimento" type="NUMBER(12, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CETIP_MOTIVO_CESSAZIONE" remarks="Descrizione del motivo cessazione" type="VARCHAR2(200 BYTE)"/>
+            <column name="CETIP_SGCTP_SEQ_PK" remarks="Riferimento alla categoria di personale a cui applicare la cessazione" type="NUMBER(12, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CETIP_SGRUO_SEQ_PK" remarks="Riferimento al ruolo del personale a cui applicare la cessazione" type="VARCHAR2(12 BYTE)"/>
+            <column name="CETIP_STFAA_SEQ_PK" remarks="Riferimento alla FF.AA. del personale a cui è applicata la cessazione" type="VARCHAR2(12 BYTE)"/>
+            <column name="CETIP_CENOR_SEQ_PK" remarks="Riferimento all'articolo del codice di ordinamento militare" type="NUMBER(12, 0)"/>
+            <column name="CETIP_SGTPO_SEQ_PK" remarks="Riferimento alle posizione di servizio" type="VARCHAR2(20 BYTE)"/>
+            <column defaultValueComputed="Current_timestamp" name="CETIP_DATA_INS" remarks="Data inserimento del record" type="TIMESTAMP(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="Current_timestamp" name="CETIP_DATA_ULT_AGG" remarks="Data ultimo aggiornamento" type="TIMESTAMP(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CETIP_COD_ULT_AGG" remarks="Codice ultimo utente in aggiornamento" type="VARCHAR2(50 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CETIP_ACR_TIV" remarks="Descrizione breve indicata nella tabella tipologica TT51" type="VARCHAR2(100 BYTE)"/>
+            <column name="ID_MOTIVO" type="VARCHAR2(100)" />
+        </createTable>
+    </changeSet>
+
+    <changeSet id="insert_TP_CETIP_CESSAZIONE_v1.0-data" author="m.kerabandi">
+        <loadData
+                file="config/liquibase/changelog/data/tp_cetip_cessazione.csv"
+                separator=";"
+                tableName="TP_CETIP_CESSAZIONE"
+                usePreparedStatements="true"/>
+    </changeSet>
+</databaseChangeLog>

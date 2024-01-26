@@ -1,0 +1,2206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="dichiarazioniDecision" name="Dichiarazioni Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.8.1">
+  <decision id="dichiarazioniDecisionKey" name="Dichiarazioni Decision">
+    <decisionTable id="DecisionTable_0hkkjwp">
+      <input id="Input_1" label="idTipoProcedimento" camunda:inputVariable="idTipoProcedimento">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1ko6l92">
+          <text>"CszAusiliaria","CszRiserva","CszComplemento","CszRiservaCompl","CszCongedoAss","CszLimitiEtà","CszNonIdFunzGrad","CszScarsoRend","CszDAutorità","CszInfermità"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_13t8tay" label="fase" camunda:inputVariable="fase">
+        <inputExpression id="LiteralExpression_1hivk8r" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_00lpl70">
+          <text>"AVVIO","ISTRUTTORIA","CHIUSURA","APPROVAZIONE","FIRMA"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="D01" name="D01" typeRef="integer" biodi:width="192" />
+      <output id="OutputClause_1jfvaxs" label="D02" name="D02" typeRef="integer" />
+      <output id="OutputClause_1nu25n5" label="D03" name="D03" typeRef="integer" />
+      <output id="OutputClause_0gwphw0" label="D04" name="D04" typeRef="integer" />
+      <output id="OutputClause_1fc7p7t" label="D05" name="D05" typeRef="integer" />
+      <output id="OutputClause_1ekp8ie" label="D06" name="D06" typeRef="integer" />
+      <output id="OutputClause_0xzkkkp" label="D07" name="D07" typeRef="integer" />
+      <output id="OutputClause_01q0p8o" label="D08" name="D08" typeRef="integer" />
+      <output id="OutputClause_0xow0mv" label="D09" name="D09" typeRef="integer" />
+      <output id="OutputClause_0yj84yj" label="D11" name="D11" typeRef="integer" />
+      <output id="OutputClause_11w0kok" label="D15" name="D15" typeRef="integer" />
+      <output id="OutputClause_13lwibb" label="D16" name="D16" typeRef="integer" />
+      <output id="OutputClause_0b6oh7q" label="P01" name="P01" typeRef="integer" biodi:width="192" />
+      <output id="OutputClause_0wur6q9" label="P02" name="P02" typeRef="integer" />
+      <output id="OutputClause_0a2852u" label="P03" name="P03" typeRef="integer" />
+      <output id="OutputClause_129q60n" label="P04" name="P04" typeRef="integer" />
+      <output id="OutputClause_006twvi" label="V01" name="V01" typeRef="integer" />
+      <output id="OutputClause_1wtgf8k" label="V02" name="V02" typeRef="integer" />
+      <output id="OutputClause_0kk20g1" label="V03" name="V03" typeRef="integer" />
+      <output id="OutputClause_1cl5ou0" label="V04" name="V04" typeRef="integer" />
+      <output id="OutputClause_0ducrt6" label="V05" name="V05" typeRef="integer" />
+      <output id="OutputClause_1yw8in1" label="C01" name="C01" typeRef="integer" />
+      <output id="OutputClause_0v0hkmr" label="C03" name="C03" typeRef="integer" />
+      <output id="OutputClause_1dvzwxj" label="C04" name="C04" typeRef="integer" />
+      <output id="OutputClause_15sg5hk" label="C05" name="C05" typeRef="integer" />
+      <output id="OutputClause_0fz5n1f" label="C06" name="C06" typeRef="integer" />
+      <output id="OutputClause_07m3van" label="C08" name="C08" typeRef="integer" />
+      <output id="OutputClause_0bvt32p" label="C11" name="C11" typeRef="integer" />
+      <output id="OutputClause_0wf0y7h" label="C13" name="C13" typeRef="integer" />
+      <output id="OutputClause_0mnpdv8" label="C14" name="C14" typeRef="integer" />
+      <output id="OutputClause_0bfb0td" label="C15" name="C15" typeRef="integer" />
+      <output id="OutputClause_0yjbf9e" label="C16" name="C16" typeRef="integer" />
+      <output id="OutputClause_0k7atnh" label="numVerbCommAv" name="numVerbCommAv" typeRef="integer" />
+      <rule id="DecisionRule_1lpi3le">
+        <inputEntry id="UnaryTests_0jyu39h">
+          <text>"CszAusiliaria"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s6tv5f">
+          <text>"AVVIO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fvbkjr">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13as9zd">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00jvbvj">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0flgujz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09qicnc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m5zau2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01tw4ym">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m0pu1b">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b9c5lv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hcy3zo">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18vskby">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w4gcw1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kjsnrz">
+          <text>4</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qpca2k">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fmgpx9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fukphh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p9t8g0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qklhdx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mhu9as">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hzveov">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tb7slc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_104z2do">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x6f6y2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vl0kvl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00c8298">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0w4t42z">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06bx70x">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17hsq6o">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rfmgca">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18c2b4j">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pryze8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0quv200">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00dcky9">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_167dly3">
+        <inputEntry id="UnaryTests_0ubu6u9">
+          <text>"CszAusiliaria"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kftwn9">
+          <text>"ISTRUTTORIA","CHIUSURA","APPROVAZIONE","FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19hn97b">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0im0c8k">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06ca8n0">
+          <text>4</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hou123">
+          <text>6</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w2am80">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15ghet7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_060e16s">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xq3pll">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13300ou">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_091k3t1">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k7y2tn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1egnb3j">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1u1s4hg">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mf9vza">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tj84qr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0skewcf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03pk0bi">
+          <text>7</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v69vo9">
+          <text>8</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wb2mfu">
+          <text>9</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13uelcx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08bufof">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kw0b9y">
+          <text>17</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1instvx">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sf1jcp">
+          <text>11</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l3b3gc">
+          <text>16</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0in87zw">
+          <text>12</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1q759e0">
+          <text>20</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l2pgkq">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18t4nxt">
+          <text>19</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vw2zua">
+          <text>18</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14dpexp">
+          <text>13</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kvpi6w">
+          <text>14</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1e9z7eo">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1n63clh">
+        <inputEntry id="UnaryTests_0bk3u3o">
+          <text>"CszRiserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jvyxwx">
+          <text>"AVVIO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ntzl2t">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01hkc0d">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0b872ev">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xlj4li">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rahr4d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0go35sn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02f5m11">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1podvn3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i159y2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12ghq6w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zqkrll">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dvyw8c">
+          <text>4</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07350t4">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01ugfaw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0h8ti13">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03zfpy5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0onnbt0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f56sao">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s21jyf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dxql9r">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0un2zbu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_102tjch">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cp669v">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pi15cf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1y3ompa">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0aatvge">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1846rxx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u7n0ef">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bhy6f5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m97x7k">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h6dx99">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hyrwkr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pmclna">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1gogt10">
+        <inputEntry id="UnaryTests_0rspljd">
+          <text>"CszRiserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m0udoj">
+          <text>"ISTRUTTORIA","CHIUSURA","APPROVAZIONE","FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0t0qx2f">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07c7v6f">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0drohrd">
+          <text>9</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ccjco9">
+          <text>4</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nuog4s">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sruebc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wjmoqw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_106jurp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0r8cp4g">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mfjh2q">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1drdmla">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ul6hzy">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11vf2vd">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14cxpp5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ee42af">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wtjnpe">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mlpb2y">
+          <text>6</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xbm9b3">
+          <text>7</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16a1rzo">
+          <text>8</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qm9ykv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14gsmpn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pyfkpz">
+          <text>17</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qep5r2">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1at9jhr">
+          <text>11</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w6fcas">
+          <text>16</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07h1bib">
+          <text>12</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04qjyrq">
+          <text>20</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1g0opsd">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h95i1w">
+          <text>19</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ukwah7">
+          <text>18</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nj66de">
+          <text>13</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xcmoit">
+          <text>14</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13comzc">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rxtg5z">
+        <inputEntry id="UnaryTests_06l77y6">
+          <text>"CszComplemento"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g37ky5">
+          <text>"AVVIO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1d4fn50">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0drujci">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_186nkrt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m1ts0r">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07og1ez">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05rset4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wlp2an">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07qv6ra">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10sdyc8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15ofpzy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jqrzyn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10ynixi">
+          <text>4</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p6ji6y">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_137gxty">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1196s2o">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p1rtqm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tuti35">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qz7s1m">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hy2dz9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tgzrrd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0b6z8b8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kfbest">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03viwzu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cgmlpl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pv7uvs">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06g88af">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16sqa35">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s2a5kp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xoc6fm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qego6z">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12hajye">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qzlrjc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19uleje">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p51qog">
+        <inputEntry id="UnaryTests_06rcalr">
+          <text>"CszComplemento"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qs2qqu">
+          <text>"ISTRUTTORIA","CHIUSURA","APPROVAZIONE","FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10xpydc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xg81v8">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ahyhbg">
+          <text>9</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ulcuqh">
+          <text>4</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_059rrjv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d775al">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ekigv3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_166zytn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0w3lc5o">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gptvgm">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0obl7yd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1iv9834">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01edvze">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p7jvil">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15zn6c1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_007mjnb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kgq94s">
+          <text>6</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09m9fz5">
+          <text>7</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nw5nvv">
+          <text>8</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kfd5zc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xkxycz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0212pxa">
+          <text>17</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mw9dsh">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kye2mg">
+          <text>11</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0q1yywg">
+          <text>16</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yclbuq">
+          <text>12</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17bql22">
+          <text>20</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jkuo2e">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yenav8">
+          <text>19</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p6i8nj">
+          <text>18</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sa37xs">
+          <text>13</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nmu1rw">
+          <text>14</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k8h4is">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1lwh1tj">
+        <inputEntry id="UnaryTests_04hy2qr">
+          <text>"CszRiservaCompl"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dpleiq">
+          <text>"AVVIO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0k8fvmx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qw4myq">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1y4d424">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11r9wol">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07uo9aw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qzlfyh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11e7xul">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03a3s37">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kigpz8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13z3c37">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ouhzrc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ik4qh9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kcewaz">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nu1zel">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uai9wt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sa5rjd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03zgqke">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ji4o4x">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s77pvt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lxzdwx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0a3apat">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nvbh8b">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_099l3uq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kvjrt9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d3laim">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0udwwiy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lw24kn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0scbuqh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zc2brk">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1acr6y7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1343qg7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0y6wvig">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0al6aon">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1y0ra50">
+        <inputEntry id="UnaryTests_1k3om7g">
+          <text>"CszRiservaCompl"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mumbjd">
+          <text>"ISTRUTTORIA","CHIUSURA","APPROVAZIONE","FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05uemn5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16ch36k">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fc60uc">
+          <text>8</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07devdi">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tkhswf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tmkh5x">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mhg4ae">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1huxtjz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kevlfq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fsvacz">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vghbyn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07a3gb2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uij3qx">
+          <text>4</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1um5880">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19wy4s1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dhy2xs">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18ucrfc">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gl9anv">
+          <text>6</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yamr13">
+          <text>7</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_099j0c5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gbxjhn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vl9os4">
+          <text>16</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wfp5qq">
+          <text>9</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yuqfqp">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jay72v">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fbdg1t">
+          <text>11</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sr7i2r">
+          <text>19</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ic468r">
+          <text>14</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nqepcw">
+          <text>18</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0shzia4">
+          <text>17</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l959oy">
+          <text>12</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06fw1jy">
+          <text>13</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qghu3l">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ta5cbm">
+        <inputEntry id="UnaryTests_0wmkmp8">
+          <text>"CszCongedoAss"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kabv1n">
+          <text>"AVVIO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1brf8ik">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02ua1fs">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1q3gb31">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l45l7e">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fq4bjj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dipdj4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12j5tp9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08obbjj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1az7kfg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02gdujl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14uyglu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j3qjsw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f6xwiz">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qv78i8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0st4j5x">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0edtrm0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17fdkhw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x2wcf7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16p5vbz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vlpjtx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g8pkn6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01oa0or">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hug5xn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gj1heq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pybxmy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ukecmq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ld9tpe">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nm8jyc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kxn0rp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_014vsvl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b8qbla">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g2mvgc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kzmh9r">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hbsupm">
+        <inputEntry id="UnaryTests_13xsb14">
+          <text>"CszCongedoAss"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1f54cp1">
+          <text>"ISTRUTTORIA","CHIUSURA","APPROVAZIONE","FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1az4ibf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j2kuz6">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w62lxz">
+          <text>8</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z7l9r0">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12c1s19">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1iqzmko">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1sd0awx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_148vbmd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qjs1qd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i5onup">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0akinww">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1evnyix">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xq20i5">
+          <text>4</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1n1yejo">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1t0pirn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fr0wb5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0go9ywt">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uiwuym">
+          <text>6</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19kh46r">
+          <text>7</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vdr690">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j2coio">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hlp2bb">
+          <text>16</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b6m2dq">
+          <text>9</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g3k4bd">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n984dy">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vde1so">
+          <text>11</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pf7x97">
+          <text>19</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jxk57t">
+          <text>14</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0atb75x">
+          <text>18</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bdjnud">
+          <text>17</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04d4w8f">
+          <text>12</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p4fwgo">
+          <text>13</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06yiw63">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13xmydy">
+        <inputEntry id="UnaryTests_0w0da21">
+          <text>"CszLimitiEtà"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cxfxgn">
+          <text>"AVVIO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1bn9gys">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rkatqp">
+          <text>4</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g738m2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nf3538">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lhjtx5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vj2d6r">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16grk6i">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vh67gf">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09tsuuh">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i3bopy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ya9mw9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dhjla8">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19x6e3m">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0auacxz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15s4l1j">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nzxz4o">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zdwbwa">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v4qkuc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pa60kw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wee7xx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00tls8j">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m7jkcq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wczg1k">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kea19p">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ieiih3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nvnqhz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wtcsnd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nd2gwg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uqnwkl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jnsm31">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dvq6h5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1r83wu8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0013hcr">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_02kstcf">
+        <inputEntry id="UnaryTests_0i39ffp">
+          <text>"CszLimitiEtà"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1of9s8q">
+          <text>"ISTRUTTORIA","CHIUSURA","APPROVAZIONE","FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cjjgdn">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1djikrj">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04p1v3z">
+          <text>9</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pjgt71">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b2vs1p">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e1rtis">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_048d6lj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1moyz7t">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_038nryy">
+          <text>4</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_182paye">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xo518n">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dw5tcd">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1taddmv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hiidkw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_068otnh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p2zceu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wc6aaa">
+          <text>6</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i5a96g">
+          <text>7</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16tg8lh">
+          <text>8</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f9qsla">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06fm6zk">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17khwwf">
+          <text>14</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xhuycd">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0egspxc">
+          <text>11</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f98f6g">
+          <text>13</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pg5jen">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ndgjlx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cyzrjm">
+          <text>12</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05e5plk">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mo25ws">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pel6e1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11k9suw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0egn9t4">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hw44uc">
+        <inputEntry id="UnaryTests_0h0l3ld">
+          <text>"CszNonIdFunzGrad"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08kipft">
+          <text>"AVVIO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1159bb7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dw14j6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hct76x">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nqx7kt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fgia43">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qndwrg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hxy8d0">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mqzx7m">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gahb9a">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xs216l">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bgeipo">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_108b86l">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03ruzd4">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cgz84h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0eqcp06">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18gtrrp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jbguzm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11vg2w8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04fgnwp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xcvrdy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c8ywt3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wg5z2w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0h05mjl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01nqi0y">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ju4kb5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_018csro">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mb1m4w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14r5pwn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0epzn8n">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03lzjp6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gcq74b">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1a3ao06">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19m9mvz">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qzcgtb">
+        <description></description>
+        <inputEntry id="UnaryTests_0ydt034">
+          <text>"CszNonIdFunzGrad"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n5iylr">
+          <text>"ISTRUTTORIA","CHIUSURA","APPROVAZIONE","FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14gzp1z">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wh1v37">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0r7e0in">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0t7qjhx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1y46ffi">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1eabzsu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ahi9sg">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bdna2w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g69pfg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k8dle7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qovz9o">
+          <text>12</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10nkdxu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fhfwb1">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d5dgne">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cfghe4">
+          <text>6</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15geqoi">
+          <text>8</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0htbmxd">
+          <text>11</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_183yv87">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10w095w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11ebvvt">
+          <text>4</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i6kvlm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vpb449">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1amw2ru">
+          <text>9</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rxo9lz">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gkpmry">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n5rfwb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uojmf7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04y1y93">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_164nadu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1u2lwd9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16uwcm8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05j0ai8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cvp8n0">
+          <text>7</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06vgp61">
+        <inputEntry id="UnaryTests_0z29vwa">
+          <text>"CszScarsoRend"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02iec81">
+          <text>"AVVIO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1sjpdcx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09hl05q">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00jjjqv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_061kcek">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z01tz0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18rg22n">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09b1d89">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02bcrrw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fs595m">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10aq1dg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0smo0ek">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08jzjr4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0v26fxe">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0khqeei">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dzwu4w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s3f5d1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m2uehr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15747wp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yz3xtd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rdbij2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wn88vm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f4hy2n">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19ut5ca">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p7rrck">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1olsaoq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rat6o2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0oo9pl0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13nco4x">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11y347o">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08vyikr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z7ftar">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ilonck">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v0veid">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qnqvm3">
+        <description></description>
+        <inputEntry id="UnaryTests_17wnlau">
+          <text>"CszScarsoRend"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11ow6h0">
+          <text>"ISTRUTTORIA","CHIUSURA","APPROVAZIONE","FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1bosd6l">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0odbg8r">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10w063p">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tcyfkh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1soj8lz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fe3y4w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wmd300">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12jwebw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l12svf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1q6is9w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_102q1ka">
+          <text>12</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lxu5rc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18lpc2v">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0swiog9">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02z97mb">
+          <text>6</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zrgo8c">
+          <text>8</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0eyenw5">
+          <text>11</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12xdw73">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hhgzdl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jppvjq">
+          <text>4</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0702jnb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p9qu3w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1sg3793">
+          <text>9</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0of4ni0">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b5k4ox">
+          <text>14</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bzpfts">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_067imkz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e3drx0">
+          <text>13</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ij9hct">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vi5656">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tc5aw2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yerzx5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i4af0o">
+          <text>7</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03p1zqh">
+        <inputEntry id="UnaryTests_0nmi3bc">
+          <text>"CszDAutorità"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12s2j0b">
+          <text>"AVVIO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wadcf7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19mo8xm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k7dq3y">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ffbxbx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09gia9g">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wco52u">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bpxd3o">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yuiikh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xnkme3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k8x0o6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yu172f">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rlewkt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pal1xn">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19tqk7x">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15ebl3t">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1e4m62x">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tttayw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1agdztm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12db64x">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zs97rj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0h1qkzv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06hs05g">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1a0z8ls">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12i99ux">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j0ix9d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05f0e2h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_185frn1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10t65pc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ae72c5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06omg6j">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ca3pnk">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m99d4e">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j0n9sz">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1co5ppc">
+        <description></description>
+        <inputEntry id="UnaryTests_0dyqzhw">
+          <text>"CszDAutorità"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_007b0iy">
+          <text>"ISTRUTTORIA","CHIUSURA","APPROVAZIONE","FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0aanyda">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14vxnch">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d6bo7v">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nyb58z">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l4hi57">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tgqyr7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1c2owf4">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jm1vjz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ykcv34">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1eublqn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1il4soj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03tovqe">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gv9phx">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cmpkyf">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fkrile">
+          <text>6</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16z36qw">
+          <text>8</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12elqcw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09jnrl4">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11q10uf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_033uqfd">
+          <text>4</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18nvsu7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kcoatv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ab17m5">
+          <text>9</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hs01kz">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02h6enq">
+          <text>12</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rv96iz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1epocra">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bs74uz">
+          <text>11</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1a1phxt">
+          <text>13</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zi6nrb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0at6vc9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xn5uuo">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j0jirp">
+          <text>7</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ieqzpz">
+        <inputEntry id="UnaryTests_0it97ig">
+          <text>"CszInfermità"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sojew4">
+          <text>"AVVIO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01jxiga">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p93te0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vqf6ig">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zreslc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17p2tr2">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16njqtd">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16dufel">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15p4ihn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vcl3d5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pmmvw9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18hg3q7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19x04zx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o4ldgw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05s6cod">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1igatlu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pqwips">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j9nvfy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kp8bc3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1sncudf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01s5jww">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s0bkgt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04a4ik4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l73eqs">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07njegm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07jzvel">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hrrfik">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16nzlmh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07lg8co">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cuuenw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02wscs9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o52ae8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1thngxt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09zej3d">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0a6gbne">
+        <inputEntry id="UnaryTests_1v2ncf1">
+          <text>"CszInfermità"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1phpehg">
+          <text>"ISTRUTTORIA","CHIUSURA","APPROVAZIONE","FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12neq59">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ttytoi">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j83jch">
+          <text>3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vusjg8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cimzte">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cavpx2">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1a4hovo">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19cvj20">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zqbhk6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z4lv19">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gcni7q">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x59k0r">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mxaecp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1giegfw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d05630">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0b6hvo7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0r16ko5">
+          <text>4</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e4zf19">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rvod17">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16z8pk7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uozv5x">
+          <text>6</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xjvd4c">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_158wr3k">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xd9wy3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ype66r">
+          <text>8</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0orhtiw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n5wnxz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0adqw03">
+          <text>7</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lt66vb">
+          <text>9</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05o4p42">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_127mwvs">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0oafrjj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0boyrlc">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="dichiarazioniDecisionKey">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

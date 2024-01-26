@@ -1,0 +1,1122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="rwDatiTransitoDecision" name="RW Dati Transito Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.5.1">
+  <decision id="rwDatiTransitoDecisionKey" name="RW Dati Transito Decision">
+    <decisionTable id="DecisionTable_1wyu17l" hitPolicy="COLLECT">
+      <input id="Input_1" label="state" camunda:inputVariable="state">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0oe8fn9">
+          <text>"BOZZA","LAVORAZIONE","APPR_DOC","FIRMA","CHIUSURA_PA_RDP","APPR_FIRMA","IN_CHIUSURA","CHIUSO","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_DECRETO","CHIUSO_ANT"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="flagIdoneoTransito" name="flagIdoneoTransito" typeRef="string">
+        <outputValues id="UnaryTests_1he5yg8">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0mmd38k" label="flagPresentataIstanza" name="flagPresentataIstanza" typeRef="string">
+        <outputValues id="UnaryTests_0zepskc">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0wkqz5i" label="dataIstanza" name="dataIstanza" typeRef="string">
+        <outputValues id="UnaryTests_1bczpwi">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1o2x28e" label="protIstanza" name="protIstanza" typeRef="string">
+        <outputValues id="UnaryTests_16gdz3u">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1a1uifj" label="dataProtIstanza" name="dataProtIstanza" typeRef="string">
+        <outputValues id="UnaryTests_1apmodq">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1w5ibov" label="protDomandaPersomil" name="protDomandaPersomil" typeRef="string">
+        <outputValues id="UnaryTests_041trwg">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0r4akzd" label="dataPrDomPersomil" name="dataPrDomPersomil" typeRef="string">
+        <outputValues id="UnaryTests_1wlai5s">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0ua7f3a" label="flagPresRinuncia" name="flagPresRinuncia" typeRef="string">
+        <outputValues id="UnaryTests_0rfd7or">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0lhlq28" label="dataPresRinuncia" name="dataPresRinuncia" typeRef="string">
+        <outputValues id="UnaryTests_0coseng">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1eogpql" label="protRinunciaCmd" name="protRinunciaCmd" typeRef="string">
+        <outputValues id="UnaryTests_1n29vmy">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1w3sp2w" label="dataRinunciaCmd" name="dataRinunciaCmd" typeRef="string">
+        <outputValues id="UnaryTests_083x8tw">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_07k58k0" label="protRinunciaPersomil" name="protRinunciaPersomil" typeRef="string">
+        <outputValues id="UnaryTests_1eykap3">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1d8upsd" label="dataRinunciaPersomil" name="dataRinunciaPersomil" typeRef="string">
+        <outputValues id="UnaryTests_0mh5bax">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0uu5aik" label="flagNoautoriz" name="flagNoautoriz" typeRef="string">
+        <outputValues id="UnaryTests_1y9utup">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0zrvfuy" label="dataNoautPersociv" name="dataNoautPersociv" typeRef="string">
+        <outputValues id="UnaryTests_1jjlspc">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1o504nw" label="protNoautPersociv" name="protNoautPersociv" typeRef="string">
+        <outputValues id="UnaryTests_1tqkwze">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_05zwrxw" label="dataPrNoautPersociv" name="dataPrNoautPersociv" typeRef="string">
+        <outputValues id="UnaryTests_0ithogu">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1hd78zt" label="protNoautPersomil" name="protNoautPersomil" typeRef="string">
+        <outputValues id="UnaryTests_1awtur5">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1wwkakh" label="dataPrNoautPersomil" name="dataPrNoautPersomil" typeRef="string">
+        <outputValues id="UnaryTests_02sw9p4">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_072ccib" label="dataNotifica" name="dataNotifica" typeRef="string">
+        <outputValues id="UnaryTests_1mav995">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_014jsua" label="flagFirmaContratto" name="flagFirmaContratto" typeRef="string">
+        <outputValues id="UnaryTests_1i6h33r">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_16lcraj" label="dataFirmaContr" name="dataFirmaContr" typeRef="string">
+        <outputValues id="UnaryTests_0ldffro">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0e2r5if" label="protFirmaPersociv" name="protFirmaPersociv" typeRef="string">
+        <outputValues id="UnaryTests_0zttpkb">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_14axqfp" label="dataPrFirmaPersociv" name="dataPrFirmaPersociv" typeRef="string">
+        <outputValues id="UnaryTests_1koa43k">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0qyl7hj" label="protFirmaPersomil" name="protFirmaPersomil" typeRef="string">
+        <outputValues id="UnaryTests_14rvwfw">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_06iyf54" label="dataPrFirmaPersomil" name="dataPrFirmaPersomil" typeRef="string">
+        <outputValues id="UnaryTests_1jddlry">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_12a7amw" label="flagNonfirmaSalute" name="flagNonfirmaSalute" typeRef="string">
+        <outputValues id="UnaryTests_16rvjlb">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1i9hw7i" label="dataGiorno151" name="dataGiorno151" typeRef="string">
+        <outputValues id="UnaryTests_13ixhk0">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1ntefi6" label="contrDataMax266" name="contrDataMax266" typeRef="string">
+        <outputValues id="UnaryTests_1owhfgl">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1tl0qjl" label="numGiorniErogati266" name="numGiorniErogati266" typeRef="string">
+        <outputValues id="UnaryTests_04ptxdg">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1j4q2fp">
+        <inputEntry id="UnaryTests_0tac7k7">
+          <text>"BOZZA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ctuyd8">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mg7yin">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bhrusr">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15eg0rt">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0h61q20">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14hayxc">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wwwkv3">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dcolja">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jx1pcs">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1eldt20">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1naiepf">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1t69vte">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02hvyst">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s1l7gu">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12223te">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x7oevs">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04d7xxq">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rfqrtw">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jftq9w">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0b1wnh1">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00ilmqo">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uu1dih">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ube8ua">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_197dbrx">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j8fzuf">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g1uhkz">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ttj9wr">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m3gojk">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0na1nyd">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1q75bgy">
+          <text>"RW"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_11x2xlp">
+        <inputEntry id="UnaryTests_19dt36h">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gkf111">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x35g3o">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0owep0p">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19agopk">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1epbbig">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p5sgy2">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10kqdqx">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06prejt">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mlpqft">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00hzci5">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lf9jo5">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zsd67n">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j603ko">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rghk1v">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mrcf7j">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1557uir">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cdlqew">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0t6mw71">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0charrh">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fn6zun">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h95b2a">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10wxkw3">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uvb9xb">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0up23e8">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l2nn1e">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05fuaf7">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06j1mwi">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09nsyzh">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w5urzl">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kdxb5f">
+          <text>"RW"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16e684s">
+        <inputEntry id="UnaryTests_0888eqg">
+          <text>"APPR_DOC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18ir2ib">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08mrc74">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1po15cq">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qr3xpz">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fbef4a">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xuwlmp">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dyet5w">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tewo35">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gqocx3">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nk243t">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00391q5">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wvk46s">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ezr3gh">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rr8k47">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gtp7c1">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08jlzpm">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07xcokv">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k42goe">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jorfqq">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i3wc8x">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ynstee">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uulvqc">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1y5436w">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1299ftz">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fiu171">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03dcb0h">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0aet6tq">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dscn5k">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1stsrn4">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1iit5bl">
+          <text>"R"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_141h4c0">
+        <inputEntry id="UnaryTests_1n7nwky">
+          <text>"APPR_FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1q2p3zg">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vyu4y6">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15bbo9x">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v3asgv">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vpt1y0">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07zsfsj">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_080np91">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02vg2yu">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_036x9sb">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fpfd8k">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s7bqqo">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_001yz8y">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11alnx5">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d0yjvk">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jq8ze0">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gyr2f1">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pdj52s">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00kho47">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0me36fv">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ph8p96">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gb84on">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_061baxf">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cf4wbs">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1r94o64">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gf3kq4">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07igihx">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09zk856">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10vzsfi">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17llqdj">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1t9ospl">
+          <text>"R"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1l731ac">
+        <inputEntry id="UnaryTests_1o98cdr">
+          <text>"CHIUSURA_PA_DINIEGO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_189jotl">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xkeayr">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14lz710">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o8d134">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1e3kng8">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n38v6x">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jasa0l">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03wevc9">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06gkeul">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_134aaoe">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i07rzc">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wnfvdg">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08y9zci">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ip45l8">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ocqmq9">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xl7teh">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qcp8ek">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fbhq0r">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n7150y">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o3y4kk">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0a6ol2l">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qibqd2">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1n9oc0u">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vcqs9t">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kx1bld">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yjkx5k">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d4ls5j">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_032sjue">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1n0ddsj">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00dpz71">
+          <text>"R"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mvnlsd">
+        <inputEntry id="UnaryTests_1q0l92h">
+          <text>"CHIUSURA_PA_DECRETO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0110rve">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1982x19">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19w4rw4">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jlmj67">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01tizhm">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_156sivn">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wgekqg">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1auxqfg">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_109ftc1">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01psc1e">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fp0q65">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bdxpq4">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kvqt6p">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16x60lc">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j0gch2">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d7wiyq">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16kj2qn">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00zbopo">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pf1blw">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0does2u">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b7gx31">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jec697">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rctl8l">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b7ds4x">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j39qg0">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17mkllp">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jxkxm1">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_181sehb">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gytopd">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kqg84c">
+          <text>"R"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0exwykd">
+        <inputEntry id="UnaryTests_083zfhw">
+          <text>"FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0othqka">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vp0gbn">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c1ki6q">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lhbly1">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pf9lli">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0r8ynu2">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x6tk3d">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dpc4xn">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cxy6x4">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04ri02m">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uqlotl">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01a6o28">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sebpg0">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bsa7b6">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tlqx0x">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0864ve5">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zztb84">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wnfila">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lr8sss">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jqd22s">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f8soct">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1foaifu">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lr77hj">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1q1pn3z">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b9ls79">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05mgxtf">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_172zm16">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05fbign">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z19tid">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08s3mjc">
+          <text>"R"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13ork3o">
+        <inputEntry id="UnaryTests_119t35i">
+          <text>"CHIUSURA_PA_RDP"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wot9ed">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f0c354">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14uqhw4">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hkmmfm">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m6xa3w">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ayb62q">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03rpu4n">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f4xqmh">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1373phx">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nc15ye">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gfkn9o">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14m2qnx">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mm9i3w">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00nsun3">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0az0n0f">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i4dfie">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g6y569">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0olwggi">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kq0vvf">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ylbglb">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dualc1">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11c0ydb">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f697o2">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1oyicvs">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fm2ymp">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ij0il5">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uvt9o6">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ca6lyy">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_140n2dr">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nsv510">
+          <text>"R"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18289me">
+        <inputEntry id="UnaryTests_1vbanv6">
+          <text>"IN_CHIUSURA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0u0nv5l">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x3bvxp">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x36s0r">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dw8wzt">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gtg1n2">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ha9o4v">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_006ovco">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17rw3l2">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0iq10i1">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1coz0ho">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e83lmk">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pss0p6">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_146wiu2">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03c737b">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17jubad">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e5lj76">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uvtutk">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kjygy4">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xhbvl4">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18bmx5d">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_106q8vx">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1je86xk">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uc0fl6">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f0f0o4">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1r32px8">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_021s00k">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04prsh8">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1iatdu2">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uu3mv2">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kjn75l">
+          <text>"R"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0m8mgj3">
+        <inputEntry id="UnaryTests_18nhjwk">
+          <text>"CHIUSO","CHIUSO_ANT"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cv7fyt">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p92jdp">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qhxpb4">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12vlseq">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j8ccrn">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1n9xt61">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ywmzaw">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fzamq5">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kxnpft">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13dj2mr">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mw5lcb">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cbe9hl">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ziybvk">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xe5zj3">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1e7t6ia">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hl9il5">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1acukno">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05iu3u3">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pe95g0">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z9zbzj">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15gbuyk">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yb4sdz">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16ly63w">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0al2slt">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pf4btm">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19l4obo">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lggjh9">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dzp12d">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l6tynu">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10998ra">
+          <text>"R"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="rwDatiTransitoDecisionKey">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

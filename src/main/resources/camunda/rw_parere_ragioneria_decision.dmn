@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="rwParereRagioneriaDecision" name="RW Parere Ragioneria Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.5.1">
+  <decision id="rwParereRagioneriaDecisionKey" name="RW Parere Ragioneria Decision">
+    <decisionTable id="DecisionTable_1wyu17l" hitPolicy="COLLECT">
+      <input id="Input_1" label="state" camunda:inputVariable="state">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0oe8fn9">
+          <text>"BOZZA","LAVORAZIONE","APPR_DOC","FIRMA","CHIUSURA_PA_RDP","APPR_FIRMA","IN_CHIUSURA","CHIUSO","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_DECRETO","CHIUSO_ANT"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1aai807" label="flVistoRagioneria" camunda:inputVariable="flVistoRagioneria">
+        <inputExpression id="LiteralExpression_1fjh7lr" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0ejsudn" label="showTab" name="showTab" typeRef="string">
+        <outputValues id="UnaryTests_0dhr6sv">
+          <text>"Yes","No"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0mmd38k" label="esito" name="esito" typeRef="string">
+        <outputValues id="UnaryTests_0zepskc">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0wkqz5i" label="numRegistrazione" name="numRegistrazione" typeRef="string">
+        <outputValues id="UnaryTests_1bczpwi">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1o2x28e" label="dataEsito" name="dataEsito" typeRef="string">
+        <outputValues id="UnaryTests_16gdz3u">
+          <text>"RW","R"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_0ucsq4k">
+        <inputEntry id="UnaryTests_1uqtnuv">
+          <text>"CHIUSURA_PA_DECRETO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f9431g">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0o1p61w">
+          <text>"Yes"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00tn970">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0apd7ws">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_184pn3j">
+          <text>"RW"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18289me">
+        <inputEntry id="UnaryTests_1vbanv6">
+          <text>"IN_CHIUSURA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19brs29">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0z8sfxj">
+          <text>"Yes"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x3bvxp">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x36s0r">
+          <text>"RW"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dw8wzt">
+          <text>"RW"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0m8mgj3">
+        <inputEntry id="UnaryTests_18nhjwk">
+          <text>"CHIUSO","CHIUSO_ANT"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cpnf4r">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11q2v2x">
+          <text>"Yes"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p92jdp">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qhxpb4">
+          <text>"R"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12vlseq">
+          <text>"R"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bltrhz">
+        <inputEntry id="UnaryTests_1lxgpuz">
+          <text>not("IN_CHIUSURA","CHIUSO","CHIUSURA_PA_DECRETO","CHIUSO_ANT")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dn19x8">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10p9sx3">
+          <text>"No"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cxbg67">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_140j1aq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0itxejx">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_014wsyn">
+        <inputEntry id="UnaryTests_070pgq7">
+          <text>"BOZZA","LAVORAZIONE","APPR_DOC","FIRMA","CHIUSURA_PA_RDP","APPR_FIRMA","IN_CHIUSURA","CHIUSO","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_DECRETO","CHIUSO_ANT"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y33a4r">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1t5xfgm">
+          <text>"No"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xaxoyc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pix6al">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10e5ei5">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="rwParereRagioneriaDecisionKey">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

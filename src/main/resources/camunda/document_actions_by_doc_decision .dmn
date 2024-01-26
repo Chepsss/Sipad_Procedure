@@ -1,0 +1,1793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="documentActionsByDocDecision" name="Document Actions By Document Type State and Format Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.5.1">
+  <decision id="documentActionsByDocDecisionKey" name="Document Actions By Document Type State and Format Decision">
+    <decisionTable id="DecisionTable_0m1wy4u" hitPolicy="COLLECT">
+      <input id="InputClause_0i7lefx" label="tipoDocumento" biodi:width="353" camunda:inputVariable="tipoDocumento">
+        <inputExpression id="LiteralExpression_0p7r712" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1wf252c">
+          <text>"CE01","CE02","CE03","CE06","CE07","CE08","CE09","CE10","CE11","CE04"</text>
+        </inputValues>
+      </input>
+      <input id="Input_1" label="stato" biodi:width="356" camunda:inputVariable="stato">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1bmk3ku">
+          <text>"IN_LAVORAZIONE","IN_APPROVAZIONE","FIRMATO","PROTOCOLLATO","STERILIZZATO","PREDISPOSTO_ADHOC","IN_APPROVAZIONE_ADHOC"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0w1ml0m" label="editabile" camunda:inputVariable="editabile">
+        <inputExpression id="LiteralExpression_002mzjf" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1x6so35" label="subStato" camunda:inputVariable="subStato">
+        <inputExpression id="LiteralExpression_0m0zg8l" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0jnww1p">
+          <text>"CICLO_ADHOC_4_VIA"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="DETTAGLI_DOCUMENTO" name="DETTAGLI_DOCUMENTO" typeRef="string" biodi:width="292">
+        <outputValues id="UnaryTests_0nyknss">
+          <text>"Dettagli documento"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_11yfweq" label="VISUALIZZA_DOCUMENTO" name="VISUALIZZA_DOCUMENTO" typeRef="string">
+        <outputValues id="UnaryTests_0quop1n">
+          <text>"Visualizza documento"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0egecd7" label="MODIFICA" name="MODIFICA" typeRef="string">
+        <outputValues id="UnaryTests_14r6h3m">
+          <text>"Modifica"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0qq07bm" label="FIRMA" name="FIRMA" typeRef="string">
+        <outputValues id="UnaryTests_1qt5mrd">
+          <text>"Firma"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1mkcz6m" label="SEGNATURA" name="SEGNATURA" typeRef="string">
+        <outputValues id="UnaryTests_19x3hay">
+          <text>"Segnatura"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1k7kvpq" label="PREDISPOSIZIONE" name="PREDISPOSIZIONE" typeRef="string">
+        <outputValues id="UnaryTests_1mlg2k2">
+          <text>"Predisposizione"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0yjkm0z" label="PROTOCOLLA" name="PROTOCOLLA" typeRef="string">
+        <outputValues id="UnaryTests_0nvk7xe">
+          <text>"Protocolla"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1cj1vdx" label="PREDISPONI_ADHOC" name="PREDISPONI_ADHOC" typeRef="string">
+        <outputValues id="UnaryTests_1aw1e8a">
+          <text>"Predisponi su AdHoc"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0arw7u3" label="APPROVAZIONE_ADHOC" name="APPROVAZIONE_ADHOC" typeRef="string">
+        <outputValues id="UnaryTests_0fa9wfg">
+          <text>"Invia per approvazione su AdHoc"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0vie20z" label="ELIMINA" name="ELIMINA" typeRef="string">
+        <outputValues id="UnaryTests_0z0tn96">
+          <text>"Elimina"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1xpjm72" label="STERILIZZA" name="STERILIZZA" typeRef="string">
+        <outputValues id="UnaryTests_0c179cj">
+          <text>"Sterilizza"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1v7nzp5" label="ACQUISISCI_PROTOCOLLO" name="ACQUISISCI_PROTOCOLLO" typeRef="string">
+        <outputValues id="UnaryTests_07cvmhd">
+          <text>"Acquisisci protocollo"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1aje5ss" label="INSERISCI_NOTIFICA" name="INSERISCI_NOTIFICA" typeRef="string">
+        <outputValues id="UnaryTests_0ygzmjw">
+          <text>"Inserisci notifica"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_00habjk" label="CAMBIA_NOME" name="CAMBIA_NOME" typeRef="string">
+        <outputValues id="UnaryTests_0wlqcvp">
+          <text>"Cambia nome"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1c3dcxj">
+        <inputEntry id="UnaryTests_1rcq77j">
+          <text>"CE01"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tady68">
+          <text>"IN_LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0augube">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01vwa7l">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vqwk0t">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l7ww87">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05nbisc">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0b80d3j">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wnczkf">
+          <text>"Segnatura"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1athzc3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x3vsw2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ih98de">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hzegh4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uhi9nf">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rvcu74">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05tzoso">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_104dk13">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qx2mhu">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0yzu7y7">
+        <inputEntry id="UnaryTests_1euqlz3">
+          <text>"CE01"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jn6e1e">
+          <text>"IN_LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1htdrdm">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xsunv9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xh9j53">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16bn1mh">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lgmzh4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tplxw3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c0pui1">
+          <text>"Segnatura"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v0t0tz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1g5khfx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1t94ec8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0w64ckr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ww3sjj">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18r47az">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f3lfpc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00kwiss">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12zdhqt">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0k9b1ae">
+        <inputEntry id="UnaryTests_0bdcasb">
+          <text>"CE01"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m9e17w">
+          <text>"IN_APPROVAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07dox9z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ths7x7">
+          <text>not("CICLO_ADHOC_4_VIA")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1a2l9i7">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01cyb2w">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1aillqs">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qrurtn">
+          <text>"Firma"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rvi036">
+          <text>"Segnatura"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0r14tzm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ojr9rq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v1aky5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10egsqy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1exlybt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_007ihvf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m04vui">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lz8d1l">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h5i92w">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0f8dem8">
+        <inputEntry id="UnaryTests_1lq8pbu">
+          <text>"CE01"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dnhwht">
+          <text>"IN_APPROVAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16u9sm8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08v6xpd">
+          <text>"CICLO_ADHOC_4_VIA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01btfq0">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03vgmyf">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rn64qc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ifg0jb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vj8ud2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jvrwl2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02lbq9d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m459b8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12khc3d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kyi1wi">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yoa2ic">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1groubl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11yosnc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05n32ul">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0nr4jp3">
+        <inputEntry id="UnaryTests_1kzzbw4">
+          <text>"CE01"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pwi0xa">
+          <text>"IN_APPROVAZIONE_ADHOC"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15x9xsz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1agaqdb">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zqj4er">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l5xya2">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gp6izb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pzgq0c">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1a4wnwb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_040moor">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0v836uf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vpexgn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pddalz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qizg8y">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10x8odw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o0mgy9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10now1y">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ejmoip">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1c5fwog">
+        <inputEntry id="UnaryTests_025f0om">
+          <text>"CE01"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0au0llg">
+          <text>"PREDISPOSTO_ADHOC"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0id3rgd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lhfx7u">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0z8znbm">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19a6nq3">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14m5631">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v6oikn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b2vd46">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00ror44">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08y8zym">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ha85ry">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wamnua">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wkdcff">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0946kxd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rzllm3">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18rq7v6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ifs3j3">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wp5g55">
+        <inputEntry id="UnaryTests_0dp09yc">
+          <text>"CE01"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01450ed">
+          <text>"FIRMATO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0utt5x0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yq50c3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1e3zw9a">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tun9je">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08cwn4m">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19bzlx3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dm2w6m">
+          <text>"Segnatura"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wd9tvm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0adjpo8">
+          <text>"Protocolla"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_096uzy8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mpy2g7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i520ld">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0480ak8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17tmtbb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0coj65v">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gnhchi">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1twsnmt">
+        <inputEntry id="UnaryTests_0l7su8i">
+          <text>"CE01"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n7efvw">
+          <text>"PROTOCOLLATO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00jrfxf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ytaaqx">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1w00oxm">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09bgqnl">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bacz5h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gnj8qf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1olc76b">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1at4mt4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1iyie77">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yfuk02">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gyrjqj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qfmq7h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c5i370">
+          <text>"Sterilizza"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uf0wv4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hzmlff">
+          <text>"Inserisci notifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03drsc5">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ttit6s">
+        <inputEntry id="UnaryTests_0boxw8g">
+          <text>"CE01"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_023wmlj">
+          <text>"STERILIZZATO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09by37y">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fqt2rb">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xfc3n6">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rak0xt">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yyawat">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fuj6gk">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09kfxko">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01pbbz5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z7ozmo">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_135lgxm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_007by73">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0731bwx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pfw8s4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1glpj3q">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0buxoi2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dj26zi">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0u2jsdx">
+        <inputEntry id="UnaryTests_1cwj10f">
+          <text>"CE11"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bqlgbn">
+          <text>"IN_LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ajbzjf">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iqb0oo">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ajorki">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jo0yq3">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hwm51p">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cux4mb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i23u9o">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vuzqgg">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02whf5w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_028nuld">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11fayy4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16tkwd1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1es8fo7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j0is3m">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f2cmbj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i8gs8p">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1f0hbc6">
+        <inputEntry id="UnaryTests_00amfvh">
+          <text>"CE11"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18aaqsx">
+          <text>"IN_LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19hihgx">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lnws7s">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0robro3">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0af7380">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1467hu5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19s9ffw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ohlz5d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0khxvqm">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04wpwbt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0790o5z">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ib8lci">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17cbonv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nx2v5j">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bde2sv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ergr85">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04olvfo">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09e3j0o">
+        <inputEntry id="UnaryTests_0v6ycg8">
+          <text>"CE11"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ekoukk">
+          <text>"IN_APPROVAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11tg5mb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wb3256">
+          <text>not("CICLO_ADHOC_4_VIA")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_041djnb">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cz0oqe">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10hgdwm">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_155y3so">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pyra2s">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03e87ys">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09ox3au">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_146182f">
+          <text>"Predisponi su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o33qbd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rp87wp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zcn9fu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gjd32s">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lf73qh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02489mo">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ukk89s">
+        <inputEntry id="UnaryTests_0fl4vyj">
+          <text>"CE11"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aeu0ov">
+          <text>"IN_APPROVAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02xyw05">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aijtkw">
+          <text>"CICLO_ADHOC_4_VIA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01qixgg">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ncb7u7">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07w2jig">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wn8vjj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gotm7n">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j87q1b">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v5izgp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ffsctk">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zc9e0r">
+          <text>"Invia per approvazione su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01exqrp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09ifqqp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nhjma9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hfoeud">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wv2vso">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ken2gk">
+        <inputEntry id="UnaryTests_1k0g45p">
+          <text>"CE11"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_130d1py">
+          <text>"IN_APPROVAZIONE_ADHOC"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rpkk46">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00k6fyj">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nr1o2s">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15wm9pb">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11dojyv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ikb6a0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18v9az8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uldm2e">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e0x8yl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kkuz3i">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0waeya0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jwq8wr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0484vvn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sfj242">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_070xown">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lu7fbu">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_033anns">
+        <inputEntry id="UnaryTests_0lpxvba">
+          <text>"CE11"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0eva4r4">
+          <text>"PREDISPOSTO_ADHOC"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jdaumq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s5u3j8">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_194uh76">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ms571e">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ptsfrb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ughv3i">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d58y98">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e27qxw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0epvasd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0egjhrx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hhjpqa">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04japtc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p13at0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lrfibj">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00ns71k">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1645rfv">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10r68kk">
+        <inputEntry id="UnaryTests_1ode4o9">
+          <text>"CE11"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mp3y52">
+          <text>"PROTOCOLLATO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04ow343">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0voul6j">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1git7z6">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xv128d">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o4cg4m">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j5bb0d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1u1x0xw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kkiojm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ttmdwl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s3m76r">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vv27oi">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qa5svs">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0suh3p3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0713lcg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1c4qr3v">
+          <text>"Inserisci notifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bshctw">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_11k5vqc">
+        <inputEntry id="UnaryTests_14m714z">
+          <text>"CE11"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_085j624">
+          <text>"STERILIZZATO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lrbi5b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w3cl4j">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03mrbwn">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1encgpe">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05tendr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pjlo23">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16i1qcg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vxzh9a">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x26vl4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tuf7id">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_087bk1h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gc5mwj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wik7y4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e4u1d5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ry66xp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rkn905">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1dorvoa">
+        <inputEntry id="UnaryTests_11e59rb">
+          <text>"CE02","CE03","CE07","CE09","CE10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04gy3qv">
+          <text>"IN_LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_134wt5m">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sohtzz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04vf3a7">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qyxefj">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03f5nc7">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cdu42z">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jy889l">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1oasn1u">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02il6yf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mrl223">
+          <text>"Predisponi su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v792se">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0861wg9">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c1d3zq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15cill9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pbj6o2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hqvyme">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0um7j9t">
+        <inputEntry id="UnaryTests_1beu1qn">
+          <text>"CE02","CE03","CE07","CE09","CE10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12a65ei">
+          <text>"IN_LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rmdmyz">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vcgudy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0guuazn">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0528cr9">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0raq512">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dnk24d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gq67m9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03hpvv1">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mt6j3h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fa9mbj">
+          <text>"Predisponi su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ytrk2n">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0um35xo">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10uyuiy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04qti25">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13g3h16">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_051w1us">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_123bawl">
+        <inputEntry id="UnaryTests_1xxdhu4">
+          <text>"CE02","CE03","CE07","CE09","CE10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0eudvh1">
+          <text>"IN_APPROVAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01ilbq2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uq79yx">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wxjw86">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0du4lax">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zbz5t6">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cz4m05">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1q458y6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o5pbgm">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fcmalw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lyi8jc">
+          <text>"Predisponi su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1orhuk9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1buypjy">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1r1taay">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05lzo9q">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18dpeqv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ldubxc">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0phg740">
+        <inputEntry id="UnaryTests_1edw64x">
+          <text>"CE02","CE03","CE07","CE09","CE10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mycq6v">
+          <text>"PREDISPOSTO_ADHOC"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rdvo1z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kuqt14">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1q2dk2q">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1knis2p">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pjgciq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dc5ga4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qms3z9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_054c72k">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0b856a2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03takh6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xuk9qb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nwfeso">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vo7n8w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f1dwdz">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xm56as">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n8kqat">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0t810wn">
+        <inputEntry id="UnaryTests_0dvjxso">
+          <text>"CE02","CE03","CE07","CE09","CE10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dif6kt">
+          <text>"PROTOCOLLATO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iq1a1a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j293ew">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kase1h">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j7yl9k">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0v0sswq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1n81iiy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02p6q2t">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1t35s8s">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x3k1o9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1icieva">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p4j0he">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d724r7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0idg2gs">
+          <text>"Sterilizza"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ic79ti">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vl1shn">
+          <text>"Inserisci notifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lcx1fr">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0wk9p3n">
+        <inputEntry id="UnaryTests_0ja621j">
+          <text>"CE02","CE03","CE07","CE09","CE10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s9mil6">
+          <text>"STERILIZZATO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jxgxsy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n0jbqk">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01a4wx3">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fchcbs">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1y18ye6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f17cl1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dgkoiq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ans144">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05yiyro">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0reon1r">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hdbbos">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1baxj7a">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u1xyu9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16d8lrh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ph04n5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1czt452">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bbrv7s">
+        <inputEntry id="UnaryTests_035ziyp">
+          <text>"CE06","CE08"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tvo4nl">
+          <text>"IN_LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m7c8v8">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00fgs3d">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0emu4hq">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d2aanp">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wg50x0">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sn3im2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ewrzhm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08t6zjp">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z2srh5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fihxzj">
+          <text>"Predisponi su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fzd2hh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03ueb1y">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1st1as0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0shm436">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tbvb1q">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fya4w8">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0igafrf">
+        <inputEntry id="UnaryTests_1xvvmcz">
+          <text>"CE06","CE08"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qhha5k">
+          <text>"IN_LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dlo1e2">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12d1mxn">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16lv98b">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ip8y1y">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kcu6l5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m4grlh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0w1e5za">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0b7fggm">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zrivbx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jm0u77">
+          <text>"Predisponi su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ijbu47">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j4bgz2">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cgl9cq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hfillr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tejca3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d0tm7p">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hmworu">
+        <inputEntry id="UnaryTests_14lvu5x">
+          <text>"CE06","CE08"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bpnf20">
+          <text>"IN_APPROVAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13l4uuk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0itq0mf">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vvq1sy">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j2q4ys">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x62ij0">
+          <text>"Modifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0akwnol">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09n7514">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00juka9">
+          <text>"Predisposizione"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06qkiap">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mozy9m">
+          <text>"Predisponi su AdHoc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d6b3hj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0my7mpu">
+          <text>"Elimina"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c3z62n">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rfi7w4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19qu89u">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dcl6wo">
+          <text>"Cambia nome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0f6fqyf">
+        <inputEntry id="UnaryTests_0l3fgp7">
+          <text>"CE06","CE08"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y41886">
+          <text>"PREDISPOSTO_ADHOC"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cfhuqh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0osfan5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xyz6hs">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kshglq">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yoq8db">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qd7cg1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zajma1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11h7amv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i2q3d8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jiijwz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fg7rlb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02irk72">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0onkgaf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u9se7q">
+          <text>"Acquisisci protocollo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15mipo3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dx77a9">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qwyr3a">
+        <inputEntry id="UnaryTests_0ma366x">
+          <text>"CE06","CE08"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_159docd">
+          <text>"PROTOCOLLATO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i4kytb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q2q62b">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1253pq4">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08y6t2t">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07ykwie">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yze02q">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gpgwbo">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z6q1hz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ev1pvb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08set07">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1azq52z">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jp74pq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tbb1bx">
+          <text>"Sterilizza"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07i9azv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1y6dbbt">
+          <text>"Inserisci notifica"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16q9f6t">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1aiu4vz">
+        <inputEntry id="UnaryTests_1fm08rg">
+          <text>"CE06","CE08"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m03zeh">
+          <text>"STERILIZZATO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1480wge">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d2wuah">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_189ucf5">
+          <text>"Dettagli documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cfd878">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ed5429">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ceq4kk">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mkzac9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kyx4mt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tnwbxy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07pip6s">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12lah5p">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06xhy2i">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lche75">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06geksr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0waggu9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02kc2ba">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1r6lqn1">
+        <inputEntry id="UnaryTests_0fewhya">
+          <text>"CE04"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_111uede">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qwrmbo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_143yliw">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1slooza">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qrtmqj">
+          <text>"Visualizza documento"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jbojrw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03d5tvw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_072ggdl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08ao43d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hncx1u">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_171f12s">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ijdse6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uzz9kz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cqvyjt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0za6get">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xfd1kr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0crj1lc">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="documentActionsByDocDecisionKey">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

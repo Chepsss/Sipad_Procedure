@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+    <!--
+        Added the entity TP_CECON_CATEG_CONG.
+    -->
+    <changeSet id="created_entity_TP_CECON_CATEG_CONG_v1.0" author="m.kerabandi">
+        <createTable tableName="TP_CECON_CATEG_CONG">
+            <column name="CECON_CETIP_SEQ_PK" remarks="Riferimento al tipo di cessazione" type="NUMBER(4, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CECON_SGTPO_SEQ_PK" remarks="Riferimento alla categoria di congedo richiesta o di destinazione." type="VARCHAR2(12 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CECON_SGTPO_GDL" remarks="Predisposizione della colonna per accogliere il valore della categoria di congedo definita dal GDL." type="VARCHAR2(12 BYTE)"/>
+            <column defaultValueComputed="Current_timestamp" name="CECON_DATA_INS" remarks="Data inserimento del record" type="TIMESTAMP(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="Current_timestamp" name="CECON_DATA_ULT_AGG" remarks="Data ultimo aggiornamento" type="TIMESTAMP(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CECON_COD_ULT_AGG" remarks="Codice ultimo utente in aggiornamento" type="VARCHAR2(50 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="insert_TP_CECON_CATEG_CONG_v1.0-data" author="m.kerabandi">
+        <loadData
+                file="config/liquibase/changelog/data/tp_cecon_categ_cong.csv"
+                separator=";"
+                tableName="TP_CECON_CATEG_CONG"
+                usePreparedStatements="true"/>
+    </changeSet>
+</databaseChangeLog>

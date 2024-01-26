@@ -1,0 +1,289 @@
+cetip_id_pk;cetip_prtpo_seq_pk;cetip_motivo_cessazione;cetip_sgctp_seq_pk;cetip_sgruo_seq_pk;cetip_stfaa_seq_pk;cetip_cenor_seq_pk;cetip_sgtpo_seq_pk;cetip_data_ins;cetip_data_ult_agg;cetip_cod_ult_agg;cetip_acr_tiv;id_motivo
+0;30;Rinuncia al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);2;;EI;50;;2018-01-17 17:22:42.000000;2018-01-17 17:22:42.000000;CARICAMENTO MANUALE;;
+1;30;Rinuncia al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);1;;EI;1;1;2017-09-14 11:10:44.000000;2017-09-14 11:10:44.000000;CARICAMENTO MANUALE;BD168;BD168r
+2;30;Rinuncia al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);1;;MM;3;1;2017-09-14 11:10:44.000000;2017-09-14 11:10:44.000000;CARICAMENTO MANUALE;BD168;BD168r
+3;30;Rinuncia al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);1;;AM;2;1;2017-09-14 11:10:44.000000;2017-09-14 11:10:44.000000;CARICAMENTO MANUALE;BD168;BD168r
+4;30;Rinuncia al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);1;;CC;4;1;2017-09-14 11:10:44.000000;2017-09-14 11:10:44.000000;CARICAMENTO MANUALE;BD168;BD168r
+5;30;Non idoneità al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);1;;EI;1;1;2017-09-14 11:13:22.000000;2017-09-14 11:13:22.000000;CARICAMENTO MANUALE;BD168;BD168n
+6;30;Non idoneità al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);1;;MM;3;1;2017-09-14 11:13:22.000000;2017-09-14 11:13:22.000000;CARICAMENTO MANUALE;BD168;BD168n
+7;30;Non idoneità al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);1;;AM;2;1;2017-09-14 11:13:22.000000;2017-09-14 11:13:22.000000;CARICAMENTO MANUALE;BD168;BD168n
+8;30;Non idoneità al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);1;;CC;4;1;2017-09-14 11:13:22.000000;2017-09-14 11:13:22.000000;CARICAMENTO MANUALE;BD168;BD168n
+9;30;Mancato superamento del corso applicativo a nomina diretta ruolo normale;1;;EI;10;1;2017-09-14 11:13:22.000000;2017-09-14 11:13:22.000000;CARICAMENTO MANUALE;BD166;BD166
+10;30;Mancato superamento del corso applicativo a nomina diretta ruolo normale;1;;MM;10;1;2017-09-14 11:13:22.000000;2017-09-14 11:13:22.000000;CARICAMENTO MANUALE;BD166;BD166
+11;30;Mancato superamento del corso applicativo a nomina diretta ruolo normale;1;;AM;10;1;2017-09-14 11:13:22.000000;2017-09-14 11:13:22.000000;CARICAMENTO MANUALE;BD166;BD166
+12;30;Mancato superamento del corso applicativo a nomina diretta ruolo normale;1;;CC;10;1;2017-09-14 11:13:22.000000;2017-09-14 11:13:22.000000;CARICAMENTO MANUALE;BD166;BD166
+13;30;Mancato superamento del corso applicativo a nomina diretta ruolo speciale;1;;EI;11;1;2017-09-14 11:13:22.000000;2017-09-14 11:13:22.000000;CARICAMENTO MANUALE;BD167;BD167
+14;30;Mancato superamento del corso applicativo a nomina diretta ruolo speciale;1;;MM;11;1;2017-09-14 11:13:22.000000;2017-09-14 11:13:22.000000;CARICAMENTO MANUALE;BD167;BD167
+15;30;Mancato superamento del corso applicativo a nomina diretta ruolo speciale;1;;AM;11;1;2017-09-14 11:13:22.000000;2017-09-14 11:13:22.000000;CARICAMENTO MANUALE;BD167;BD167
+16;30;Mancato superamento del corso applicativo a nomina diretta ruolo speciale;1;;CC;13;1;2017-09-14 11:13:22.000000;2017-09-14 11:13:22.000000;CARICAMENTO MANUALE;BD167;BD167
+17;36;Cessazione d'autorità;1;;EI;28;1;2017-09-14 11:24:36.000000;2017-09-14 11:24:36.000000;CARICAMENTO MANUALE;BD160;BD160
+18;36;Cessazione d'autorità;1;;MM;28;1;2017-09-14 11:24:36.000000;2017-09-14 11:24:36.000000;CARICAMENTO MANUALE;BD160;BD160
+19;36;Cessazione d'autorità;1;;AM;28;1;2017-09-14 11:24:36.000000;2017-09-14 11:24:36.000000;CARICAMENTO MANUALE;BD160;BD160
+20;36;Cessazione d'autorità;1;;CC;28;1;2017-09-14 11:24:36.000000;2017-09-14 11:24:36.000000;CARICAMENTO MANUALE;BD160;BD160
+21;31;Cancellazione dai ruoli per perdita di cittadinanza;1;;EI;5;1;2017-09-14 12:23:27.000000;2017-09-14 12:23:27.000000;CARICAMENTO MANUALE;BD212;BD212
+22;31;Cancellazione dai ruoli per perdita di cittadinanza;1;;MM;5;1;2017-09-14 12:23:27.000000;2017-09-14 12:23:27.000000;CARICAMENTO MANUALE;BD212;BD212
+23;31;Cancellazione dai ruoli per perdita di cittadinanza;1;;AM;5;1;2017-09-14 12:23:27.000000;2017-09-14 12:23:27.000000;CARICAMENTO MANUALE;BD212;BD212
+24;31;Cancellazione dai ruoli per perdita di cittadinanza;1;;CC;5;1;2017-09-14 12:23:27.000000;2017-09-14 12:23:27.000000;CARICAMENTO MANUALE;BD212;BD212
+25;31;Cancellazione dai ruoli per perdita di cittadinanza;2;;EI;5;1;2017-09-14 12:23:27.000000;2017-09-14 12:23:27.000000;CARICAMENTO MANUALE;BD212;BD212
+26;31;Cancellazione dai ruoli per perdita di cittadinanza;2;;MM;5;1;2017-09-14 12:23:27.000000;2017-09-14 12:23:27.000000;CARICAMENTO MANUALE;BD212;BD212
+27;31;Cancellazione dai ruoli per perdita di cittadinanza;2;;AM;5;1;2017-09-14 12:23:27.000000;2017-09-14 12:23:27.000000;CARICAMENTO MANUALE;BD212;BD212
+28;31;Cancellazione dai ruoli per perdita di cittadinanza;2;;CC;5;1;2017-09-14 12:23:27.000000;2017-09-14 12:23:27.000000;CARICAMENTO MANUALE;BD212;BD212
+29;31;Cancellazione dai ruoli per perdita di cittadinanza;3;;EI;5;1;2017-09-14 12:23:27.000000;2017-09-14 12:23:27.000000;CARICAMENTO MANUALE;BD212;BD212
+30;31;Cancellazione dai ruoli per perdita di cittadinanza;3;;MM;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD212;BD212
+31;31;Cancellazione dai ruoli per perdita di cittadinanza;3;;AM;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD212;BD212
+32;31;Cancellazione dai ruoli per perdita di cittadinanza;3;;CC;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD212;BD212
+33;31;Cancellazione dai ruoli per assunzione di servizio con qualsiasi grado o qualifica in una Forza armata o Corpo armato diversi o Forza di polizia a ordinamento civile;1;;EI;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD210;BD210
+34;31;Cancellazione dai ruoli per assunzione di servizio con qualsiasi grado o qualifica in una Forza armata o Corpo armato diversi o Forza di polizia a ordinamento civile;1;;MM;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD210;BD210
+35;31;Cancellazione dai ruoli per assunzione di servizio con qualsiasi grado o qualifica in una Forza armata o Corpo armato diversi o Forza di polizia a ordinamento civile;1;;AM;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD210;BD210
+36;31;Cancellazione dai ruoli per assunzione di servizio con qualsiasi grado o qualifica in una Forza armata o Corpo armato diversi o Forza di polizia a ordinamento civile;1;;CC;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD210;BD210
+37;31;Cancellazione dai ruoli per assunzione di servizio con qualsiasi grado o qualifica in una Forza armata o Corpo armato diversi o Forza di polizia a ordinamento civile;2;;EI;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD210;BD210
+38;31;Cancellazione dai ruoli per assunzione di servizio con qualsiasi grado o qualifica in una Forza armata o Corpo armato diversi o Forza di polizia a ordinamento civile;2;;MM;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD210;BD210
+39;31;Cancellazione dai ruoli per assunzione di servizio con qualsiasi grado o qualifica in una Forza armata o Corpo armato diversi o Forza di polizia a ordinamento civile;2;;AM;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD210;BD210
+40;31;Cancellazione dai ruoli per assunzione di servizio con qualsiasi grado o qualifica in una Forza armata o Corpo armato diversi o Forza di polizia a ordinamento civile;2;;CC;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD210;BD210
+41;31;Cancellazione dai ruoli per assunzione di servizio con qualsiasi grado o qualifica in una Forza armata o Corpo armato diversi o Forza di polizia a ordinamento civile;3;;EI;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD210;BD210
+42;31;Cancellazione dai ruoli per assunzione di servizio con qualsiasi grado o qualifica in una Forza armata o Corpo armato diversi o Forza di polizia a ordinamento civile;3;;MM;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD210;BD210
+43;31;Cancellazione dai ruoli per assunzione di servizio con qualsiasi grado o qualifica in una Forza armata o Corpo armato diversi o Forza di polizia a ordinamento civile;3;;AM;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD210;BD210
+44;31;Cancellazione dai ruoli per assunzione di servizio con qualsiasi grado o qualifica in una Forza armata o Corpo armato diversi o Forza di polizia a ordinamento civile;3;;CC;5;1;2017-09-14 12:23:28.000000;2017-09-14 12:23:28.000000;CARICAMENTO MANUALE;BD210;BD210
+45;31;Assunzione di servizio con grado inferiore nella Forza armata o Corpo armato di appartenenza;1;;EI;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD209;BD209
+46;31;Assunzione di servizio con grado inferiore nella Forza armata o Corpo armato di appartenenza;1;;MM;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD209;BD209
+47;31;Assunzione di servizio con grado inferiore nella Forza armata o Corpo armato di appartenenza;1;;AM;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD209;BD209
+48;31;Assunzione di servizio con grado inferiore nella Forza armata o Corpo armato di appartenenza;1;;CC;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD209;BD209
+49;31;Assunzione di servizio con grado inferiore nella Forza armata o Corpo armato di appartenenza;2;;EI;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD209;BD209
+50;31;Assunzione di servizio con grado inferiore nella Forza armata o Corpo armato di appartenenza;2;;MM;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD209;BD209
+51;31;Assunzione di servizio con grado inferiore nella Forza armata o Corpo armato di appartenenza;2;;AM;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD209;BD209
+52;31;Assunzione di servizio con grado inferiore nella Forza armata o Corpo armato di appartenenza;2;;CC;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD209;BD209
+53;31;Assunzione di servizio con grado inferiore nella Forza armata o Corpo armato di appartenenza;3;;EI;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD209;BD209
+54;31;Assunzione di servizio con grado inferiore nella Forza armata o Corpo armato di appartenenza;3;;MM;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD209;BD209
+55;31;Assunzione di servizio con grado inferiore nella Forza armata o Corpo armato di appartenenza;3;;AM;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD209;BD209
+56;31;Assunzione di servizio con grado inferiore nella Forza armata o Corpo armato di appartenenza;3;;CC;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD209;BD209
+57;31;Assunzione di servizio, non autorizzata, nelle Forze armate di Stati esteri;1;;EI;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD211;BD211
+58;31;Assunzione di servizio, non autorizzata, nelle Forze armate di Stati esteri;1;;MM;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD211;BD211
+59;31;Assunzione di servizio, non autorizzata, nelle Forze armate di Stati esteri;1;;AM;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD211;BD211
+60;31;Assunzione di servizio, non autorizzata, nelle Forze armate di Stati esteri;1;;CC;5;1;2017-09-14 14:11:47.000000;2017-09-14 14:11:47.000000;CARICAMENTO MANUALE;BD211;BD211
+61;31;Assunzione di servizio, non autorizzata, nelle Forze armate di Stati esteri;2;;EI;5;1;2017-09-14 15:03:35.000000;2017-09-14 15:03:35.000000;CARICAMENTO MANUALE;BD211;BD211
+62;31;Assunzione di servizio, non autorizzata, nelle Forze armate di Stati esteri;2;;MM;5;1;2017-09-14 15:03:35.000000;2017-09-14 15:03:35.000000;CARICAMENTO MANUALE;BD211;BD211
+63;31;Assunzione di servizio, non autorizzata, nelle Forze armate di Stati esteri;2;;AM;5;1;2017-09-14 15:03:35.000000;2017-09-14 15:03:35.000000;CARICAMENTO MANUALE;BD211;BD211
+64;31;Assunzione di servizio, non autorizzata, nelle Forze armate di Stati esteri;2;;CC;5;1;2017-09-14 15:03:35.000000;2017-09-14 15:03:35.000000;CARICAMENTO MANUALE;BD211;BD211
+65;31;Assunzione di servizio, non autorizzata, nelle Forze armate di Stati esteri;3;;EI;5;1;2017-09-14 15:03:35.000000;2017-09-14 15:03:35.000000;CARICAMENTO MANUALE;BD211;BD211
+66;31;Assunzione di servizio, non autorizzata, nelle Forze armate di Stati esteri;3;;MM;5;1;2017-09-14 15:03:35.000000;2017-09-14 15:03:35.000000;CARICAMENTO MANUALE;BD211;BD211
+67;31;Assunzione di servizio, non autorizzata, nelle Forze armate di Stati esteri;3;;AM;5;1;2017-09-14 15:03:35.000000;2017-09-14 15:03:35.000000;CARICAMENTO MANUALE;BD211;BD211
+68;31;Assunzione di servizio, non autorizzata, nelle Forze armate di Stati esteri;3;;CC;5;1;2017-09-14 15:03:35.000000;2017-09-14 15:03:35.000000;CARICAMENTO MANUALE;BD211;BD211
+69;32;Collocamento nella categoria dell’ausiliaria;1;;EI;19;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164a
+70;32;Collocamento nella categoria dell’ausiliaria;1;;MM;19;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164a
+71;32;Collocamento nella categoria dell’ausiliaria;1;;AM;19;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164a
+72;32;Collocamento nella categoria dell’ausiliaria;1;;CC;19;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164a
+73;32;Collocamento nella categoria dell’ausiliaria;2;;EI;19;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164a
+74;32;Collocamento nella categoria dell’ausiliaria;2;;MM;19;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164a
+75;32;Collocamento nella categoria dell’ausiliaria;2;;AM;19;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164a
+76;32;Collocamento nella categoria dell’ausiliaria;2;;CC;19;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164a
+77;32;Collocamento nella categoria dell’ausiliaria;3;;EI;19;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164a
+78;32;Collocamento nella categoria dell’ausiliaria;3;;MM;19;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164a
+79;32;Collocamento nella categoria dell’ausiliaria;3;;AM;19;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164a
+80;32;Collocamento nella categoria dell’ausiliaria;3;;CC;19;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164a
+81;32;Collocamento nella categoria della riserva;1;;EI;20;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164r
+82;32;Collocamento nella categoria della riserva;1;;MM;20;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164r
+83;32;Collocamento nella categoria della riserva;1;;AM;20;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164r
+84;32;Collocamento nella categoria della riserva;1;;CC;20;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164r
+85;32;Collocamento nella categoria della riserva;2;;EI;20;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164r
+86;32;Collocamento nella categoria della riserva;2;;MM;20;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164r
+87;32;Collocamento nella categoria della riserva;2;;AM;20;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164r
+88;32;Collocamento nella categoria della riserva;2;;CC;20;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164r
+89;32;Collocamento nella categoria della riserva;3;;EI;20;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164r
+90;32;Collocamento nella categoria della riserva;3;;MM;20;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164r
+91;32;Collocamento nella categoria della riserva;3;;AM;20;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164r
+92;32;Collocamento nella categoria della riserva;3;;CC;20;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164r
+93;32;Collocamento nella categoria del congedo assoluto;1;;EI;18;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164c
+94;32;Collocamento nella categoria del congedo assoluto;1;;MM;18;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164c
+95;32;Collocamento nella categoria del congedo assoluto;1;;AM;18;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164c
+96;32;Collocamento nella categoria del congedo assoluto;1;;CC;18;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164c
+97;32;Collocamento nella categoria del congedo assoluto;2;;EI;18;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164c
+98;32;Collocamento nella categoria del congedo assoluto;2;;MM;18;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164c
+99;32;Collocamento nella categoria del congedo assoluto;2;;AM;18;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164c
+100;32;Collocamento nella categoria del congedo assoluto;2;;CC;18;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164c
+101;32;Collocamento nella categoria del congedo assoluto;3;;EI;18;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164c
+102;32;Collocamento nella categoria del congedo assoluto;3;;MM;18;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164c
+103;32;Collocamento nella categoria del congedo assoluto;3;;AM;18;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164c
+104;32;Collocamento nella categoria del congedo assoluto;3;;CC;18;1;2017-09-14 15:20:03.000000;2017-09-14 15:20:03.000000;CARICAMENTO MANUALE;BD164;BD164c
+105;34;Divenuto permanentemente non idoneo al servizio incondizionato;1;;EI;21;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD169;BD169
+106;34;Divenuto permanentemente non idoneo al servizio incondizionato;1;;MM;21;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD169;BD169
+107;34;Divenuto permanentemente non idoneo al servizio incondizionato;1;;AM;21;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD169;BD169
+108;34;Divenuto permanentemente non idoneo al servizio incondizionato;1;;CC;21;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD169;BD169
+109;34;Divenuto permanentemente non idoneo al servizio incondizionato;2;;EI;21;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD169;BD169
+110;34;Divenuto permanentemente non idoneo al servizio incondizionato;2;;MM;21;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD169;BD169
+111;34;Divenuto permanentemente non idoneo al servizio incondizionato;2;;AM;21;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD169;BD169
+112;34;Divenuto permanentemente non idoneo al servizio incondizionato;2;;CC;21;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD169;BD169
+113;34;Divenuto permanentemente non idoneo al servizio incondizionato;3;;EI;21;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD169;BD169
+114;34;Divenuto permanentemente non idoneo al servizio incondizionato;3;;MM;21;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD169;BD169
+115;34;Divenuto permanentemente non idoneo al servizio incondizionato;3;;AM;21;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD169;BD169
+116;34;Divenuto permanentemente non idoneo al servizio incondizionato;3;;CC;21;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD169;BD169
+117;34;Superamento del periodo massimo di aspettativa per infermità temporanea;1;;EI;22;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD176;BD176
+118;34;Superamento del periodo massimo di aspettativa per infermità temporanea;1;;MM;22;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD176;BD176
+119;34;Superamento del periodo massimo di aspettativa per infermità temporanea;1;;AM;22;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD176;BD176
+120;34;Superamento del periodo massimo di aspettativa per infermità temporanea;1;;CC;22;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD176;BD176
+121;34;Superamento del periodo massimo di aspettativa per infermità temporanea;2;;EI;22;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD176;BD176
+122;34;Superamento del periodo massimo di aspettativa per infermità temporanea;2;;MM;22;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD176;BD176
+123;34;Superamento del periodo massimo di aspettativa per infermità temporanea;2;;AM;22;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD176;BD176
+124;34;Superamento del periodo massimo di aspettativa per infermità temporanea;2;;CC;22;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD176;BD176
+125;34;Superamento del periodo massimo di aspettativa per infermità temporanea;3;;EI;22;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD176;BD176
+126;34;Superamento del periodo massimo di aspettativa per infermità temporanea;3;;MM;22;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD176;BD176
+127;34;Superamento del periodo massimo di aspettativa per infermità temporanea;3;;AM;22;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD176;BD176
+128;34;Superamento del periodo massimo di aspettativa per infermità temporanea;3;;CC;22;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD176;BD176
+129;34;Non idoneo al servizio incondizionato dopo aver fruito del periodo massimo di aspettativa nel quinquennio;1;;EI;23;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD173;BD173
+130;34;Non idoneo al servizio incondizionato dopo aver fruito del periodo massimo di aspettativa nel quinquennio;1;;MM;23;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD173;BD173
+131;34;Non idoneo al servizio incondizionato dopo aver fruito del periodo massimo di aspettativa nel quinquennio;1;;AM;23;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD173;BD173
+132;34;Non idoneo al servizio incondizionato dopo aver fruito del periodo massimo di aspettativa nel quinquennio;1;;CC;23;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD173;BD173
+133;34;Non idoneo al servizio incondizionato dopo aver fruito del periodo massimo di aspettativa nel quinquennio;2;;EI;23;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD173;BD173
+134;34;Non idoneo al servizio incondizionato dopo aver fruito del periodo massimo di aspettativa nel quinquennio;2;;MM;23;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD173;BD173
+135;34;Non idoneo al servizio incondizionato dopo aver fruito del periodo massimo di aspettativa nel quinquennio;2;;AM;23;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD173;BD173
+136;34;Non idoneo al servizio incondizionato dopo aver fruito del periodo massimo di aspettativa nel quinquennio;2;;CC;23;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD173;BD173
+137;34;Non idoneo al servizio incondizionato dopo aver fruito del periodo massimo di aspettativa nel quinquennio;3;;EI;23;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD173;BD173
+138;34;Non idoneo al servizio incondizionato dopo aver fruito del periodo massimo di aspettativa nel quinquennio;3;;MM;23;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD173;BD173
+139;34;Non idoneo al servizio incondizionato dopo aver fruito del periodo massimo di aspettativa nel quinquennio;3;;AM;23;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD173;BD173
+140;34;Non idoneo al servizio incondizionato dopo aver fruito del periodo massimo di aspettativa nel quinquennio;3;;CC;23;1;2017-09-14 15:49:12.000000;2017-09-14 15:49:12.000000;CARICAMENTO MANUALE;BD173;BD173
+141;33;Non idoneità alle funzioni del grado;1;;EI;24;1;2017-09-19 10:43:23.000000;2017-09-19 10:43:23.000000;CARICAMENTO MANUALE;BD162;BD162
+142;33;Non idoneità alle funzioni del grado;1;;MM;24;1;2017-09-19 10:43:23.000000;2017-09-19 10:43:23.000000;CARICAMENTO MANUALE;BD162;BD162
+143;33;Non idoneità alle funzioni del grado;1;;AM;24;1;2017-09-19 10:43:23.000000;2017-09-19 10:43:23.000000;CARICAMENTO MANUALE;BD162;BD162
+144;33;Non idoneità alle funzioni del grado;1;;CC;24;1;2017-09-19 10:43:23.000000;2017-09-19 10:43:23.000000;CARICAMENTO MANUALE;BD162;BD162
+145;33;Non idoneità alle funzioni del grado;2;;EI;24;1;2017-09-19 10:43:23.000000;2017-09-19 10:43:23.000000;CARICAMENTO MANUALE;BD162;BD162
+146;33;Non idoneità alle funzioni del grado;2;;MM;24;1;2017-09-19 10:43:23.000000;2017-09-19 10:43:23.000000;CARICAMENTO MANUALE;BD162;BD162
+147;33;Non idoneità alle funzioni del grado;2;;AM;24;1;2017-09-19 10:43:23.000000;2017-09-19 10:43:23.000000;CARICAMENTO MANUALE;BD162;BD162
+148;33;Non idoneità alle funzioni del grado;2;;CC;24;1;2017-09-19 10:43:23.000000;2017-09-19 10:43:23.000000;CARICAMENTO MANUALE;BD162;BD162
+149;33;Non idoneità alle funzioni del grado;3;;EI;24;1;2017-09-19 10:43:23.000000;2017-09-19 10:43:23.000000;CARICAMENTO MANUALE;BD162;BD162
+150;33;Non idoneità alle funzioni del grado;3;;MM;24;1;2017-09-19 10:43:23.000000;2017-09-19 10:43:23.000000;CARICAMENTO MANUALE;BD162;BD162
+151;33;Non idoneità alle funzioni del grado;3;;AM;24;1;2017-09-19 10:43:23.000000;2017-09-19 10:43:23.000000;CARICAMENTO MANUALE;BD162;BD162
+152;33;Non idoneità alle funzioni del grado;3;;CC;24;1;2017-09-19 10:43:23.000000;2017-09-19 10:43:23.000000;CARICAMENTO MANUALE;BD162;BD162
+153;35;Scarso rendimento;1;;EI;25;1;2017-09-19 10:43:40.000000;2017-09-19 10:43:40.000000;CARICAMENTO MANUALE;BD165;BD165
+154;35;Scarso rendimento;1;;MM;25;1;2017-09-19 10:43:40.000000;2017-09-19 10:43:40.000000;CARICAMENTO MANUALE;BD165;BD165
+155;35;Scarso rendimento;1;;AM;25;1;2017-09-19 10:43:40.000000;2017-09-19 10:43:40.000000;CARICAMENTO MANUALE;BD165;BD165
+156;35;Scarso rendimento;1;;CC;25;1;2017-09-19 10:43:40.000000;2017-09-19 10:43:40.000000;CARICAMENTO MANUALE;BD165;BD165
+157;35;Scarso rendimento;2;;EI;25;1;2017-09-19 10:43:40.000000;2017-09-19 10:43:40.000000;CARICAMENTO MANUALE;BD165;BD165
+158;35;Scarso rendimento;2;;MM;25;1;2017-09-19 10:43:41.000000;2017-09-19 10:43:41.000000;CARICAMENTO MANUALE;BD165;BD165
+159;35;Scarso rendimento;2;;AM;25;1;2017-09-19 10:43:41.000000;2017-09-19 10:43:41.000000;CARICAMENTO MANUALE;BD165;BD165
+160;35;Scarso rendimento;2;;CC;25;1;2017-09-19 10:43:41.000000;2017-09-19 10:43:41.000000;CARICAMENTO MANUALE;BD165;BD165
+161;35;Scarso rendimento;3;;EI;25;1;2017-09-19 10:43:41.000000;2017-09-19 10:43:41.000000;CARICAMENTO MANUALE;BD165;BD165
+162;35;Scarso rendimento;3;;MM;25;1;2017-09-19 10:43:41.000000;2017-09-19 10:43:41.000000;CARICAMENTO MANUALE;BD165;BD165
+163;35;Scarso rendimento;3;;AM;25;1;2017-09-19 10:43:41.000000;2017-09-19 10:43:41.000000;CARICAMENTO MANUALE;BD165;BD165
+164;35;Scarso rendimento;3;;CC;25;1;2017-09-19 10:43:41.000000;2017-09-19 10:43:41.000000;CARICAMENTO MANUALE;BD165;BD165
+165;37;Ausiliaria (40 anni di servizio effettivo);1;;EI;8;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD154;BD154
+166;37;Ausiliaria (40 anni di servizio effettivo);1;;MM;8;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD154;BD154
+167;37;Ausiliaria (40 anni di servizio effettivo);1;;AM;8;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD154;BD154
+168;37;Ausiliaria (40 anni di servizio effettivo);1;;CC;8;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD154;BD154
+169;37;Ausiliaria (40 anni di servizio effettivo);2;;EI;8;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD154;BD154
+170;37;Ausiliaria (40 anni di servizio effettivo);2;;MM;8;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD154;BD154
+171;37;Ausiliaria (40 anni di servizio effettivo);2;;AM;8;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD154;BD154
+172;37;Ausiliaria (40 anni di servizio effettivo);2;;CC;8;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD154;BD154
+173;37;Ausiliaria (40 anni di servizio effettivo);3;;EI;8;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD154;BD154
+174;37;Ausiliaria (40 anni di servizio effettivo);3;;MM;8;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD154;BD154
+175;37;Ausiliaria (40 anni di servizio effettivo);3;;AM;8;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD154;BD154
+176;37;Ausiliaria (40 anni di servizio effettivo);3;;CC;8;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD154;BD154
+177;37;Ausiliaria Scivolo;1;;EI;9;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD158;BD158
+178;37;Ausiliaria Scivolo;1;;MM;9;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD158;BD158
+179;37;Ausiliaria Scivolo;1;;AM;9;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD158;BD158
+181;37;Ausiliaria Scivolo;2;;EI;9;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD158;BD158
+182;37;Ausiliaria Scivolo;2;;MM;9;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD158;BD158
+183;37;Ausiliaria Scivolo;2;;AM;9;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD158;BD158
+189;37;Ausiliaria dalla posizione di A.R.Q.;1;;EI;15;5;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD159;BD159
+190;37;Ausiliaria dalla posizione di A.R.Q.;1;;MM;15;5;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD159;BD159
+191;37;Ausiliaria dalla posizione di A.R.Q.;1;;AM;15;5;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD159;BD159
+192;37;Ausiliaria dalla posizione di A.R.Q.;1;;CC;15;5;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD159;BD159
+201;38;Riserva;1;;EI;26;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD155;BD155u
+202;38;Riserva;1;;MM;26;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD155;BD155u
+203;38;Riserva;1;;AM;26;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD155;BD155u
+204;38;Riserva;1;;CC;26;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD155;BD155u
+205;38;Riserva;2;;EI;27;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD156;BD155u
+206;38;Riserva;2;;MM;27;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD156;BD155u
+207;38;Riserva;2;;AM;27;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD156;BD155u
+208;38;Riserva;2;;CC;27;1;2017-09-19 10:43:57.000000;2017-09-19 10:43:57.000000;CARICAMENTO MANUALE;BD156;BD155u
+209;39;Complemento;1;;EI;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;BD157;BD157
+210;39;Complemento;1;;MM;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;BD157;BD157
+211;39;Complemento;1;;AM;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;BD157;BD157
+212;39;Complemento;1;;CC;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;BD157;BD157
+213;39;Complemento;2;;EI;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;BD157;BD157
+214;39;Complemento;2;;MM;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;BD157;BD157
+215;39;Complemento;2;;AM;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;BD157;BD157
+216;39;Complemento;2;;CC;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;BD157;BD157
+217;39;Complemento;3;;EI;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;BD157;BD157
+218;39;Complemento;3;;MM;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;BD157;BD157
+219;39;Complemento;3;;AM;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;BD157;BD157
+220;39;Complemento;3;;CC;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;BD157;BD157
+221;40;Riserva di complemento;1;;EI;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;;XX001
+222;40;Riserva di complemento;1;;MM;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;;XX001
+223;40;Riserva di complemento;1;;AM;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;;XX001
+224;40;Riserva di complemento;1;;CC;17;1;2017-09-19 10:48:29.000000;2017-09-19 10:48:29.000000;CARICAMENTO MANUALE;;XX001
+233;41;Congedo assoluto;1;;EI;26;1;2017-09-19 10:48:30.000000;2017-09-19 10:48:30.000000;CARICAMENTO MANUALE;;XX002
+234;41;Congedo assoluto;1;;MM;26;1;2017-09-19 10:48:30.000000;2017-09-19 10:48:30.000000;CARICAMENTO MANUALE;;XX002
+235;41;Congedo assoluto;1;;AM;26;1;2017-09-19 10:48:30.000000;2017-09-19 10:48:30.000000;CARICAMENTO MANUALE;;XX002
+236;41;Congedo assoluto;1;;CC;26;1;2017-09-19 10:48:30.000000;2017-09-19 10:48:30.000000;CARICAMENTO MANUALE;;XX002
+301;30;Mancato superamento del corso applicativo a nomina diretta ruolo normale;2;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+302;30;Mancato superamento del corso applicativo a nomina diretta ruolo normale;3;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+303;30;Mancato superamento del corso applicativo a nomina diretta ruolo normale;2;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+304;30;Mancato superamento del corso applicativo a nomina diretta ruolo normale;3;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+305;30;Mancato superamento del corso applicativo a nomina diretta ruolo normale;2;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+306;30;Mancato superamento del corso applicativo a nomina diretta ruolo normale;3;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+307;30;Mancato superamento del corso applicativo a nomina diretta ruolo normale;2;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+308;30;Mancato superamento del corso applicativo a nomina diretta ruolo normale;3;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+309;30;Mancato superamento del corso applicativo a nomina diretta ruolo speciale;2;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+310;30;Mancato superamento del corso applicativo a nomina diretta ruolo speciale;3;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+311;30;Mancato superamento del corso applicativo a nomina diretta ruolo speciale;2;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+312;30;Mancato superamento del corso applicativo a nomina diretta ruolo speciale;3;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+313;30;Mancato superamento del corso applicativo a nomina diretta ruolo speciale;2;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+314;30;Mancato superamento del corso applicativo a nomina diretta ruolo speciale;3;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+315;30;Mancato superamento del corso applicativo a nomina diretta ruolo speciale;2;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+316;30;Mancato superamento del corso applicativo a nomina diretta ruolo speciale;3;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+317;30;Non idoneità al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);2;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+318;30;Non idoneità al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);3;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+319;30;Non idoneità al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);2;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+320;30;Non idoneità al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);3;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+321;30;Non idoneità al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);2;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+322;30;Non idoneità al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);3;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+323;30;Non idoneità al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);2;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+324;30;Non idoneità al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);3;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+325;30;Rinuncia al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);2;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+326;30;Rinuncia al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);3;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+327;30;Rinuncia al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);2;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+328;30;Rinuncia al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);3;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+329;30;Rinuncia al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);3;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+330;30;Rinuncia al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);2;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+331;30;Rinuncia al transito nei ruoli speciali (a seguito di dimissione dall'Accademia);3;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+332;36;Cessazione d'autorità;2;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+333;36;Cessazione d'autorità;3;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+334;36;Cessazione d'autorità;2;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+335;36;Cessazione d'autorità;3;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+336;36;Cessazione d'autorità;2;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+337;36;Cessazione d'autorità;3;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+338;36;Cessazione d'autorità;2;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+339;36;Cessazione d'autorità;3;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+340;37;Ausiliaria dalla posizione di A.R.Q.;2;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+341;37;Ausiliaria dalla posizione di A.R.Q.;3;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+342;37;Ausiliaria dalla posizione di A.R.Q.;2;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+343;37;Ausiliaria dalla posizione di A.R.Q.;3;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+344;37;Ausiliaria dalla posizione di A.R.Q.;2;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+345;37;Ausiliaria dalla posizione di A.R.Q.;3;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+346;37;Ausiliaria dalla posizione di A.R.Q.;2;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+347;37;Ausiliaria dalla posizione di A.R.Q.;3;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+348;37;Ausiliaria Scivolo;3;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+349;37;Ausiliaria Scivolo;1;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+350;37;Ausiliaria Scivolo;2;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+351;37;Ausiliaria Scivolo;3;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+352;37;Ausiliaria Scivolo;3;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+353;37;Ausiliaria Scivolo;3;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+354;38;Riserva;3;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+355;38;Riserva;3;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+356;38;Riserva;3;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+357;38;Riserva;3;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+358;40;Riserva di complemento;2;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+359;40;Riserva di complemento;3;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+360;40;Riserva di complemento;2;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+361;40;Riserva di complemento;3;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+362;40;Riserva di complemento;2;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+363;40;Riserva di complemento;3;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+364;40;Riserva di complemento;2;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+365;40;Riserva di complemento;3;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+366;41;Congedo assoluto;2;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+367;41;Congedo assoluto;3;;AM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+368;41;Congedo assoluto;2;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+369;41;Congedo assoluto;3;;CC;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+370;41;Congedo assoluto;2;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+371;41;Congedo assoluto;3;;EI;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+372;41;Congedo assoluto;2;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;
+373;41;Congedo assoluto;3;;MM;50;;2022-07-13 00:00:00.000000;2022-07-13 00:00:00.000000;RECORD INAMMISSIBILI;;

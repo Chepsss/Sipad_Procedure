@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+    <!--
+        Added the constraints for entity tb_ce_proc_assegnazioni.
+    -->
+    <changeSet id="constraints_tb_ce_proc_assegnazioni_v1.0" author="m.kerabandi">
+
+        <addForeignKeyConstraint baseColumnNames="id_proc_storico"
+                                 baseTableName="tb_ce_proc_assegnazioni"
+                                 constraintName="fk_proc_assegnazioni_proc_storico"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_ce_proc_storico"/>
+    </changeSet>
+</databaseChangeLog>

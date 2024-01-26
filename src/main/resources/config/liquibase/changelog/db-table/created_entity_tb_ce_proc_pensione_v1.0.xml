@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!--
+        Added the entity TB_CE_PROC_PENSIONE.
+    -->
+    <changeSet id="created_entity_tb_ce_proc_pensione_v1.0" author="m.kerabandi">
+        <createTable tableName="tb_ce_proc_pensione">
+            <column name="id_proc" type="bigint">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="tb_ce_proc_pensione_pk"/>
+            </column>
+            <column name="mod_compilazione" remarks="Modalità di compilazione scelta dall’utente. Qualora selezioni 'Da servizio' tutti i campi sottostanti diventano in sola lettura." type="char(1)" defaultValue="M">
+                <constraints nullable="false" />
+            </column>
+            <column name="prot_atto_persomil" remarks="Numero del protocollo atto Persomil" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_decorrenza" remarks="Data di decorrenza della cessazione inserita dall’utente in precedenza, data cui si riferiscono tutti i dati pensionistici" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            <column name="anni_servizio_eff" remarks="Numero di anni di servizio effettivo alla data di decorrenza della cessazione" type="int">
+                <constraints nullable="true" />
+            </column>
+            <column name="mesi_servizio_eff" remarks="Numero di mesi di servizio effettivo in eccedenza agli anni inseriti alla data di decorrenza della cessazione" type="int">
+                <constraints nullable="true" />
+            </column>
+            <column name="giorni_servizio_eff" remarks="Numero di giorni di servizio effettivo in eccedenza ai mesi inseriti alla data di decorrenza della cessazione" type="int">
+                <constraints nullable="true" />
+            </column>
+            <column name="eta_dipendente" remarks="Età anagrafica del dipendente alla data di decorrenza della cessazione" type="int">
+                <constraints nullable="true" />
+            </column>
+            <column name="anni_anz_contr" remarks="Numero di anni di anzianità contributiva aggiornata alla data di decorrenza della cessazione" type="int">
+                <constraints nullable="true" />
+            </column>
+            <column name="mesi_anz_contr" remarks="Numero di mesi di anzianità contributiva aggiornata in eccedenza agli anni inseriti alla data di decorrenza della cessazione" type="int">
+                <constraints nullable="true" />
+            </column>
+            <column name="giorni_anz_contr" remarks="Numero di giorni di anzianità contributiva aggiornata in eccedenza ai mesi inseriti alla data di decorrenza della cessazione" type="int">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_agg_anz_contr" remarks="Data di aggiornamento dell’anzianità contributiva" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_mat_req_minimo" remarks="Data di maturazione del requisito minimo" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="mesi_incr_speranza_v" remarks="Incremento della speranza di vita espresso in mesi" type="int">
+                <constraints nullable="true" />
+            </column>
+            <column name="mesi_fin_mobile" remarks="Finestra mobile espressa in mesi" type="int">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_diritto_tratt" remarks="Data di acquisizione del diritto di percezione al trattamento pensionistico" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="cod_ins" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ins" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cod_ult_agg" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ult_agg" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="constraints_tb_ce_proc_pensione_v1.0" author="m.kerabandi">
+
+        <addForeignKeyConstraint baseColumnNames="id_proc"
+                                 baseTableName="tb_ce_proc_pensione"
+                                 constraintName="fk_tb_ce_proc_pensione__procedure"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tb_ce_procedura"/>
+    </changeSet>
+
+</databaseChangeLog>

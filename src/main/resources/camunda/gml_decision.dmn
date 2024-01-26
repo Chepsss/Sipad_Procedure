@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="gmlDecision" name="GML Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.8.1">
+  <decision id="gmlDecisionKey" name="GML Decision">
+    <decisionTable id="DecisionTable_04sjhbt" hitPolicy="FIRST">
+      <input id="Input_1" label="instance" camunda:inputVariable="instance">
+        <inputExpression id="InputExpression_1" typeRef="integer">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1qbzfn9" label="gml" camunda:inputVariable="gml">
+        <inputExpression id="LiteralExpression_0373asr" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_01i1a46">
+          <text>"PNI al s.m.i. in riserva","PNI al s.m.i. in congedo assoluto","PNI al s.m.i. in forma parziale in riserva","Idoneo al servizio militare incondizionato","Temporaneamente non idoneo al s.m.i."</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0dp4sxu" label="D05" camunda:inputVariable="D05">
+        <inputExpression id="LiteralExpression_1idnhq9" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1ne144q" label="sgtpoAcrPosizione" camunda:inputVariable="sgtpoAcrPosizione">
+        <inputExpression id="LiteralExpression_0tl1pj6" typeRef="string">
+          <text>sgtpoAcrPosizione</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_09ph09z">
+          <text>"RIS","AUS","CONGASS","CPLCONG","RISCPL"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="response" name="response" typeRef="string">
+        <outputValues id="UnaryTests_0671kcf">
+          <text>"ok","incongruenza","noestremi","nodati"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_1d5cjcy" label="errorOutput" name="errorOutput" typeRef="string">
+        <outputValues id="UnaryTests_1y7ekcr">
+          <text>"Categoria congedo e GML non corrispondono","Verificare che ci siano gli estremi per avviare un procedimento di cessazione PNI","E' necessario compilare il dato 'Dipendenza da causa di servizio' in 'Dichiarazioni e Controlli'"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_139yt2x">
+        <inputEntry id="UnaryTests_03bvqx2">
+          <text>2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w24acg">
+          <text>"PNI al s.m.i. in riserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17sl38i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ua2juy">
+          <text>not("RIS")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mlzkbo">
+          <text>"incongruenza"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hs0ysm">
+          <text>"Categoria congedo e GML non corrispondono"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hmg6kg">
+        <inputEntry id="UnaryTests_0bamg4h">
+          <text>2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s7d3nw">
+          <text>"PNI al s.m.i. in riserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pel7pw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12wemim">
+          <text>"RIS"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1git5ks">
+          <text>"ok"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dmmbnc">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1sefjva">
+        <inputEntry id="UnaryTests_0p0qf3v">
+          <text>2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wg8jhn">
+          <text>"PNI al s.m.i. in congedo assoluto"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u52js9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iyfcf1">
+          <text>not("CONGASS")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wwa1k7">
+          <text>"incongruenza"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12ffco1">
+          <text>"Categoria congedo e GML non corrispondono"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ni4wal">
+        <inputEntry id="UnaryTests_0w9fqu9">
+          <text>2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1em4jig">
+          <text>"PNI al s.m.i. in congedo assoluto"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0urylij">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18yvhfe">
+          <text>"CONGASS"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vugui8">
+          <text>"ok"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k499ec">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_061ypna">
+        <inputEntry id="UnaryTests_1go19z2">
+          <text>2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vmypz1">
+          <text>"PNI al s.m.i. in forma parziale in riserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wk39cf">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_008h9yh">
+          <text>"RIS"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1eklou4">
+          <text>"ok"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1u6axkh">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0smrqlu">
+        <inputEntry id="UnaryTests_001nz9g">
+          <text>2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kem4yf">
+          <text>"PNI al s.m.i. in forma parziale in riserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11sj95k">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bqz57k">
+          <text>not("RIS")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ux1q8t">
+          <text>"incongruenza"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1io40fs">
+          <text>"Categoria congedo e GML non corrispondono"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1iqguzd">
+        <inputEntry id="UnaryTests_12ixjd6">
+          <text>2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_097y5ko">
+          <text>"PNI al s.m.i. in forma parziale in riserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18m4cm1">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wbabr8">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fkbgrr">
+          <text>"noestremi"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qfdbit">
+          <text>"Verificare che ci siano gli estremi per avviare un procedimento di cessazione PNI"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rbig6s">
+        <inputEntry id="UnaryTests_0re8xo8">
+          <text>2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dcbfut">
+          <text>"PNI al s.m.i. in forma parziale in riserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xgbq7s">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_125jkwh">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0c79h73">
+          <text>"nodati"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j4oy6t">
+          <text>"E' necessario compilare il dato 'Dipendenza da causa di servizio' in 'Dichiarazioni e Controlli'"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1dtmmvh">
+        <inputEntry id="UnaryTests_0542hmg">
+          <text>2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0eyyauh">
+          <text>"Idoneo al servizio militare incondizionato"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lvvjsg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t237t2">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1as101o">
+          <text>"noestremi"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13qfn1q">
+          <text>"Verificare che ci siano gli estremi per avviare un procedimento di cessazione PNI"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kk2izr">
+        <inputEntry id="UnaryTests_13rf746">
+          <text>2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0izdob6">
+          <text>"Temporaneamente non idoneo al s.m.i."</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jsdt2z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uk753y">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ag5stf">
+          <text>"noestremi"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cqnhlz">
+          <text>"Verificare che ci siano gli estremi per avviare un procedimento di cessazione PNI"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_175djdc">
+        <inputEntry id="UnaryTests_0cdqzwi">
+          <text>1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d4e2sa">
+          <text>"PNI al s.m.i. in riserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cryy8h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bcjoqi">
+          <text>not("RIS")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05eoowj">
+          <text>"incongruenza"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d63ev7">
+          <text>"Categoria congedo e GML non corrispondono"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p03xqx">
+        <inputEntry id="UnaryTests_1qsvfx9">
+          <text>1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1od6fzy">
+          <text>"PNI al s.m.i. in riserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_080nx09">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0twp11d">
+          <text>"RIS"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1y7nhh2">
+          <text>"ok"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vuulx0">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12vr09f">
+        <inputEntry id="UnaryTests_0db3v6m">
+          <text>1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04pfeog">
+          <text>"PNI al s.m.i. in congedo assoluto"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xnc4oz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g82dao">
+          <text>not("CONGASS")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ycml46">
+          <text>"incongruenza"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qvdxu7">
+          <text>"Categoria congedo e GML non corrispondono"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ln8bz8">
+        <inputEntry id="UnaryTests_1a3ngzt">
+          <text>1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f4nfoi">
+          <text>"PNI al s.m.i. in congedo assoluto"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rlxzam">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qv6c4b">
+          <text>"CONGASS"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_024020k">
+          <text>"ok"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gxee7p">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07korr5">
+        <inputEntry id="UnaryTests_13sqypp">
+          <text>1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lqlt48">
+          <text>"PNI al s.m.i. in forma parziale in riserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nagqjp">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_019ifxw">
+          <text>"RIS"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pt1xtn">
+          <text>"ok"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v3lmc9">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bwkgvc">
+        <inputEntry id="UnaryTests_06dp66v">
+          <text>1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08b097r">
+          <text>"PNI al s.m.i. in forma parziale in riserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_030j8mi">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07kwbrz">
+          <text>not("RIS")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1nz3vlf">
+          <text>"incongruenza"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dnivtj">
+          <text>"Categoria congedo e GML non corrispondono"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_02isckj">
+        <inputEntry id="UnaryTests_10lso2u">
+          <text>1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fbcl6f">
+          <text>"PNI al s.m.i. in forma parziale in riserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kyu7yq">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1upsyw7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1u39quj">
+          <text>"noestremi"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_190r5re">
+          <text>"Verificare che ci siano gli estremi per avviare un procedimento di cessazione PNI"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fe2tch">
+        <inputEntry id="UnaryTests_0dmhzs1">
+          <text>1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vbc6et">
+          <text>"PNI al s.m.i. in forma parziale in riserva"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_158cfyv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tkgbpg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02hvkol">
+          <text>"nodati"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hdtdx6">
+          <text>"E' necessario compilare il dato 'Dipendenza da causa di servizio' in 'Dichiarazioni e Controlli'"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="gmlDecisionKey">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

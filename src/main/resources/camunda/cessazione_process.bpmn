@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0w70rcj" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.5.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
+  <bpmn:collaboration id="Collaboration_1lmombb">
+    <bpmn:participant id="Participant_1wixrbd" processRef="cessazione_process" />
+  </bpmn:collaboration>
+  <bpmn:process id="cessazione_process" isExecutable="true">
+    <bpmn:laneSet id="LaneSet_1c54xqj">
+      <bpmn:lane id="Lane_1bkkc1t" name="Istruttore">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0peeawr</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>BOZZA</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>LAVORAZIONE</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_1qa8o2q" name="Approvatore">
+        <bpmn:flowNodeRef>APPR_FIRMA</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>APPR_DOC</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>CHIUSURA_PA_DINIEGO</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>CHIUSURA_PA_DECRETO</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0vffhmb" name="Titolare firma">
+        <bpmn:flowNodeRef>FIRMA</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0tqyom8" name="RDP">
+        <bpmn:flowNodeRef>CHIUSURA_PA_RDP</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>IN_CHIUSURA</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>CHIUSO</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0ar4ldp</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0a2665z</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_1knpkk3</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_0peeawr">
+      <bpmn:incoming>Flow_1l5beqx</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1knpkk3" sourceRef="StartEvent_1" targetRef="BOZZA" />
+    <bpmn:sequenceFlow id="Flow_1l5beqx" name="Cancellazione" sourceRef="BOZZA" targetRef="Event_0peeawr">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("deletePa") == true &amp;&amp; deletePa}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1vo2rjt" name="Crea PA" sourceRef="BOZZA" targetRef="LAVORAZIONE">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="LAVORAZIONE"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1lqzydl" name="Documenti da approvare" sourceRef="LAVORAZIONE" targetRef="APPR_DOC">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="APPR_DOC"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1d86mqq" name="1. completato 2. revisione" sourceRef="APPR_DOC" targetRef="LAVORAZIONE">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="LAVORAZIONE"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1ffzy7m" name="Invio a chiusura PA (diniego)" sourceRef="LAVORAZIONE" targetRef="CHIUSURA_PA_DINIEGO">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="CHIUSURA_PA_DINIEGO"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0r04n60" name="Invio alla approvazione firma" sourceRef="LAVORAZIONE" targetRef="APPR_FIRMA">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="APPR_FIRMA"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1pd7j00" name="Invio alla firma" sourceRef="APPR_FIRMA" targetRef="FIRMA">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="FIRMA"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0hhluep" name="Invio alla chiusura" sourceRef="FIRMA" targetRef="IN_CHIUSURA">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="IN_CHIUSURA"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1ng1lst" name="Chiusura" sourceRef="IN_CHIUSURA" targetRef="CHIUSO">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="CHIUSO"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1t3d9w3" name="Revisione" sourceRef="APPR_FIRMA" targetRef="LAVORAZIONE">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="LAVORAZIONE"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1c3zxb9" name="Revisione" sourceRef="CHIUSURA_PA_DINIEGO" targetRef="LAVORAZIONE">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="LAVORAZIONE"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0xdbr9u" name="Invio a chiusura PA (diniego)" sourceRef="CHIUSURA_PA_DINIEGO" targetRef="CHIUSURA_PA_RDP">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="CHIUSURA_PA_RDP"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1k68cw2" name="Chiudi PA (diniego)" sourceRef="CHIUSURA_PA_RDP" targetRef="Activity_0ar4ldp">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="CHIUSO_ANT"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0hy5bjp" name="Chiudi PA - diniego" sourceRef="CHIUSURA_PA_DINIEGO" targetRef="Activity_0ar4ldp">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${(execution.hasVariable("nextState") == true &amp;&amp; nextState=="CHIUSO_ANT") &amp;&amp; (execution.hasVariable("role") == true &amp;&amp; role.contains("ROLE_MANAGER_"))}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1mp0ky2" name="Revisione" sourceRef="FIRMA" targetRef="APPR_FIRMA">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="APPR_FIRMA"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0b3aw1v" name="Revisione" sourceRef="IN_CHIUSURA" targetRef="FIRMA">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="FIRMA"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:userTask id="BOZZA" name="Bozza">
+      <bpmn:incoming>Flow_1knpkk3</bpmn:incoming>
+      <bpmn:outgoing>Flow_1vo2rjt</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1l5beqx</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="APPR_FIRMA" name="Approvazione firma">
+      <bpmn:incoming>Flow_1mp0ky2</bpmn:incoming>
+      <bpmn:incoming>Flow_0r04n60</bpmn:incoming>
+      <bpmn:outgoing>Flow_1t3d9w3</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1pd7j00</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_00mdfer" name="Invio a chiusura PA (decreto)" sourceRef="LAVORAZIONE" targetRef="CHIUSURA_PA_DECRETO">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="CHIUSURA_PA_DECRETO"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_08wn9gc" name="Revisione" sourceRef="CHIUSURA_PA_DECRETO" targetRef="LAVORAZIONE">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("nextState") == true &amp;&amp; nextState=="LAVORAZIONE"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:userTask id="APPR_DOC" name="Approvazione documenti">
+      <bpmn:incoming>Flow_1lqzydl</bpmn:incoming>
+      <bpmn:outgoing>Flow_1d86mqq</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="CHIUSURA_PA_DINIEGO" name="Chiusura PA Approvatore (diniego)">
+      <bpmn:incoming>Flow_1ffzy7m</bpmn:incoming>
+      <bpmn:outgoing>Flow_0hy5bjp</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0xdbr9u</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1c3zxb9</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1hfbqcw" name="Chiudi PA - decreto quarta via" sourceRef="CHIUSURA_PA_DECRETO" targetRef="CHIUSO">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${(execution.hasVariable("nextState") == true &amp;&amp; nextState=="CHIUSO") &amp;&amp; (execution.hasVariable("role") == true &amp;&amp; role.contains("ROLE_MANAGER_"))}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:userTask id="CHIUSURA_PA_RDP" name="Chiusura PA RDP">
+      <bpmn:incoming>Flow_0xdbr9u</bpmn:incoming>
+      <bpmn:outgoing>Flow_1k68cw2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="FIRMA" name="In firma">
+      <bpmn:incoming>Flow_0b3aw1v</bpmn:incoming>
+      <bpmn:incoming>Flow_1pd7j00</bpmn:incoming>
+      <bpmn:outgoing>Flow_1mp0ky2</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0hhluep</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="IN_CHIUSURA" name="In chiusura">
+      <bpmn:incoming>Flow_0hhluep</bpmn:incoming>
+      <bpmn:outgoing>Flow_0b3aw1v</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1ng1lst</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="CHIUSURA_PA_DECRETO" name="Chiusura PA Approvatore (decreto)">
+      <bpmn:incoming>Flow_00mdfer</bpmn:incoming>
+      <bpmn:outgoing>Flow_08wn9gc</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1hfbqcw</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1g4jy2w" name="Fine" sourceRef="CHIUSO" targetRef="Event_0a2665z">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("endEvent") == true &amp;&amp; endEvent == "closePa"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:userTask id="LAVORAZIONE" name="In lavorazione">
+      <bpmn:incoming>Flow_1c3zxb9</bpmn:incoming>
+      <bpmn:incoming>Flow_1t3d9w3</bpmn:incoming>
+      <bpmn:incoming>Flow_1d86mqq</bpmn:incoming>
+      <bpmn:incoming>Flow_1vo2rjt</bpmn:incoming>
+      <bpmn:incoming>Flow_08wn9gc</bpmn:incoming>
+      <bpmn:outgoing>Flow_0r04n60</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1ffzy7m</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1lqzydl</bpmn:outgoing>
+      <bpmn:outgoing>Flow_00mdfer</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="CHIUSO" name="Chiuso">
+      <bpmn:extensionElements />
+      <bpmn:incoming>Flow_1ng1lst</bpmn:incoming>
+      <bpmn:incoming>Flow_1hfbqcw</bpmn:incoming>
+      <bpmn:outgoing>Flow_1g4jy2w</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_0ar4ldp" name="Chiuso anticipatamente">
+      <bpmn:incoming>Flow_1k68cw2</bpmn:incoming>
+      <bpmn:incoming>Flow_0hy5bjp</bpmn:incoming>
+      <bpmn:outgoing>Flow_0lpchmc</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0lpchmc" name="Fine" sourceRef="Activity_0ar4ldp" targetRef="Event_0a2665z">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${execution.hasVariable("endEvent") == true &amp;&amp; endEvent == "closePa"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:endEvent id="Event_0a2665z">
+      <bpmn:incoming>Flow_1g4jy2w</bpmn:incoming>
+      <bpmn:incoming>Flow_0lpchmc</bpmn:incoming>
+    </bpmn:endEvent>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1lmombb">
+      <bpmndi:BPMNShape id="Participant_1wixrbd_di" bpmnElement="Participant_1wixrbd" isHorizontal="true">
+        <dc:Bounds x="160" y="80" width="1820" height="1020" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0tqyom8_di" bpmnElement="Lane_0tqyom8" isHorizontal="true">
+        <dc:Bounds x="190" y="830" width="1790" height="270" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0vffhmb_di" bpmnElement="Lane_0vffhmb" isHorizontal="true">
+        <dc:Bounds x="190" y="570" width="1790" height="260" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1qa8o2q_di" bpmnElement="Lane_1qa8o2q" isHorizontal="true">
+        <dc:Bounds x="190" y="300" width="1790" height="270" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1bkkc1t_di" bpmnElement="Lane_1bkkc1t" isHorizontal="true">
+        <dc:Bounds x="190" y="80" width="1790" height="220" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="243" y="190" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0peeawr_di" bpmnElement="Event_0peeawr">
+        <dc:Bounds x="363" y="90" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0rzhbwj_di" bpmnElement="BOZZA">
+        <dc:Bounds x="331" y="168" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0qhmfwp_di" bpmnElement="APPR_FIRMA">
+        <dc:Bounds x="1300" y="380" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1bxinzi_di" bpmnElement="APPR_DOC">
+        <dc:Bounds x="400" y="410" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_00acold_di" bpmnElement="CHIUSURA_PA_DINIEGO">
+        <dc:Bounds x="670" y="410" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0fi695a_di" bpmnElement="CHIUSURA_PA_RDP">
+        <dc:Bounds x="670" y="910" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_18mhjmx_di" bpmnElement="FIRMA">
+        <dc:Bounds x="1310" y="640" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_04bx30q_di" bpmnElement="IN_CHIUSURA">
+        <dc:Bounds x="1430" y="850" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1aogr74_di" bpmnElement="CHIUSURA_PA_DECRETO">
+        <dc:Bounds x="930" y="410" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0nezk5u_di" bpmnElement="LAVORAZIONE">
+        <dc:Bounds x="520" y="168" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_05viavs_di" bpmnElement="CHIUSO">
+        <dc:Bounds x="1690" y="890" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_09l0vhk" bpmnElement="Activity_0ar4ldp">
+        <dc:Bounds x="1690" y="1000" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0a2665z_di" bpmnElement="Event_0a2665z">
+        <dc:Bounds x="1912" y="962" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1knpkk3_di" bpmnElement="Flow_1knpkk3">
+        <di:waypoint x="279" y="208" />
+        <di:waypoint x="331" y="208" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1l5beqx_di" bpmnElement="Flow_1l5beqx">
+        <di:waypoint x="381" y="168" />
+        <di:waypoint x="381" y="126" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="306" y="144" width="70" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1vo2rjt_di" bpmnElement="Flow_1vo2rjt">
+        <di:waypoint x="431" y="208" />
+        <di:waypoint x="520" y="208" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="459" y="183" width="42" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1lqzydl_di" bpmnElement="Flow_1lqzydl">
+        <di:waypoint x="550" y="248" />
+        <di:waypoint x="550" y="329" />
+        <di:waypoint x="430" y="329" />
+        <di:waypoint x="430" y="410" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="356" y="356" width="68" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1d86mqq_di" bpmnElement="Flow_1d86mqq">
+        <di:waypoint x="470" y="410" />
+        <di:waypoint x="470" y="350" />
+        <di:waypoint x="590" y="350" />
+        <di:waypoint x="590" y="248" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="500" y="356" width="79" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ffzy7m_di" bpmnElement="Flow_1ffzy7m">
+        <di:waypoint x="619" y="240" />
+        <di:waypoint x="690" y="240" />
+        <di:waypoint x="690" y="410" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="611" y="336" width="78" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0r04n60_di" bpmnElement="Flow_0r04n60">
+        <di:waypoint x="620" y="190" />
+        <di:waypoint x="1320" y="190" />
+        <di:waypoint x="1320" y="380" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1246" y="322" width="67" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1pd7j00_di" bpmnElement="Flow_1pd7j00">
+        <di:waypoint x="1330" y="460" />
+        <di:waypoint x="1330" y="640" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1244" y="547" width="72" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hhluep_di" bpmnElement="Flow_0hhluep">
+        <di:waypoint x="1410" y="700" />
+        <di:waypoint x="1450" y="700" />
+        <di:waypoint x="1450" y="850" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1355" y="775" width="89" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ng1lst_di" bpmnElement="Flow_1ng1lst">
+        <di:waypoint x="1530" y="910" />
+        <di:waypoint x="1690" y="910" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1554" y="893" width="45" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1t3d9w3_di" bpmnElement="Flow_1t3d9w3">
+        <di:waypoint x="1380" y="380" />
+        <di:waypoint x="1380" y="170" />
+        <di:waypoint x="616" y="170" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1395" y="333" width="49" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1c3zxb9_di" bpmnElement="Flow_1c3zxb9">
+        <di:waypoint x="750" y="410" />
+        <di:waypoint x="750" y="230" />
+        <di:waypoint x="620" y="230" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="755" y="343" width="49" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0xdbr9u_di" bpmnElement="Flow_0xdbr9u">
+        <di:waypoint x="720" y="490" />
+        <di:waypoint x="720" y="910" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="631" y="726" width="78" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1k68cw2_di" bpmnElement="Flow_1k68cw2">
+        <di:waypoint x="720" y="990" />
+        <di:waypoint x="720" y="1060" />
+        <di:waypoint x="1690" y="1060" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1135" y="1066" width="49" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hy5bjp_di" bpmnElement="Flow_0hy5bjp">
+        <di:waypoint x="760" y="490" />
+        <di:waypoint x="760" y="710" />
+        <di:waypoint x="1000" y="710" />
+        <di:waypoint x="1000" y="1020" />
+        <di:waypoint x="1690" y="1020" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="945" y="906" width="49" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1mp0ky2_di" bpmnElement="Flow_1mp0ky2">
+        <di:waypoint x="1370" y="640" />
+        <di:waypoint x="1370" y="460" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1395" y="547" width="49" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0b3aw1v_di" bpmnElement="Flow_0b3aw1v">
+        <di:waypoint x="1510" y="850" />
+        <di:waypoint x="1510" y="660" />
+        <di:waypoint x="1410" y="660" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1515" y="775" width="49" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_00mdfer_di" bpmnElement="Flow_00mdfer">
+        <di:waypoint x="620" y="220" />
+        <di:waypoint x="950" y="220" />
+        <di:waypoint x="950" y="410" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="871" y="336" width="78" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_08wn9gc_di" bpmnElement="Flow_08wn9gc">
+        <di:waypoint x="1000" y="410" />
+        <di:waypoint x="1000" y="208" />
+        <di:waypoint x="620" y="208" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1025" y="343" width="49" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1hfbqcw_di" bpmnElement="Flow_1hfbqcw">
+        <di:waypoint x="1030" y="450" />
+        <di:waypoint x="1110" y="450" />
+        <di:waypoint x="1110" y="960" />
+        <di:waypoint x="1690" y="960" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1116" y="874" width="87" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1g4jy2w_di" bpmnElement="Flow_1g4jy2w">
+        <di:waypoint x="1790" y="930" />
+        <di:waypoint x="1930" y="930" />
+        <di:waypoint x="1930" y="962" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1849" y="913" width="22" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0lpchmc_di" bpmnElement="Flow_0lpchmc">
+        <di:waypoint x="1790" y="1040" />
+        <di:waypoint x="1930" y="1040" />
+        <di:waypoint x="1930" y="998" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1849" y="1043" width="22" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,6 @@
+id;code_fase;desc_fase;ord_fase
+1;AVVIO;Avvio;1
+2;ISTRUTTORIA;Istruttoria;2
+3;APPROVAZIONE;Approvazione;3
+4;FIRMA;Firma;4
+5;CHIUSURA;Chiusura;5

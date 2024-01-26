@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!--
+        Added the entity ProcedureHistory.
+    -->
+    <changeSet id="created_entity_ProcedureHistory_v1.0" author="m.kerabandi">
+        <createTable tableName="tb_ce_proc_storico">
+            <column name="id" type="bigint" defaultValueSequenceNext="proc_storico_sequence">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="tb_ce_proc_storico_pk"/>
+            </column>
+            <column name="id_proc" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="data_assegnazione" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+            <column name="id_stato_procedura" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="role_code" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column remarks="Flag per identificare l'assegnatario attuale"
+                    name="flag_attuale" type="boolean">
+                <constraints nullable="false" />
+            </column>
+            <column name="cod_ins" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ins" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cod_ult_agg" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ult_agg" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

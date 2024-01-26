@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="reassignmentDecision" name="Reassignment Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.5.1">
+  <decision id="reassignmentDecisionKey" name="Reassignment Decision">
+    <decisionTable id="DecisionTable_0q9v9qp" hitPolicy="COLLECT">
+      <input id="Input_1" label="currentState" biodi:width="378" camunda:inputVariable="currentState">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0vq15h8">
+          <text>"BOZZA","LAVORAZIONE","APPR_DOC","APPR_FIRMA","CHIUSURA_PA_RDP","FIRMA","IN_CHIUSURA","CHIUSO","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_DECRETO","CHIUSO_ANT"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_022zhie" label="nextState" biodi:width="316" camunda:inputVariable="nextState">
+        <inputExpression id="LiteralExpression_1ifmgjt" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0y8wrln">
+          <text>"BOZZA","LAVORAZIONE","APPR_DOC","APPR_FIRMA","FIRMA","IN_CHIUSURA","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_DECRETO","CHIUSURA_PA_RDP","CHIUSO","CHIUSO_ANT"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_06ol5rh" label="reassignment" name="reassignment" typeRef="string">
+        <outputValues id="UnaryTests_0391axp">
+          <text>"yes","no"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_0xgoi7j">
+        <inputEntry id="UnaryTests_10608d9">
+          <text>"BOZZA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g1bwi9">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13vgfre">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0891cwg">
+        <inputEntry id="UnaryTests_15ifzxp">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s9ca12">
+          <text>"APPR_DOC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gslmqc">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ir3d4q">
+        <inputEntry id="UnaryTests_1qpyhvz">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0owze4r">
+          <text>"CHIUSURA_PA_DINIEGO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07nf3y6">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08itd1b">
+        <inputEntry id="UnaryTests_13b20dc">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kje1uf">
+          <text>"CHIUSURA_PA_DECRETO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vnvunn">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ktzgzf">
+        <inputEntry id="UnaryTests_1wmqz0i">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b8xmuz">
+          <text>"APPR_FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0eie8lf">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xb5up7">
+        <inputEntry id="UnaryTests_0ci637m">
+          <text>"APPR_DOC"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15opryv">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1l9y4k3">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0wvonca">
+        <inputEntry id="UnaryTests_1o36goi">
+          <text>"CHIUSURA_PA_DINIEGO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ae8a4b">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1y5612d">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0leb16c">
+        <inputEntry id="UnaryTests_1nvdaxm">
+          <text>"CHIUSURA_PA_DINIEGO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dlqxz4">
+          <text>"CHIUSURA_PA_RDP"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04mj1tu">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1t57vr2">
+        <inputEntry id="UnaryTests_12pjy0e">
+          <text>"CHIUSURA_PA_DINIEGO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19kyacb">
+          <text>"CHIUSO_ANT"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1adm20c">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05py2p2">
+        <inputEntry id="UnaryTests_1t69vc2">
+          <text>"CHIUSURA_PA_DECRETO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_018cerq">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_087dntu">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1iunhnm">
+        <inputEntry id="UnaryTests_1n4wqga">
+          <text>"CHIUSURA_PA_DECRETO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pvigyt">
+          <text>"CHIUSO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0axdv2z">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ou0qdg">
+        <inputEntry id="UnaryTests_0dkyomi">
+          <text>"APPR_FIRMA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1136l43">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lwwbo0">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0oztxqy">
+        <inputEntry id="UnaryTests_1nmrxjc">
+          <text>"APPR_FIRMA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iblaqy">
+          <text>"FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0r73il6">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0u317dg">
+        <inputEntry id="UnaryTests_0elsb31">
+          <text>"FIRMA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kv56d6">
+          <text>"APPR_FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0al4fmh">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05gk9u6">
+        <inputEntry id="UnaryTests_09zbnip">
+          <text>"FIRMA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uxszen">
+          <text>"IN_CHIUSURA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1n13eeb">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1i0t8vr">
+        <inputEntry id="UnaryTests_165dtv8">
+          <text>"IN_CHIUSURA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gbzh3s">
+          <text>"FIRMA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a62otw">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0m5l46g">
+        <inputEntry id="UnaryTests_1n9adgu">
+          <text>"IN_CHIUSURA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x5eu65">
+          <text>"CHIUSO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13ou8gg">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03vq43l">
+        <inputEntry id="UnaryTests_02ace4y">
+          <text>"CHIUSURA_PA_RDP"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09zp9cs">
+          <text>"CHIUSO_ANT"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nzu7uq">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hjg0xw">
+        <inputEntry id="UnaryTests_0ygt6ri">
+          <text>"APPR_DOC"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01032d4">
+          <text>"APPR_DOC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1c0t7dw">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="reassignmentDecisionKey">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

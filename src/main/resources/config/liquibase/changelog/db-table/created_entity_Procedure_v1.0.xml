@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!--
+        Added the entity Procedure.
+    -->
+    <changeSet id="created_entity_Procedure_v1.0" author="m.kerabandi">
+        <createTable tableName="tb_ce_procedura">
+            <column name="id" type="bigint" defaultValueSequenceNext="procedure_sequence">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="code_procedimento" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="bpmn_process_id" type="varchar(255)">
+                <constraints nullable="true" unique="true" uniqueConstraintName="ux_procedure__bpmn_process_id" />
+            </column>
+            <column name="id_autore" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="autore" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_assegnazione" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+            <column name="ce_ute_andip_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="id_stato_procedura" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="cod_ins" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ins" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cod_ult_agg" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ult_agg" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_tipo_attivazione" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_tipo_procedimento" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_tipo_cessazione" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_cat_pers_richiesta" type="varchar2(20)">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_cat_pers_spettante" type="varchar2(500)">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_cat_mil" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_tipo_comunicazione" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_ente" type="CHAR(6 BYTE)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_doc_richiesta" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_pres_doc_rich" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_decorrenza" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            <column name="fl_visto_ragioneria" type="boolean" defaultValueBoolean="false">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_ragg_eta" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_gml" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            <column name="organo_sanita" type="varchar2(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mod_verbale_gml" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="num_verb_gml" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_tipo_gml_1" type="varchar2(12)">
+                <constraints nullable="true" />
+            </column>
+            <column name="prot_istanza" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_prot_istanza" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            <column name="prot_istanza_pec" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_prot_istanza_pec" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            <column name="fl_impugna_gml" type="boolean" defaultValueBoolean="false">
+                <constraints nullable="true" />
+            </column>
+            <column name="fl_gml_concordi" type="boolean" defaultValueBoolean="false">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_gml_appello" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            <column name="n_verb_gml_appello" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="prot_verb_gml_appello" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_prot_verb_gml_appello" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            <column name="prot_verb_gml_app_pec" type="varchar2(50)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_prot_verb_gml_app_pec" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_tipo_gml_2" type="varchar2(12)">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_provincia_res" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_comune_res" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="cap_res" type="varchar2(10)">
+                <constraints nullable="true" />
+            </column>
+            <column name="indirizzo_res" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="id_nazione_res" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="num_verb_comm_av" type="varchar2(500)">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_avvio" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            <column name="data_scad_lav" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            <column name="note" type="varchar(5000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="stgce_flag_elaborato" type="varchar(1)">
+                <constraints nullable="true" />
+            </column>
+            <column name="stgce_elab_msg" type="varchar2(4000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="priorita" type="bigint">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="add_atto_sipad" author="G.Luca Farris">
+        <addColumn tableName="tb_ce_procedura">
+            <column name="num_atto_sipad" remarks="Numero atto sipad per il decreto" type="bigint">
+                <constraints nullable="true" />
+            </column>
+        </addColumn>
+        <addColumn tableName="tb_ce_procedura">
+            <column name="anno_atto_sipad" remarks="Anno atto sipad per il decreto" type="bigint">
+                <constraints nullable="true" />
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="add_prom_tit_onor" author="G.Luca Farris">
+        <addColumn tableName="tb_ce_procedura">
+            <column name="prom_tit_onor" remarks="Promozione a titolo onorifico (art. 1084 bis COM)" type="boolean">
+                <constraints nullable="true" />
+            </column>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

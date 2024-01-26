@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!--
+        Added the entity FaseProcedure.
+    -->
+    <changeSet id="created_entity_FaseProcedure_v1.0" author="m.kerabandi">
+        <createTable tableName="tb_ce_fase_procedura">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="code_fase" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="desc_fase" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="ord_fase" type="int">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="created_entity_FaseProcedure_v1.0-data" author="m.kerabandi">
+        <loadData
+                  file="config/liquibase/changelog/data/fase_procedure.csv"
+                  separator=";"
+                  tableName="tb_ce_fase_procedura"
+                  usePreparedStatements="true"/>
+    </changeSet>
+</databaseChangeLog>

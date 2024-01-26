@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="documentAdhocNegativeOutcomeDecision" name="Document AdHoc Negative Outcome Decision" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0">
+  <decision id="documentAdhocNegativeOutcomeDecisionKey" name="Document AdHoc Negative Outcome Decision">
+    <decisionTable id="DecisionTable_0m1wy4u" hitPolicy="COLLECT">
+      <input id="InputClause_0i7lefx" label="statoRichiestaAdHoc" biodi:width="353" camunda:inputVariable="statoRichiestaAdHoc">
+        <inputExpression id="LiteralExpression_0p7r712" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1wf252c">
+          <text>"Protocollata e annullata","eliminata"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0wbmtv3" label="statoProcedimento" biodi:width="631" camunda:inputVariable="statoProcedimento">
+        <inputExpression id="LiteralExpression_130yh58" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1o17ywu">
+          <text>"LAVORAZIONE","APPR_DOC","APPR_FIRMA","CHIUSURA_PA_DINIEGO","FIRMA","CHIUSURA_PA_DECRETO","CHIUSURA_PA_RDP","IN_CHIUSURA"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0ywhuyd" label="tipoDocumento" camunda:inputVariable="tipoDocumento">
+        <inputExpression id="LiteralExpression_1c8rphq" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1oinshg">
+          <text>"CE01","CE02","CE03","CE06","CE07","CE08","CE09","CE10","CE11"</text>
+        </inputValues>
+      </input>
+      <input id="Input_1" label="statoDocumento" biodi:width="224" camunda:inputVariable="statoDocumento">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1bmk3ku">
+          <text>"IN_LAVORAZIONE","FIRMATO","PREDISPOSTO_ADHOC","PROTOCOLLATO","STERILIZZATO","IN_APPROVAZIONE","IN_APPROVAZIONE_ADHOC"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="nuovoStatoDocumento" name="nuovoStatoDocumento" typeRef="string" biodi:width="1027">
+        <outputValues id="UnaryTests_0nyknss">
+          <text>"PROTOCOLLATO","IN_LAVORAZIONE","FIRMATO","PREDISPOSTO_ADHOC","STERILIZZATO","IN_APPROVAZIONE","IN_APPROVAZIONE_ADHOC"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1c3dcxj">
+        <inputEntry id="UnaryTests_1rcq77j">
+          <text>"eliminata","protocollata e annullata"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q1tgpn">
+          <text>"LAVORAZIONE","CHIUSURA_PA_DINIEGO","CHIUSURA_PA_RDP"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pdd478">
+          <text>"CE11"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tady68">
+          <text>"PREDISPOSTO_ADHOC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vqwk0t">
+          <text>"IN_LAVORAZIONE"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01w2jlj">
+        <inputEntry id="UnaryTests_0nlrsxl">
+          <text>"eliminata","protocollata e annullata"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d9r0sx">
+          <text>"APPR_DOC","APPR_FIRMA","FIRMA","IN_CHIUSURA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sav4bj">
+          <text>"CE11"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dgzscp">
+          <text>"PREDISPOSTO_ADHOC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dn6k14">
+          <text>"IN_APPROVAZIONE"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ccrqo3">
+        <inputEntry id="UnaryTests_0wsw1va">
+          <text>"eliminata","protocollata e annullata"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04k2ibr">
+          <text>"LAVORAZIONE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0grd62o">
+          <text>"CE02","CE03","CE06","CE07","CE08","CE09","CE10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ke3dhu">
+          <text>"PREDISPOSTO_ADHOC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1x0172b">
+          <text>"IN_APPROVAZIONE"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1fpx5ai">
+        <inputEntry id="UnaryTests_0xu196n">
+          <text>"eliminata","protocollata e annullata"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g4dmc7">
+          <text>"APPR_DOC","APPR_FIRMA","CHIUSURA_PA_DINIEGO","FIRMA","CHIUSURA_PA_DECRETO","CHIUSURA_PA_RDP","IN_CHIUSURA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04w0fxd">
+          <text>"CE02","CE03","CE06","CE07","CE08","CE09","CE10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04xih09">
+          <text>"PREDISPOSTO_ADHOC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1n1nfj8">
+          <text>"STERILIZZATO"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0i5xiam">
+        <inputEntry id="UnaryTests_1ft16j5">
+          <text>"eliminata","protocollata e annullata"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xiyj7q">
+          <text>"CHIUSURA_PA_DECRETO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08nehp4">
+          <text>"CE01","CE11"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13fvcu7">
+          <text>"IN_APPROVAZIONE_ADHOC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0aach9c">
+          <text>"IN_APPROVAZIONE"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="documentAdhocNegativeOutcomeDecisionKey">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

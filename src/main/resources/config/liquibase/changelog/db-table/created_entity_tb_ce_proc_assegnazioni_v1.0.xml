@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!--
+        Added the entity tb_ce_proc_assegnazioni.
+    -->
+    <changeSet id="created_entity_tb_ce_proc_assegnazioni_v1.0" author="m.kerabandi">
+        <createTable tableName="tb_ce_proc_assegnazioni">
+            <column name="id" type="bigint" defaultValueSequenceNext="proc_assegnazioni_sequence">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="tb_ce_proc_assegnazioni_pk"/>
+            </column>
+            <column name="id_proc_storico" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="id_assegnato_a" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="data_inizio" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+            <column name="data_fine" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+            <column name="flag_definitivo" type="boolean">
+                <constraints nullable="false" />
+            </column>
+            <column remarks="Flag per identificare che l'assegnatario ha fatto almeno un salvataggio sul procedimento"
+                    name="flag_lavorato" type="boolean">
+                <constraints nullable="false" />
+            </column>
+            <column name="cod_ins" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ins" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cod_ult_agg" type="varchar2(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_ult_agg" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
